@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* COLORS */
+
+$primary-pink: #bf88bc;
+$secondary-ink: #dfc4de;
+
+$primary-olive: #9ca653;
+$secondary-olive: #ced3a9;
+
+$primary-orange: #f2a444;
+$secondary-orange: #f9d2a2;
+
+$primary-brown: #8c5c4a;
+$secondary-brown: #d1beb7;
+
+$gray-100: #f2f2f2;
+$gray-200: #a9a9a9;
+$gray-300: #616161;
+
+$black: #333333;
+$white: #fefcfd;
+$red: #be0303;
+$peach: #fff5ec;
+
+/* FONT */
+
+$primary-fontFamily: 'Raleway', sans-serif;
+$secondary-fontFamily: 'Fredericka the Great', cursive;
+
+$fontSize: 10px;
+$letterSpacing: 1px;
+$lineHeight: 2;
+
+/* BOX SHADOW */
+
+$shadow-1: 1px 1px 10px var(--black);
+$shadow-2: 0 0 10px 10px var(--black);
+
+/* REST vars */
+
+$backgroundColor: var(--white);
+$borderRadius: 25px;
+
+$transition: 0.5s;
+
+$width: 100vw;
+$height: 100vh;
