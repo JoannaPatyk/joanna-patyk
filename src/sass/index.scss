@@ -1,0 +1,15 @@
+@use './variables.scss' as var;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var.$fontSize;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: var.$peach;
+    color: var.$black;
+}
