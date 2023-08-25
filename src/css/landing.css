@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* COLORS */
+/* FONT */
+/* BOX SHADOW */
+/* REST vars */
+.landing-contact-icon-container {
+    position: absolute;
+    top: 8%;
+    right: 6%;
+    z-index: 3;
+    display: flex;
+    gap: 20px;
+}
+.landing-contact-icon-container:hover {
+    color: #333333;
+}
+
+.landing-contact-icon {
+    font-size: 60px;
+    color: #fefcfd;
+    filter: drop-shadow(2px 2px #bf88bc);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.landing-contact-icon:hover {
+    color: #333333;
+}
+
+.landing-title {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    width: 60%;
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 1.3;
+    text-align: left;
+    letter-spacing: 1px;
+}
+.landing-title .part-1 {
+    color: #9ca653;
+}
+.landing-title .part-2 {
+    color: #bf88bc;
+}
+
+.background-image {
+    position: absolute;
+    top: 2%;
+    right: 7%;
+    width: 35%;
+    filter: drop-shadow(6px 6px #bf88bc);
+}
+
+.basic-btn {
+    position: absolute;
+    top: 68%;
+    left: 20%;
+}
+
+.img1 {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: -3;
+}
+
+.img6 {
+    width: 15%;
+    position: absolute;
+    top: 12%;
+    left: 32%;
+    z-index: -3;
+    animation: pulsating 6s infinite;
+}
+
+.img7 {
+    width: 13%;
+    position: absolute;
+    top: 63%;
+    left: 8%;
+    transform: rotate(20deg);
+    z-index: -3;
+    animation: pulsating 6s infinite;
+}
+
+.img2 {
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    z-index: -3;
+}
+
+.img13 {
+    position: absolute;
+    top: 73%;
+    left: 30%;
+    z-index: -2;
+    transform: rotate(145deg);
+}
+
+@keyframes pulsating {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
