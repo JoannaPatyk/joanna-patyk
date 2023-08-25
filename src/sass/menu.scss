@@ -1,0 +1,28 @@
+@use './variables.scss' as var;
+
+.menu {
+    height: var.$height / 10;
+    display: flex;
+    gap: var.$gap * 2;
+    margin-left: var.$padding * 10;
+    padding-left: var.$padding * 2;
+    margin-top: var.$margin * 4;
+}
+
+.menu-element {
+    padding: 0 var.$padding;
+    color: var.$black;
+    font-size: var.$fontSize * 3;
+    font-weight: 300;
+    letter-spacing: var.$letterSpacing;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    text-align: center;
+    transition: var.$transition;
+    cursor: pointer;
+
+    &:hover {
+        color: var.$primary-orange;
+        transform: scale(0.9);
+    }
+}
