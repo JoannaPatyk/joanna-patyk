@@ -7,10 +7,10 @@ import Square from './Square';
 import '../css/landing.css';
 import backgroundImage from '../images/bulb.png';
 
-import img1 from '../images/img1.png';
-import img7 from '../images/img7.png';
-import img6 from '../images/img6.png';
-import img2 from '../images/img2.png';
+import dotImage1 from '../images/dot1.png';
+import dotImage2 from '../images/dot2.png';
+import starsImage1 from '../images/stars1.png';
+import starsImage2 from '../images/stars2.png';
 
 import { AiFillGithub } from 'react-icons/ai';
 import { HiOutlineMailOpen } from 'react-icons/hi';
@@ -31,15 +31,18 @@ function Landing() {
                 </h1>
                 <Button>kontakt</Button>
             </div>
+
             <Square id="big" />
             <Square id="medium" />
             <Square id="small-1" />
             <Square id="small-2" />
             <Square id="small-3" />
-            <img src={img1} className="img1" alt="" />
-            <img src={img7} className="img7" alt="" />
-            <img src={img6} className="img6" alt="" />
-            <img src={img2} className="img2" alt="" />
+
+            <img src={dotImage1} className="dot-image1" alt="" />
+            <img src={starsImage2} className="stars-image2" alt="" />
+            <img src={starsImage1} className="stars-image1" alt="" />
+            <img src={dotImage2} className="dot-image2" alt="" />
+
             <img src={backgroundImage} className="background-image" alt="" />
         </div>
     );

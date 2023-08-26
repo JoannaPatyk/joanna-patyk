@@ -1,0 +1,12 @@
+@use './variables.scss' as var;
+
+.banner-container {
+    min-height: 14vh;
+    background-color: var.$peach;
+
+    p {
+        font-size: var.$fontSize * 3;
+        line-height: 14vh;
+        text-align: center;
+    }
+}

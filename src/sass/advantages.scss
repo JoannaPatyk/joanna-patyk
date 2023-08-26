@@ -1,0 +1,71 @@
+@use './variables.scss' as var;
+@use 'sass:math';
+
+.advantages-container {
+    width: 70%;
+    margin: var.$margin * 2 auto;
+    min-height: 120vh;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        text-align: center;
+        font-weight: 600;
+        color: var.$primary-orange;
+        font-size: var.$fontSize * 4;
+        line-height: math.div(var.$lineHeight, 1.8);
+        letter-spacing: var.$letterSpacing;
+        filter: drop-shadow(2px 2px var.$black);
+        margin: 0 auto;
+    }
+
+    h2 {
+        width: 80%;
+        font-weight: 400;
+        font-size: var.$fontSize * 2;
+        letter-spacing: var.$letterSpacing;
+        text-align: center;
+        line-height: 1.6;
+    }
+}
+
+.advantage-container {
+    margin: 0 auto;
+    display: grid;
+    gap: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    h2 {
+        width: 50%;
+        font-size: var.$fontSize * 3;
+        text-align: left;
+    }
+
+    p {
+        font-size: var.$fontSize * 1.8;
+        line-height: var.$lineHeight;
+        text-align: justify;
+    }
+
+    .advantage {
+        padding: var.$padding;
+        display: grid;
+        grid-template-rows: 1fr 2fr;
+        border-radius: var.$borderRadius;
+    }
+
+    .advantage:nth-of-type(1) {
+        background-color: var.$secondary-pink;
+    }
+
+    .advantage:nth-of-type(2) {
+        background-color: var.$secondary-orange;
+    }
+
+    .advantage:nth-of-type(3) {
+        background-color: var.$secondary-olive;
+    }
+}
