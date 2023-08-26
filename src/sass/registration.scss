@@ -1,0 +1,85 @@
+@use './variables.scss' as var;
+@use 'sass:math';
+
+.registration-container {
+    position: relative;
+    min-height: math.div(var.$height, 2);
+    display: grid;
+    gap: 100px;
+    grid-template-rows: 0.05fr 0.95fr;
+    color: var.$white;
+
+    h1 {
+        width: 50%;
+        text-align: center;
+        font-weight: 600;
+        font-size: var.$fontSize * 4;
+        line-height: math.div(var.$lineHeight, 1.5);
+        letter-spacing: var.$letterSpacing;
+        filter: drop-shadow(2px 2px var.$primary-pink);
+        margin: 0 auto;
+    }
+}
+
+.steps-container {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 3fr 3fr;
+    place-content: center;
+
+    .step {
+        position: relative;
+        width: 70%;
+        justify-self: center;
+
+        h2 {
+            font-size: var.$fontSize * 3;
+            font-weight: 600;
+            line-height: var.$lineHeight * 0.75;
+            letter-spacing: var.$letterSpacing;
+            text-transform: uppercase;
+            filter: drop-shadow(1px 1px var.$primary-pink);
+            margin: var.$padding 0;
+        }
+
+        p {
+            font-size: var.$fontSize * 2;
+            letter-spacing: var.$letterSpacing;
+            line-height: var.$lineHeight * 0.75;
+            text-align: justify;
+            font-weight: 400;
+        }
+    }
+}
+
+.arrow1 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: var.$fontSize * 10;
+}
+
+.arrow2 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: var.$fontSize * 10;
+}
+
+.arrow3 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: var.$fontSize * 10;
+}
+
+.registration-icon {
+    font-size: var.$fontSize * 15;
+    font-weight: 100;
+    animation: pulsating 3s infinite;
+}

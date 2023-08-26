@@ -1,4 +1,5 @@
 @use './variables.scss' as var;
+@use 'sass:math';
 
 * {
     margin: 0;
@@ -23,27 +24,37 @@ body {
     text-transform: uppercase;
     font-family: inherit;
     font-size: var.$fontSize * 2.5;
-    font-weight: 700;
+    font-weight: 300;
     color: var.$white;
-    letter-spacing: var.$letterSpacing;
+    letter-spacing: var.$letterSpacing * 3;
     border: none;
     border-radius: var.$borderRadius;
     background-color: var.$primary-orange;
     filter: drop-shadow(6px 6px var.$secondary-orange);
     overflow: hidden;
+    transition: var.$transition;
     cursor: pointer;
+
+    &:hover {
+        transform: scale(0.9);
+    }
 
     .icon-btn {
         position: absolute;
         top: 50%;
-        right: 10%;
+        right: 8%;
         transform: translateY(-50%);
-        font-size: var.$fontSize * 3;
+        font-size: var.$fontSize * 3.5;
         transition: var.$transition * 4;
     }
 
     &:hover .icon-btn {
         top: -100%;
+        transform: scale(0.4);
+    }
+
+    &:hover {
+        transform: scale(0.9);
     }
 }
 
@@ -63,21 +74,21 @@ body {
 
 #medium {
     width: var.$width * 2;
-    height: var.$height;
+    height: var.$height * 1.7;
     position: absolute;
-    bottom: -70%;
-    left: -10%;
+    bottom: -148%;
+    left: -30%;
     z-index: -2;
     transform: rotate(170deg);
-    background-color: var.$secondary-olive;
+    background-color: var.$black;
 }
 
 #small-1 {
     position: absolute;
     bottom: 55%;
     left: 48%;
-    width: var.$width / 15;
-    height: var.$width / 15;
+    width: math.div(var.$width, 15);
+    height: math.div(var.$width, 15);
     background-color: var.$primary-olive;
     filter: drop-shadow(10px 10px var.$secondary-olive);
     transform: rotate(20deg);
@@ -101,8 +112,8 @@ body {
     position: absolute;
     bottom: 10%;
     left: 45%;
-    width: var.$width / 12;
-    height: var.$width / 12;
+    width: math.div(var.$width, 12);
+    height: math.div(var.$width, 12);
     background-color: var.$primary-pink;
     filter: drop-shadow(15px 15px var.$secondary-pink);
     border-radius: var.$borderRadius;
@@ -125,8 +136,8 @@ body {
     position: absolute;
     bottom: 65%;
     left: 15%;
-    width: var.$width / 24;
-    height: var.$width / 24;
+    width: math.div(var.$width, 24);
+    height: math.div(var.$width, 24);
     background-color: var.$primary-orange;
     filter: drop-shadow(5px 5px var.$secondary-orange);
     border-radius: var.$borderRadius;

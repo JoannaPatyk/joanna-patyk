@@ -1,5 +1,9 @@
 @use './variables.scss' as var;
 
+.landing-container {
+    min-height: 100vh;
+}
+
 .landing-contact-icon-container {
     position: absolute;
     top: 8%;
@@ -62,14 +66,14 @@
     left: 20%;
 }
 
-.img1 {
+.dot-image1 {
     position: absolute;
     top: 10%;
     left: 10%;
     z-index: -3;
 }
 
-.img6 {
+.stars-image1 {
     width: 15%;
     position: absolute;
     top: 12%;
@@ -78,7 +82,7 @@
     animation: pulsating 6s infinite;
 }
 
-.img7 {
+.stars-image2 {
     width: 13%;
     position: absolute;
     top: 63%;
@@ -88,19 +92,11 @@
     animation: pulsating 6s infinite;
 }
 
-.img2 {
+.dot-image2 {
     position: absolute;
     top: 45%;
     left: 35%;
     z-index: -3;
-}
-
-.img13 {
-    position: absolute;
-    top: 73%;
-    left: 30%;
-    z-index: -2;
-    transform: rotate(145deg);
 }
 
 @keyframes pulsating {

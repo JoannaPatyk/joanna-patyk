@@ -1,7 +1,8 @@
 @use './variables.scss' as var;
+@use 'sass:math';
 
 .menu {
-    height: var.$height / 10;
+    height: math.div(var.$height, 10);
     display: flex;
     gap: var.$gap * 2;
     margin-left: var.$padding * 10;
@@ -11,9 +12,10 @@
 
 .menu-element {
     padding: 0 var.$padding;
-    color: var.$black;
+    color: var.$primary-orange;
+    filter: drop-shadow(2px 2px var.$black);
     font-size: var.$fontSize * 3;
-    font-weight: 300;
+    font-weight: 600;
     letter-spacing: var.$letterSpacing;
     text-transform: uppercase;
     border: 1px solid transparent;
