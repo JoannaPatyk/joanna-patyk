@@ -1,0 +1,66 @@
+@use './variables.scss' as var;
+
+.information-container {
+    min-height: 40vh;
+    width: 55%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    .elements {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        gap: var.$gap * 10;
+        margin-top: var.$margin * 3;
+
+        h2 {
+            font-size: var.$fontSize * 1.8;
+            border-bottom: 2px solid var.$orange-300;
+        }
+
+        .element {
+            display: flex;
+            gap: var.$gap * 1.5;
+            flex-direction: column;
+
+            h1 {
+                font-weight: 800;
+                color: var.$orange-300;
+                line-height: var.$lineHeight;
+                letter-spacing: var.$letterSpacing;
+                text-align: center;
+                filter: drop-shadow(1px 1px var.$black);
+            }
+
+            .information-btn {
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+
+        .information-element {
+            display: flex;
+            gap: var.$gap * 0.5;
+            align-items: center;
+            text-align: left;
+            border: none;
+            background-color: transparent;
+            text-transform: uppercase;
+            font-size: var.$fontSize * 1.5;
+            transition: var.$transition;
+            cursor: pointer;
+
+            &:hover {
+                font-weight: 600;
+                color: var.$primary-olive;
+                padding-left: var.$padding * 0.5;
+            }
+        }
+
+        p {
+            font-size: var.$fontSize * 1.5;
+            font-weight: 400;
+        }
+    }
+}

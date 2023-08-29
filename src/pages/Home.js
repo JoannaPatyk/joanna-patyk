@@ -2,7 +2,10 @@ import React from 'react';
 import Landing from '../components/Landing';
 import Registration from '../components/Registration';
 import Advantages from '../components/Advantages';
-// import Footer from '../components/Footer';
+import Banner from '../components/Banner';
+import Information from '../components/Information';
+import Footer from '../components/Footer';
+import ScrollButton from '../components/ScrollButton';
 
 function Home() {
     return (
@@ -10,7 +13,10 @@ function Home() {
             <Landing />
             <Registration />
             <Advantages />
-            {/* <Footer /> */}
+            <Information />
+            <Banner />
+            <Footer />
+            <ScrollButton />
         </>
     );
 }

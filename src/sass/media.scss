@@ -1,0 +1,24 @@
+@use './variables.scss' as var;
+
+.contact-icon-container {
+    position: absolute;
+    top: 8%;
+    right: 6%;
+    z-index: 100;
+    display: flex;
+    gap: 10px;
+}
+
+.contact-icon {
+    z-index: 100;
+    font-size: var.$fontSize * 5.5;
+    color: var.$orange-300;
+    filter: drop-shadow(2px 2px var.$black);
+    transition: var.$transition;
+    cursor: pointer;
+
+    &:hover {
+        color: var.$primary-olive;
+        transform: scale(0.9);
+    }
+}

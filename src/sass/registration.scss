@@ -3,16 +3,17 @@
 
 .registration-container {
     position: relative;
-    min-height: math.div(var.$height, 2);
+    min-height: var.$height * 1.4;
     display: grid;
-    gap: 100px;
+    gap: 80px;
     grid-template-rows: 0.05fr 0.95fr;
-    color: var.$white;
+    color: var.$peach;
 
     h1 {
         width: 50%;
         text-align: center;
-        font-weight: 600;
+        font-weight: 800;
+        color: var.$peach;
         font-size: var.$fontSize * 4;
         line-height: math.div(var.$lineHeight, 1.5);
         letter-spacing: var.$letterSpacing;
@@ -24,62 +25,53 @@
 .steps-container {
     width: 70%;
     margin: 0 auto;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 3fr 3fr;
-    place-content: center;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    flex-direction: column;
 
     .step {
         position: relative;
-        width: 70%;
+        width: 65%;
         justify-self: center;
 
         h2 {
             font-size: var.$fontSize * 3;
-            font-weight: 600;
+            font-weight: 800;
             line-height: var.$lineHeight * 0.75;
-            letter-spacing: var.$letterSpacing;
+            letter-spacing: var.$letterSpacing * 2;
             text-transform: uppercase;
-            filter: drop-shadow(1px 1px var.$primary-pink);
+            color: var.$peach;
             margin: var.$padding 0;
         }
 
         p {
             font-size: var.$fontSize * 2;
             letter-spacing: var.$letterSpacing;
-            line-height: var.$lineHeight * 0.75;
+            line-height: var.$lineHeight * 0.9;
             text-align: justify;
-            font-weight: 400;
+            font-weight: 500;
+            color: var.$peach;
+        }
+
+        span {
+            font-weight: 800;
+            filter: drop-shadow(2px 2px var.$secondary-pink);
         }
     }
 }
 
-.arrow1 {
+.background-image-plane {
+    width: 20%;
     position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: var.$fontSize * 10;
+    top: 5%;
+    left: 5%;
+    transform: rotate(-10deg);
 }
 
-.arrow2 {
+.background-image-ideas {
+    width: 12%;
     position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: var.$fontSize * 10;
-}
-
-.arrow3 {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: var.$fontSize * 10;
-}
-
-.registration-icon {
-    font-size: var.$fontSize * 15;
-    font-weight: 100;
-    animation: pulsating 3s infinite;
+    top: 40%;
+    right: 10%;
 }

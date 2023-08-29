@@ -1,5 +1,7 @@
 import React from 'react';
+import Square from './Square';
 import advantages from '../utils/advantages';
+import advantagesImages from '../utils/advantagesImages';
 import '../css/advantages.css';
 
 function Advantages() {
@@ -7,9 +9,13 @@ function Advantages() {
         return (
             <article key={id} className="advantage">
                 <h2>{title}</h2>
-                <p>{text}</p>
+                {text}
             </article>
         );
+    });
+
+    const displayImages = advantagesImages.map(({ id, src, cls, alt }) => {
+        return <img key={id} src={src} className={cls} alt={alt} />;
     });
 
     return (
@@ -22,6 +28,10 @@ function Advantages() {
                 rynkowego.
             </h2>
             <section className="advantage-container">{displayAdvantages}</section>
+            {displayImages}
+            <Square id="small-7" />
+            <Square id="small-8" />
+            <Square id="small-9" />
         </div>
     );
 }

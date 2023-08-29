@@ -1,8 +1,15 @@
 @use './variables.scss' as var;
 
 .footer-content {
-    height: 5vh;
+    position: relative;
+    height: 10vh;
     width: 100%;
-    line-height: 5vh;
-    text-align: center;
+    background-color: var.$orange-200;
+    overflow: hidden;
+
+    p {
+        line-height: 10vh;
+        text-align: center;
+        font-size: var.$fontSize * 1.5;
+    }
 }
