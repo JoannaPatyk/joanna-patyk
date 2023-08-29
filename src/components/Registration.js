@@ -1,8 +1,9 @@
 import React from 'react';
 import '../css/registration.css';
-
+import Square from './Square';
 import steps from '../utils/steps';
-// import { BsBalloonHeart } from 'react-icons/bs';
+import backgroundPlane from '../images/map.png';
+import backgroundIdeas from '../images/ideas.png';
 
 function Registration() {
     const displaySteps = steps.map(({ id, title, description }) => {
@@ -18,7 +19,11 @@ function Registration() {
         <div className="registration-container">
             <h1>Poszukujesz osoby, która stworzy stronę internetową dla Twojej firmy?</h1>
             <section className="steps-container">{displaySteps}</section>
-            {/* <BsBalloonHeart className="registration-icon" /> */}
+            <img src={backgroundPlane} className="background-image-plane" alt="Samolot" />
+            <img src={backgroundIdeas} className="background-image-ideas" alt="Żarówka" />
+            <Square id="small-4" />
+            <Square id="small-5" />
+            <Square id="small-6" />
         </div>
     );
 }

@@ -1,0 +1,191 @@
+@use './variables.scss' as var;
+@use 'sass:math';
+
+.menu-icon {
+    position: absolute;
+    top: 8%;
+    left: 3%;
+    z-index: 100;
+    font-size: var.$fontSize * 4.5;
+    color: var.$orange-300;
+    filter: drop-shadow(1px 1px var.$black);
+    border: none;
+    background-color: transparent;
+    transition: var.$transition;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(0.9);
+    }
+}
+
+.small-menu {
+    position: relative;
+    top: 10%;
+    left: -100%;
+    height: 20vh;
+    width: 35%;
+    transition: var.$transition * 2;
+    opacity: 0.6;
+}
+
+.show {
+    left: 0;
+    opacity: 1;
+}
+
+.form-container {
+    min-height: 180vh;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1.2fr;
+    color: var.$peach;
+    overflow: hidden;
+}
+
+.contact-form {
+    width: 70%;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    margin-top: var.$margin * 6;
+
+    h1 {
+        font-weight: 600;
+        font-size: var.$fontSize * 2.5;
+        color: var.$white;
+        letter-spacing: var.$letterSpacing;
+        filter: drop-shadow(2px 2px var.$black);
+    }
+
+    h3 {
+        font-size: var.$fontSize * 1.8;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+}
+
+.questions {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: var.$padding * 2;
+    margin-bottom: var.$margin * 0.5;
+    cursor: pointer;
+    font-size: var.$fontSize * 1.6;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    transform: translateY(-50%);
+    background-color: var.$peach;
+    border-radius: 50%;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var.$orange-400;
+}
+
+.checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    border-radius: var.$borderRadius;
+    background: var.$peach;
+}
+
+.application-btn {
+    width: 30%;
+    margin-left: var.$margin * 8;
+    margin-top: var.$margin * 2;
+}
+
+label {
+    font-size: var.$fontSize * 1.6;
+    font-weight: 300;
+    line-height: 2;
+}
+
+label:nth-last-of-type(1) {
+    line-height: 1.5;
+    font-size: var.$fontSize * 1.7;
+    letter-spacing: var.$letterSpacing;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+input,
+textarea {
+    width: 70%;
+    padding: var.$padding * 0.75;
+    margin: var.$margin * 0.5;
+    border: none;
+    font-family: inherit;
+    border-radius: var.$borderRadius;
+    background-color: var.$white;
+}
+
+textarea {
+    min-height: 15vh;
+}
+
+input::placeholder,
+textarea::placeholder {
+    opacity: 0.8;
+}
+
+.contact-flower2-image {
+    position: absolute;
+    top: 30%;
+    right: 58%;
+    width: 16%;
+    transform: rotate(-10deg);
+}
+
+.contact-flower-image {
+    position: absolute;
+    top: 85%;
+    right: 8%;
+    width: 15%;
+}
+
+.contact-plane-image {
+    position: absolute;
+    bottom: -80%;
+    right: 65%;
+    width: 28%;
+    z-index: -1;
+    transform: rotate(20deg);
+}

@@ -4,38 +4,13 @@
     min-height: 100vh;
 }
 
-.landing-contact-icon-container {
-    position: absolute;
-    top: 8%;
-    right: 6%;
-    z-index: 3;
-    display: flex;
-    gap: 20px;
-
-    &:hover {
-        color: var.$black;
-    }
-}
-
-.landing-contact-icon {
-    font-size: var.$fontSize * 6;
-    color: var.$white;
-    filter: drop-shadow(2px 2px var.$primary-pink);
-    transition: var.$transition;
-    cursor: pointer;
-
-    &:hover {
-        color: var.$black;
-    }
-}
-
 .landing-title {
     display: flex;
     align-items: left;
     flex-direction: column;
     position: absolute;
-    top: 40%;
-    left: 20%;
+    top: 42%;
+    left: 18%;
     width: 60%;
     font-weight: 700;
     font-size: var.$fontSize * 5.8;
@@ -44,11 +19,13 @@
     letter-spacing: var.$letterSpacing;
 
     .part-1 {
-        color: var.$primary-olive;
+        color: var.$primary-pink;
+        filter: drop-shadow(2px 2px var.$black);
     }
 
     .part-2 {
-        color: var.$primary-pink;
+        color: var.$orange-300;
+        filter: drop-shadow(2px 2px var.$black);
     }
 }
 
@@ -56,14 +33,16 @@
     position: absolute;
     top: 2%;
     right: 7%;
-    width: 35%;
-    filter: drop-shadow(6px 6px var.$primary-pink);
+    width: 33%;
+    filter: drop-shadow(6px 6px var.$white);
+    animation: upAndDown 6s infinite;
 }
 
-.basic-btn {
+.landing-btn {
     position: absolute;
-    top: 68%;
-    left: 20%;
+    top: 70%;
+    left: 25%;
+    width: 14%;
 }
 
 .dot-image1 {
@@ -79,7 +58,6 @@
     top: 12%;
     left: 32%;
     z-index: -3;
-    animation: pulsating 6s infinite;
 }
 
 .stars-image2 {
@@ -89,7 +67,6 @@
     left: 8%;
     transform: rotate(20deg);
     z-index: -3;
-    animation: pulsating 6s infinite;
 }
 
 .dot-image2 {
@@ -99,14 +76,14 @@
     z-index: -3;
 }
 
-@keyframes pulsating {
+@keyframes upAndDown {
     0% {
-        transform: scale(1);
+        top: 2%;
     }
     50% {
-        transform: scale(0.95);
+        top: 5%;
     }
     100% {
-        transform: scale(1);
+        top: 2%;
     }
 }

@@ -12,10 +12,10 @@
 
 .menu-element {
     padding: 0 var.$padding;
-    color: var.$primary-orange;
+    color: var.$orange-300;
     filter: drop-shadow(2px 2px var.$black);
     font-size: var.$fontSize * 3;
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: var.$letterSpacing;
     text-transform: uppercase;
     border: 1px solid transparent;
@@ -24,7 +24,7 @@
     cursor: pointer;
 
     &:hover {
-        color: var.$primary-orange;
-        transform: scale(0.9);
+        color: var.$primary-olive;
+        transform: scale(0.85);
     }
 }

@@ -2,70 +2,117 @@
 @use 'sass:math';
 
 .advantages-container {
-    width: 70%;
+    position: relative;
+    width: 60%;
     margin: var.$margin * 2 auto;
-    min-height: 120vh;
+    min-height: 100vh;
     display: flex;
-    gap: 50px;
+    gap: 100px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
     h1 {
         text-align: center;
-        font-weight: 600;
-        color: var.$primary-orange;
+        font-weight: 800;
+        color: var.$orange-300;
         font-size: var.$fontSize * 4;
         line-height: math.div(var.$lineHeight, 1.8);
+        text-align: justify;
         letter-spacing: var.$letterSpacing;
         filter: drop-shadow(2px 2px var.$black);
         margin: 0 auto;
     }
 
     h2 {
-        width: 80%;
+        width: 75%;
         font-weight: 400;
-        font-size: var.$fontSize * 2;
+        font-size: var.$fontSize * 1.8;
         letter-spacing: var.$letterSpacing;
-        text-align: center;
-        line-height: 1.6;
+        text-align: right;
+        line-height: 2;
     }
 }
 
 .advantage-container {
     margin: 0 auto;
     display: grid;
-    gap: 100px;
+    gap: 40px;
     grid-template-columns: 1fr 1fr 1fr;
 
     h2 {
-        width: 50%;
-        font-size: var.$fontSize * 3;
-        text-align: left;
+        width: 70%;
+        font-size: var.$fontSize * 2;
+        font-weight: 800;
+        line-height: math.div(var.$lineHeight, 1.5);
+        letter-spacing: var.$letterSpacing;
+        color: var.$orange-300;
+        filter: drop-shadow(2px 2px var.$black);
+        border-right: 4px solid var.$orange-300;
+        padding-right: var.$padding;
+        text-transform: uppercase;
     }
 
     p {
-        font-size: var.$fontSize * 1.8;
+        font-size: var.$fontSize * 1.5;
         line-height: var.$lineHeight;
-        text-align: justify;
+        padding: 0 var.$padding * 2;
     }
 
     .advantage {
-        padding: var.$padding;
+        padding: var.$padding * 2;
         display: grid;
+        gap: 20px;
         grid-template-rows: 1fr 2fr;
+        place-items: center;
+        font-weight: 400;
         border-radius: var.$borderRadius;
-    }
+        background-color: transparent;
+        transition: var.$transition;
+        text-align: justify;
 
-    .advantage:nth-of-type(1) {
-        background-color: var.$secondary-pink;
+        &:hover {
+            box-shadow: 4px 4px 5px var.$orange-100;
+            transform: scale(0.95);
+        }
     }
+}
 
-    .advantage:nth-of-type(2) {
-        background-color: var.$secondary-orange;
-    }
+.stars {
+    position: absolute;
+    z-index: -1;
+    width: 20%;
+    top: -2%;
+    right: -10%;
+}
 
-    .advantage:nth-of-type(3) {
-        background-color: var.$secondary-olive;
-    }
+.dot {
+    width: 25%;
+    position: absolute;
+    z-index: -3;
+}
+
+.green-dots1 {
+    bottom: -5%;
+    left: 49%;
+}
+
+.green-dots2 {
+    top: 0%;
+    left: 46%;
+}
+
+.pink-dots {
+    bottom: 4%;
+    left: 5%;
+    transform: rotate(5deg);
+}
+
+.plane {
+    width: 25%;
+    position: absolute;
+    top: 18%;
+    left: -15%;
+    z-index: -3;
+    transform: rotate(-10deg);
 }

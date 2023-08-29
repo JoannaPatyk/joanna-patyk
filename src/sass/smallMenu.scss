@@ -1,0 +1,19 @@
+@use './variables.scss' as var;
+
+.small-menu-container {
+    .menu {
+        position: absolute;
+        top: -30%;
+        left: -50%;
+        display: flex;
+        gap: var.$gap * 2;
+        flex-direction: column;
+        margin-left: var.$padding * 10;
+        padding-left: var.$padding * 2;
+        margin-top: var.$margin * 4;
+    }
+
+    .menu-element {
+        text-align: left;
+    }
+}
