@@ -1,10 +1,19 @@
 import React from 'react';
 import Square from './Square';
+import Button from './Button';
 import advantages from '../utils/advantages';
 import advantagesImages from '../utils/advantagesImages';
+import { useNavigate } from 'react-router-dom';
 import '../css/advantages.css';
 
 function Advantages() {
+    const navigate = useNavigate();
+
+    const handleClick = (path) => {
+        navigate(path);
+        window.scrollTo(0, 0);
+    };
+
     const displayAdvantages = advantages.map(({ id, title, text }) => {
         return (
             <article key={id} className="advantage">
@@ -29,6 +38,14 @@ function Advantages() {
             </h2>
             <section className="advantage-container">{displayAdvantages}</section>
             {displayImages}
+            <div className="advantage-title">
+                <h1>
+                    Jeśli napiszesz do 18:00, <br /> odpowiem w ciągu 2 godzin...
+                </h1>
+                <Button nextClass="information-btn" onClick={() => handleClick('/contact')}>
+                    kontakt
+                </Button>
+            </div>
             <Square id="small-7" />
             <Square id="small-8" />
             <Square id="small-9" />

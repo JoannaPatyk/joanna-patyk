@@ -4,12 +4,12 @@
     position: relative;
     height: 10vh;
     width: 100%;
-    background-color: var.$orange-200;
+    background-color: var.$orange-300;
     overflow: hidden;
 
     p {
         line-height: 10vh;
         text-align: center;
-        font-size: var.$fontSize * 1.5;
+        font-size: var.$fontSize * 1.8;
     }
 }

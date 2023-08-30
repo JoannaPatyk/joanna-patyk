@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from './Button';
 import { useNavigate } from 'react-router-dom';
 import links from '../utils/links';
 import '../css/information.css';
@@ -29,14 +28,6 @@ function Information() {
                 <div className="element">
                     <h2>Dane</h2>
                     <p>email: email@gmail.com</p>
-                </div>
-                <div className="element">
-                    <h1>
-                        Jeśli napiszesz do 18:00, <br /> odpowiem w ciągu 2 godzin...
-                    </h1>
-                    <Button nextClass="information-btn" onClick={() => handleClick('/contact')}>
-                        kontakt
-                    </Button>
                 </div>
             </div>
         </div>
