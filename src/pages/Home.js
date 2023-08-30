@@ -6,6 +6,7 @@ import Banner from '../components/Banner';
 import Information from '../components/Information';
 import Footer from '../components/Footer';
 import ScrollButton from '../components/ScrollButton';
+import Values from '../components/Values';
 
 function Home() {
     return (
@@ -13,6 +14,7 @@ function Home() {
             <Landing />
             <Registration />
             <Advantages />
+            <Values />
             <Information />
             <Banner />
             <Footer />

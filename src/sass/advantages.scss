@@ -5,9 +5,9 @@
     position: relative;
     width: 60%;
     margin: var.$margin * 2 auto;
-    min-height: 100vh;
+    min-height: 130vh;
     display: flex;
-    gap: 100px;
+    gap: 80px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -75,6 +75,28 @@
             box-shadow: 4px 4px 5px var.$orange-100;
             transform: scale(0.95);
         }
+    }
+}
+
+.advantage-title {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+
+    h1 {
+        font-weight: 800;
+        color: var.$orange-200;
+        line-height: var.$lineHeight * 0.7;
+        letter-spacing: var.$letterSpacing;
+        text-align: center;
+        filter: drop-shadow(1px 1px var.$black);
+    }
+
+    .information-btn {
+        width: 50%;
+        margin: 0 auto;
     }
 }
 
