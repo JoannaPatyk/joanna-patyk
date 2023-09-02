@@ -13,7 +13,7 @@ const advantages = [
     },
     {
         id: 1,
-        title: 'szybki dostęp do informacji',
+        title: 'Łatwy dostęp do informacji',
         text: [
             <p key={0}>
                 Klienci mogą szybko znaleźć informacje o produktach, usługach, cenach oraz sposobach kontaktu co zachęca

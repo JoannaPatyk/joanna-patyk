@@ -3,57 +3,58 @@
 
 .values-container {
     position: relative;
+    width: 60%;
     min-height: 100vh;
+    margin: 0 auto var.$margin * 6;
     display: flex;
-    gap: 50px;
+    gap: var.$gap * 6;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var.$orange-400;
+    color: var.$peach;
 
     h1 {
-        width: 50%;
-        font-size: var.$fontSize * 4;
-        font-weight: 800;
-        color: var.$orange-200;
-        line-height: math.div(var.$lineHeight, 1.5);
-        letter-spacing: var.$letterSpacing;
-        filter: drop-shadow(2px 2px var.$black);
         text-align: center;
+        font-weight: 800;
+        color: var.$peach;
+        font-size: var.$fontSize * 4;
+        font-family: var.$secondary-fontFamily;
+        line-height: math.div(var.$lineHeight, 1.8);
+        text-align: justify;
+        letter-spacing: var.$letterSpacing;
+        filter: drop-shadow(2px 2px var.$secondary-pink);
+        margin: 0 auto;
     }
 
-    h3 {
-        width: 50%;
-        text-align: center;
-        color: var.$black;
-        font-size: var.$fontSize * 1.8;
-        font-weight: 300;
-        line-height: var.$lineHeight;
+    h2 {
+        width: 80%;
+        font-weight: 400;
+        font-size: var.$fontSize * 1.6;
+        letter-spacing: var.$letterSpacing;
+        text-align: justify;
+        line-height: 2;
+
+        span {
+            font-weight: 800;
+        }
     }
 }
 
 .values {
-    width: 50%;
+    width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     place-content: center;
-    gap: 10px;
+    gap: var.$gap * 10;
 
     .value {
+        margin-top: var.$margin * 1.5;
         text-align: center;
         letter-spacing: var.$letterSpacing;
 
-        &:hover h2,
         &:hover .value-icon {
             transform: scale(0.95);
-            color: var.$orange-200;
             opacity: 1;
-        }
-
-        p {
-            font-size: var.$fontSize * 1.5;
-            text-align: justify;
-            line-height: var.$lineHeight;
         }
     }
 
@@ -61,34 +62,39 @@
         font-size: var.$fontSize * 10;
         background-color: transparent;
         border: none;
-        color: var.$orange-200;
-        filter: drop-shadow(1px 1px var.$orange-200);
+        color: var.$peach;
+        filter: drop-shadow(3px 3px var.$primary-pink);
         transition: var.$transition;
-        opacity: 0.4;
+        opacity: 0.5;
         cursor: pointer;
     }
 }
 
 .values-description {
-    width: 50%;
-    min-height: 30vh;
-    margin: var.$margin;
+    width: 70%;
+    min-height: 25vh;
+    border-radius: var.$borderRadius;
+    padding: var.$margin;
+    border-top: 4px solid var.$peach;
+    border-bottom: 4px solid var.$peach;
+}
+
+.value-text {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: var.$borderRadius;
-    background-color: var.$orange-400;
-    border-top: 4px dotted var.$orange-300;
-    border-bottom: 4px dotted var.$orange-300;
+    flex-direction: column;
 }
 
 .value-text p {
-    margin: var.$margin;
+    margin-bottom: var.$margin;
     text-align: center;
-    color: var.$black;
-    font-weight: 500;
-    font-size: var.$fontSize * 1.7;
+    color: var.$peach;
+    font-weight: 200;
+    font-family: var.$secondary-fontFamily;
+    font-size: var.$fontSize * 1.6;
     line-height: var.$lineHeight;
+    letter-spacing: var.$letterSpacing;
 
     span {
         font-weight: 800;
@@ -96,17 +102,43 @@
 }
 
 .value-text h2 {
-    color: var.$orange-200;
-    filter: drop-shadow(1px 1px var.$black);
-    font-size: var.$fontSize * 2.6;
+    margin-bottom: var.$margin;
+    color: var.$peach;
+    font-size: var.$fontSize * 3;
+    font-family: var.$secondary-fontFamily;
     font-weight: 800;
+    text-align: center;
+    filter: drop-shadow(2px 2px var.$secondary-pink);
     text-transform: uppercase;
     letter-spacing: var.$letterSpacing;
-    text-align: center;
     transition: var.$transition;
 }
 
 .value.active .value-icon {
     opacity: 1;
-    color: var.$orange-200;
+}
+
+.values-image-flower {
+    width: 15%;
+    position: absolute;
+    top: 5%;
+    right: -10%;
+    transform: rotate(-20deg);
+}
+
+.values-image-plane {
+    width: 20%;
+    position: absolute;
+    top: 20%;
+    left: -20%;
+    z-index: -1;
+}
+
+.values-image-bulb {
+    width: 15%;
+    position: absolute;
+    top: 70%;
+    right: -18%;
+    transform: rotate(20deg);
+    z-index: -1;
 }

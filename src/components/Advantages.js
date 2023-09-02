@@ -1,19 +1,10 @@
 import React from 'react';
 import Square from './Square';
-import Button from './Button';
 import advantages from '../utils/advantages';
 import advantagesImages from '../utils/advantagesImages';
-import { useNavigate } from 'react-router-dom';
 import '../css/advantages.css';
 
 function Advantages() {
-    const navigate = useNavigate();
-
-    const handleClick = (path) => {
-        navigate(path);
-        window.scrollTo(0, 0);
-    };
-
     const displayAdvantages = advantages.map(({ id, title, text }) => {
         return (
             <article key={id} className="advantage">
@@ -31,24 +22,17 @@ function Advantages() {
         <div className="advantages-container">
             <h1>Czy warto posiadać stronę internetową?</h1>
             <h2>
-                W dzisiejszym dynamicznym środowisku biznesowym posiadanie własnej strony internetowej stało się
-                nieodzownym elementem sukcesu firmy. W dobie, w której większość konsumentów poszukuje informacji,
-                produktów i usług w sieci, brak obecności online może być równoznaczny z utratą ogromnego potencjału
-                rynkowego.
+                W dzisiejszym dynamicznym środowisku biznesowym{' '}
+                <span>posiadanie własnej strony internetowej stało się nieodzownym elementem sukcesu firmy</span>. W
+                dobie, w której większość konsumentów poszukuje informacji, produktów i usług w sieci, brak obecności
+                online może być równoznaczny z utratą ogromnego potencjału rynkowego.
             </h2>
             <section className="advantage-container">{displayAdvantages}</section>
             {displayImages}
-            <div className="advantage-title">
-                <h1>
-                    Jeśli napiszesz do 18:00, <br /> odpowiem w ciągu 2 godzin...
-                </h1>
-                <Button nextClass="information-btn" onClick={() => handleClick('/contact')}>
-                    kontakt
-                </Button>
-            </div>
-            <Square id="small-7" />
-            <Square id="small-8" />
-            <Square id="small-9" />
+
+            <Square id="medium" top="80%" left="-40%" backgroundColor="#383040" />
+            <Square id="small-1" top="60%" left="-19%" backgroundColor="#605966" filterColor="#383040" />
+            <Square id="small-3" top="35%" left="110%" backgroundColor="#d68aa7" filterColor="#901a47" />
         </div>
     );
 }

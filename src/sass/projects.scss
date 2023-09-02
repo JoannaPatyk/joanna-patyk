@@ -1,0 +1,143 @@
+@use './variables.scss' as var;
+@use 'sass:math';
+
+.projects-container {
+    width: 50%;
+    min-height: 450vh;
+    margin: 0 auto;
+    display: flex;
+    gap: var.$gap * 5;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: var.$padding * 3;
+
+    h1 {
+        width: 80%;
+        text-align: center;
+        font-weight: 800;
+        font-size: var.$fontSize * 5;
+        line-height: math.div(var.$lineHeight, 1.5);
+        letter-spacing: var.$letterSpacing;
+        margin: 0 auto;
+
+        span {
+            color: var.$primary-pink;
+            filter: drop-shadow(3px 3px var.$black);
+        }
+    }
+
+    h2 {
+        width: 80%;
+        font-weight: 300;
+        font-size: var.$fontSize * 3;
+        font-family: var.$secondary-fontFamily;
+        letter-spacing: var.$letterSpacing;
+        line-height: var.$lineHeight * 0.7;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .main-description {
+        margin: 0 auto;
+        font-size: var.$fontSize * 1.6;
+        font-weight: 300;
+        line-height: var.$lineHeight;
+        letter-spacing: var.$letterSpacing * 0.5;
+        text-align: justify;
+
+        span {
+            font-weight: 800;
+        }
+    }
+}
+
+.projects {
+    display: flex;
+    gap: var.$gap * 8;
+    flex-direction: column;
+}
+
+.project {
+    display: flex;
+    gap: var.$gap * 2;
+    flex-direction: column;
+
+    .project-title {
+        font-size: var.$fontSize * 2;
+        font-weight: 800;
+        text-transform: uppercase;
+
+        span {
+            color: var.$primary-pink;
+            filter: drop-shadow(1px 1px var.$black);
+        }
+    }
+
+    .points-title {
+        display: flex;
+        gap: var.$gap;
+        align-items: center;
+        justify-content: center;
+        font-size: var.$fontSize * 2;
+        text-transform: uppercase;
+
+        .project-icon {
+            font-size: var.$fontSize * 3;
+        }
+    }
+}
+
+.project-image {
+    width: 100%;
+    margin: var.$margin auto var.$margin * 2;
+}
+
+.project-description {
+    width: 80%;
+    display: flex;
+    gap: var.$gap * 3;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: justify;
+
+    h3,
+    ul {
+        font-size: var.$fontSize * 1.4;
+        font-weight: 400;
+        line-height: var.$lineHeight;
+        letter-spacing: var.$letterSpacing * 0.5;
+
+        span {
+            font-weight: 800;
+        }
+    }
+}
+
+.technologies {
+    display: flex;
+    gap: var.$gap * 2;
+    align-items: center;
+    justify-content: center;
+
+    .technologie {
+        font-size: var.$fontSize * 5;
+        color: var.$secondary-pink;
+        filter: drop-shadow(2px 2px var.$white);
+        transition: var.$transition;
+        animation: scale 3s infinite linear;
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.stars-image {
+    width: 10%;
+    position: absolute;
+    top: 25%;
+    left: 18%;
+    z-index: -3;
+}

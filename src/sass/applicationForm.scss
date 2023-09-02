@@ -1,61 +1,25 @@
 @use './variables.scss' as var;
 @use 'sass:math';
 
-.menu-icon {
-    position: absolute;
-    top: 8%;
-    left: 3%;
-    z-index: 100;
-    font-size: var.$fontSize * 4.5;
-    color: var.$orange-300;
-    filter: drop-shadow(1px 1px var.$black);
-    border: none;
-    background-color: transparent;
-    transition: var.$transition;
-    cursor: pointer;
-
-    &:hover {
-        transform: scale(0.9);
-    }
-}
-
-.small-menu {
-    position: relative;
-    top: 10%;
-    left: -100%;
-    height: 20vh;
-    width: 35%;
-    transition: var.$transition * 2;
-    opacity: 0.6;
-}
-
-.show {
-    left: 0;
-    opacity: 1;
-}
-
 .form-container {
-    min-height: 190vh;
-    display: grid;
-    gap: 50px;
-    grid-template-columns: 1fr 1.2fr;
-    color: var.$peach;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow: hidden;
 }
 
 .contact-form {
-    width: 70%;
+    width: 50%;
     display: flex;
-    gap: 15px;
+    gap: var.$gap * 1.5;
     flex-direction: column;
-    margin-top: var.$margin * 6;
+    margin: var.$margin * 4 auto;
 
     h1 {
-        font-weight: 600;
+        font-weight: 800;
         font-size: var.$fontSize * 2.5;
-        color: var.$white;
+        color: var.$primary-pink;
         letter-spacing: var.$letterSpacing;
-        filter: drop-shadow(2px 2px var.$black);
     }
 
     h3 {
@@ -67,7 +31,7 @@
 
 .questions {
     display: flex;
-    gap: 10px;
+    gap: var.$gap;
     flex-direction: column;
 }
 
@@ -134,6 +98,7 @@
 }
 
 label {
+    color: var.$black;
     font-size: var.$fontSize * 1.6;
     font-weight: 300;
     line-height: 2;

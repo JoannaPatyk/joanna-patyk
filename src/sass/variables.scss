@@ -1,13 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Bitter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /* COLORS */
 
-$primary-pink: #fc6990;
-$secondary-pink: #c74668;
-
-$light-olive: #9c98a0;
-$primary-olive: #605966;
-$secondary-olive: #383040;
+$primary-pink: #d68aa7;
+$secondary-pink: #901a47;
+$primary-violet: #605966;
+$secondary-violet: #383040;
 
 $orange-000: #bf613f;
 $orange-100: #d98c4a;
@@ -19,7 +17,7 @@ $gray-100: #f2f2f2;
 $gray-200: #a9a9a9;
 $gray-300: #616161;
 
-$black: #333333;
+$black: #444444;
 $white: #fefcfd;
 $red: #be0303;
 $green: #2e8b57;
@@ -27,8 +25,8 @@ $peach: #fff5ec;
 
 /* FONT */
 
-$primary-fontFamily: 'Montserrat', sans-serif;
-$secondary-fontFamily: 'Dancing Script', cursive;
+$primary-fontFamily: 'Comfortaa', sans-serif;
+$secondary-fontFamily: 'Bitter', sans-serif;
 
 $fontSize: 10px;
 $letterSpacing: 1px;
