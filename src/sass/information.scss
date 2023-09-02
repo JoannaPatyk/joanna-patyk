@@ -1,7 +1,7 @@
 @use './variables.scss' as var;
 
 .information-container {
-    min-height: 35vh;
+    min-height: 30vh;
     text-transform: uppercase;
     display: flex;
     background-color: var.$peach;
@@ -9,14 +9,16 @@
     .elements {
         width: 55%;
         display: grid;
-        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-columns: 1fr 1fr;
         gap: var.$gap * 10;
         margin: 0 auto;
         margin-top: var.$margin * 3;
 
         h2 {
+            padding-top: var.$padding;
+            padding-bottom: var.$padding;
             font-size: var.$fontSize * 1.8;
-            border-bottom: 2px solid var.$orange-300;
+            border-bottom: 1px dotted var.$orange-300;
         }
 
         .element {

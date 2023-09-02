@@ -5,7 +5,7 @@
     position: relative;
     min-height: var.$height * 1.4;
     display: grid;
-    gap: 80px;
+    gap: var.$gap * 8;
     grid-template-rows: 0.05fr 0.95fr;
     color: var.$peach;
 
@@ -15,9 +15,10 @@
         font-weight: 800;
         color: var.$peach;
         font-size: var.$fontSize * 4;
+        font-family: var.$secondary-fontFamily;
         line-height: math.div(var.$lineHeight, 1.5);
-        letter-spacing: var.$letterSpacing;
-        filter: drop-shadow(2px 2px var.$primary-pink);
+        letter-spacing: var.$letterSpacing * 2;
+        filter: drop-shadow(2px 2px var.$secondary-pink);
         margin: 0 auto;
     }
 }
@@ -26,7 +27,7 @@
     width: 70%;
     margin: 0 auto;
     display: flex;
-    gap: 80px;
+    gap: var.$gap * 8;
     align-items: center;
     flex-direction: column;
 
@@ -37,7 +38,8 @@
 
         h2 {
             font-size: var.$fontSize * 3;
-            font-weight: 800;
+            font-weight: 400;
+            font-family: var.$secondary-fontFamily;
             line-height: var.$lineHeight * 0.75;
             letter-spacing: var.$letterSpacing * 2;
             text-transform: uppercase;
@@ -65,12 +67,19 @@
     position: absolute;
     top: 5%;
     left: 5%;
-    transform: rotate(-10deg);
+    transform: rotate(5deg);
 }
 
 .background-image-ideas {
     width: 12%;
     position: absolute;
-    top: 40%;
+    top: 35%;
     right: 10%;
+}
+
+.background-image-flower {
+    width: 12%;
+    position: absolute;
+    top: 60%;
+    left: 10%;
 }

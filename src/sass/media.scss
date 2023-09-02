@@ -6,19 +6,20 @@
     right: 6%;
     z-index: 100;
     display: flex;
-    gap: 10px;
+    gap: var.$gap;
 }
 
 .contact-icon {
     z-index: 100;
     font-size: var.$fontSize * 5.5;
-    color: var.$peach;
-    filter: drop-shadow(3px 3px var.$black);
+    color: var.$orange-300;
+    filter: drop-shadow(2px 2px var.$black);
     transition: var.$transition;
     cursor: pointer;
 
     &:hover {
-        color: var.$primary-olive;
+        color: var.$primary-pink;
+        filter: drop-shadow(2px 2px var.$black);
         transform: scale(0.9);
     }
 }

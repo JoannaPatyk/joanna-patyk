@@ -2,7 +2,7 @@
 @use 'sass:math';
 
 .menu {
-    height: math.div(var.$height, 10);
+    min-height: math.div(var.$height, 12);
     display: flex;
     gap: var.$gap * 2;
     margin-left: var.$padding * 10;
@@ -14,9 +14,10 @@
     padding: 0 var.$padding;
     color: var.$orange-300;
     filter: drop-shadow(2px 2px var.$black);
-    font-size: var.$fontSize * 3;
+    font-size: var.$fontSize * 3.5;
     font-weight: 800;
-    letter-spacing: var.$letterSpacing;
+    font-family: var.$secondary-fontFamily;
+    letter-spacing: var.$letterSpacing * 2;
     text-transform: uppercase;
     border: 1px solid transparent;
     text-align: center;
@@ -24,7 +25,7 @@
     cursor: pointer;
 
     &:hover {
-        color: var.$primary-olive;
+        color: var.$primary-pink;
         transform: scale(0.85);
     }
 }

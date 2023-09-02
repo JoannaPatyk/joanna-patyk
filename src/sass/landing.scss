@@ -9,23 +9,23 @@
     align-items: left;
     flex-direction: column;
     position: absolute;
-    top: 42%;
+    top: 35%;
     left: 18%;
     width: 60%;
-    font-weight: 700;
+    font-weight: 900;
     font-size: var.$fontSize * 5.8;
-    line-height: var.$lineHeight * 0.65;
+    line-height: var.$lineHeight * 0.85;
     text-align: left;
     letter-spacing: var.$letterSpacing;
 
     .part-1 {
         color: var.$primary-pink;
-        filter: drop-shadow(2px 2px var.$black);
+        filter: drop-shadow(3px 3px var.$black);
     }
 
     .part-2 {
         color: var.$orange-300;
-        filter: drop-shadow(2px 2px var.$black);
+        filter: drop-shadow(3px 3px var.$black);
     }
 }
 
@@ -34,13 +34,13 @@
     top: 2%;
     right: 7%;
     width: 33%;
-    filter: drop-shadow(6px 6px var.$peach);
+    filter: drop-shadow(6px 6px var.$orange-300);
     animation: upAndDown 6s infinite;
 }
 
 .landing-btn {
     position: absolute;
-    top: 70%;
+    top: 72%;
     left: 25%;
     width: 14%;
 }
@@ -61,10 +61,10 @@
 }
 
 .stars-image2 {
-    width: 13%;
+    width: 10%;
     position: absolute;
-    top: 63%;
-    left: 8%;
+    top: 70%;
+    left: 10%;
     transform: rotate(20deg);
     z-index: -3;
 }

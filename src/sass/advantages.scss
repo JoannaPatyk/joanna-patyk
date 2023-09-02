@@ -4,10 +4,10 @@
 .advantages-container {
     position: relative;
     width: 60%;
-    margin: var.$margin * 2 auto;
-    min-height: 130vh;
+    min-height: 120vh;
+    margin: 0 auto;
     display: flex;
-    gap: 80px;
+    gap: var.$gap * 6;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -15,7 +15,8 @@
     h1 {
         text-align: center;
         font-weight: 800;
-        color: var.$orange-300;
+        font-family: var.$secondary-fontFamily;
+        color: var.$primary-pink;
         font-size: var.$fontSize * 4;
         line-height: math.div(var.$lineHeight, 1.8);
         text-align: justify;
@@ -25,36 +26,41 @@
     }
 
     h2 {
-        width: 75%;
+        width: 80%;
         font-weight: 400;
-        font-size: var.$fontSize * 1.8;
+        font-size: var.$fontSize * 1.6;
         letter-spacing: var.$letterSpacing;
-        text-align: right;
-        line-height: 2;
+        line-height: var.$lineHeight * 1.1;
+        text-align: justify;
+
+        span {
+            font-weight: 800;
+        }
     }
 }
 
 .advantage-container {
     margin: 0 auto;
     display: grid;
-    gap: 40px;
+    gap: var.$gap;
     grid-template-columns: 1fr 1fr 1fr;
 
     h2 {
-        width: 70%;
-        font-size: var.$fontSize * 2;
+        padding: var.$padding;
+        font-size: var.$fontSize * 2.2;
         font-weight: 800;
+        font-family: var.$secondary-fontFamily;
+        filter: drop-shadow(1px 1px var.$black);
         line-height: math.div(var.$lineHeight, 1.5);
         letter-spacing: var.$letterSpacing;
-        color: var.$orange-300;
-        filter: drop-shadow(2px 2px var.$black);
-        border-right: 4px solid var.$orange-300;
+        color: var.$primary-pink;
         padding-right: var.$padding;
         text-transform: uppercase;
+        text-align: right;
     }
 
     p {
-        font-size: var.$fontSize * 1.5;
+        font-size: var.$fontSize * 1.6;
         line-height: var.$lineHeight;
         padding: 0 var.$padding * 2;
     }
@@ -62,25 +68,32 @@
     .advantage {
         padding: var.$padding * 2;
         display: grid;
-        gap: 20px;
+        gap: var.$gap;
         grid-template-rows: 1fr 2fr;
         place-items: center;
         font-weight: 400;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid transparent;
         border-radius: var.$borderRadius;
         background-color: transparent;
         transition: var.$transition;
         text-align: justify;
 
         &:hover {
-            box-shadow: 4px 4px 5px var.$orange-100;
+            border-right: 8px solid var.$primary-pink;
+            border-bottom: 8px solid var.$secondary-pink;
             transform: scale(0.95);
+        }
+
+        &:hover h2 {
+            color: var.$secondary-pink;
         }
     }
 }
 
 .advantage-title {
     display: flex;
-    gap: 30px;
+    gap: var.$gap * 3;
     flex-direction: column;
     align-items: center;
     align-items: center;
@@ -109,32 +122,40 @@
 }
 
 .dot {
-    width: 25%;
+    width: 35%;
     position: absolute;
     z-index: -3;
 }
 
 .green-dots1 {
-    bottom: -5%;
-    left: 49%;
+    bottom: 15%;
+    left: 80%;
 }
 
 .green-dots2 {
     top: 0%;
-    left: 46%;
+    left: 45%;
 }
 
 .pink-dots {
-    bottom: 4%;
-    left: 5%;
-    transform: rotate(5deg);
+    bottom: 0%;
+    left: 15%;
+    transform: rotate(10deg);
 }
 
 .plane {
-    width: 25%;
+    width: 30%;
     position: absolute;
-    top: 18%;
-    left: -15%;
+    top: 10%;
+    left: -20%;
     z-index: -3;
-    transform: rotate(-10deg);
+    transform: rotate(-18deg);
+}
+
+.planet {
+    width: 16%;
+    position: absolute;
+    top: 78%;
+    right: 100%;
+    z-index: -3;
 }

@@ -6,18 +6,14 @@ import Button from './Button';
 import Square from './Square';
 import Media from './Media';
 import landingImages from '../utils/landingImages';
-import squareSize from '../utils/squareSize';
 
 function Landing() {
     const navigate = useNavigate();
 
-    const handleClick = (path) => {
-        navigate(path);
+    const handleClick = () => {
+        navigate('/contact');
         window.scrollTo(0, 0);
     };
-    const displaySquare = squareSize.map(({ id, size }) => {
-        return <Square key={id} id={size} />;
-    });
 
     const displayImages = landingImages.map(({ id, src, cls, alt }) => {
         return <img key={id} src={src} className={cls} alt={alt} />;
@@ -33,11 +29,17 @@ function Landing() {
                     <span className="part-2">moja kreatywność</span>
                     <span className="part-3">stworzę Twój ślad w sieci</span>
                 </h1>
-                <Button nextClass="landing-btn" onClick={() => handleClick('/contact')}>
+                <Button nextClass="landing-btn" onClick={handleClick}>
                     kontakt
                 </Button>
             </div>
-            {displaySquare}
+
+            <Square id="big" top="5%" left="42%" backgroundColor="#f7dcc5" />
+            <Square id="medium" top="80%" left="-30%" backgroundColor="#383040" />
+            <Square id="small-1" top="35%" left="53%" backgroundColor="#605966" filterColor="#383040" />
+            <Square id="small-2" top="78%" left="45%" backgroundColor="#d68aa7" filterColor="#901a47" />
+            <Square id="small-3" top="25%" left="10%" backgroundColor="#f7dcc5" filterColor="#e1a36e" />
+
             {displayImages}
         </div>
     );
