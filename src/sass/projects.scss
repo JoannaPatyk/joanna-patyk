@@ -3,47 +3,50 @@
 
 .projects-container {
     width: 50%;
-    min-height: 450vh;
-    margin: 0 auto;
     display: flex;
-    gap: var.$gap * 5;
+    gap: var.$gap * 7;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: var.$padding * 3;
+    margin: var.$margin * 4 auto;
 
     h1 {
         width: 80%;
         text-align: center;
         font-weight: 800;
-        font-size: var.$fontSize * 5;
+        font-size: var.$fontSize * 5.5;
         line-height: math.div(var.$lineHeight, 1.5);
         letter-spacing: var.$letterSpacing;
+        line-height: var.$lineHeight * 0.8;
         margin: 0 auto;
 
-        span {
+        span:nth-child(1) {
             color: var.$primary-pink;
-            filter: drop-shadow(3px 3px var.$black);
+            filter: drop-shadow(3px 3px var.$secondary-pink);
+        }
+
+        span:nth-child(2) {
+            color: var.$orange-300;
+            filter: drop-shadow(3px 3px var.$orange-000);
         }
     }
 
     h2 {
-        width: 80%;
+        width: 100%;
         font-weight: 300;
-        font-size: var.$fontSize * 3;
+        font-size: var.$fontSize * 3.5;
         font-family: var.$secondary-fontFamily;
-        letter-spacing: var.$letterSpacing;
-        line-height: var.$lineHeight * 0.7;
+        letter-spacing: var.$letterSpacing * 2;
+        line-height: var.$lineHeight * 0.8;
         text-align: center;
-        margin: 0 auto;
     }
 
     .main-description {
         margin: 0 auto;
-        font-size: var.$fontSize * 1.6;
-        font-weight: 300;
-        line-height: var.$lineHeight;
-        letter-spacing: var.$letterSpacing * 0.5;
+        font-size: var.$fontSize * 1.8;
+        font-weight: 200;
+        line-height: var.$lineHeight * 1.2;
+        letter-spacing: var.$letterSpacing;
         text-align: justify;
 
         span {
@@ -56,41 +59,55 @@
     display: flex;
     gap: var.$gap * 8;
     flex-direction: column;
+    margin: var.$margin * 2 auto;
 }
 
 .project {
     display: flex;
-    gap: var.$gap * 2;
+    gap: var.$gap * 4;
     flex-direction: column;
 
     .project-title {
-        font-size: var.$fontSize * 2;
-        font-weight: 800;
-        text-transform: uppercase;
+        margin: 0 auto;
+        transition: var.$transition;
+        cursor: pointer;
 
-        span {
-            color: var.$primary-pink;
-            filter: drop-shadow(1px 1px var.$black);
+        a {
+            text-align: center;
+            font-size: var.$fontSize * 3.5;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var.$orange-300;
+            filter: drop-shadow(3px 3px var.$orange-000);
+        }
+
+        &:hover {
+            transform: scale(0.9);
         }
     }
 
     .points-title {
         display: flex;
-        gap: var.$gap;
+        gap: var.$gap * 2;
         align-items: center;
         justify-content: center;
-        font-size: var.$fontSize * 2;
+        font-size: var.$fontSize * 2.5;
         text-transform: uppercase;
-
-        .project-icon {
-            font-size: var.$fontSize * 3;
-        }
+        letter-spacing: var.$letterSpacing;
+        color: var.$primary-pink;
+        font-family: var.$secondary-fontFamily;
+        filter: drop-shadow(1px 1px var.$secondary-pink);
     }
 }
 
 .project-image {
     width: 100%;
     margin: var.$margin auto var.$margin * 2;
+    border: 30px solid var.$peach;
+    border-radius: var.$borderRadius;
+    box-shadow: 2px 2px 5px var.$orange-000;
+    filter: drop-shadow(10px 10px var.$orange-300);
 }
 
 .project-description {
@@ -101,16 +118,56 @@
     margin: 0 auto;
     text-align: justify;
 
-    h3,
-    ul {
-        font-size: var.$fontSize * 1.4;
-        font-weight: 400;
-        line-height: var.$lineHeight;
-        letter-spacing: var.$letterSpacing * 0.5;
+    li {
+        margin: 0 0 var.$margin;
 
         span {
             font-weight: 800;
+            font-size: var.$fontSize * 1.8;
+            font-family: var.$secondary-fontFamily;
+            text-transform: uppercase;
         }
+    }
+
+    h3,
+    li {
+        font-size: var.$fontSize * 1.4;
+        font-weight: 300;
+        line-height: var.$lineHeight * 1.2;
+        letter-spacing: var.$letterSpacing * 0.5;
+    }
+
+    .link-content {
+        display: flex;
+        gap: var.$gap * 0.5;
+        justify-content: center;
+        align-items: center;
+        transition: var.$transition;
+
+        &:hover {
+            transform: scale(0.9);
+        }
+
+        .link {
+            font-weight: 500;
+            font-size: var.$fontSize * 1.6;
+            text-decoration-style: wavy;
+            color: var.$black;
+        }
+
+        .link-icon {
+            filter: none;
+            color: var.$primary-pink;
+            font-size: var.$fontSize * 2;
+            background-color: transparent;
+            filter: drop-shadow(2px 2px var.$secondary-pink);
+            animation: scale 2s infinite;
+        }
+    }
+
+    .arrow-icon {
+        font-size: var.$fontSize * 5;
+        margin: 0 auto;
     }
 }
 
@@ -121,9 +178,14 @@
     justify-content: center;
 
     .technologie {
+        width: 10%;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         font-size: var.$fontSize * 5;
-        color: var.$secondary-pink;
-        filter: drop-shadow(2px 2px var.$white);
+        color: var.$black;
         transition: var.$transition;
         animation: scale 3s infinite linear;
         opacity: 0.5;
@@ -131,13 +193,115 @@
         &:hover {
             opacity: 1;
         }
+
+        p {
+            text-align: center;
+            opacity: 0;
+            font-size: var.$fontSize * 1.2;
+            transition: var.$transition;
+        }
+
+        &:hover p {
+            opacity: 1;
+        }
     }
 }
 
-.stars-image {
-    width: 10%;
+.project-images {
     position: absolute;
-    top: 25%;
-    left: 18%;
     z-index: -3;
+}
+
+.project-stars-image {
+    width: 10%;
+    top: 28%;
+    left: 18%;
+}
+
+.project-rocket-image {
+    width: 13%;
+    top: 85%;
+    left: 15%;
+}
+
+.project-planet-image {
+    width: 13%;
+    top: 70%;
+    right: 7%;
+    transform: rotate(50deg);
+}
+
+.project-cloud-image {
+    width: 6%;
+    top: 310%;
+    left: 20%;
+}
+
+.project-cloud4-image {
+    width: 10%;
+    top: 315%;
+    left: 10%;
+}
+
+.project-book-image {
+    width: 8%;
+    top: 290%;
+    right: 10%;
+    transform: rotate(20deg);
+}
+
+.project-cloud2-image {
+    width: 8%;
+    top: 675%;
+    right: 15%;
+}
+
+.project-cloud3-image {
+    width: 10%;
+    top: 690%;
+    right: 20%;
+}
+
+.project-stars3-image {
+    width: 5%;
+    top: 15%;
+    right: 23%;
+}
+
+.project-stars4-image {
+    width: 4%;
+    top: 84%;
+    right: 18%;
+}
+
+.project-stars5-image {
+    width: 8%;
+    top: 645%;
+    left: 10%;
+}
+
+.project-stars6-image {
+    width: 14%;
+    top: 600%;
+    right: 5%;
+}
+
+.project-plane-image {
+    width: 20%;
+    top: 670%;
+    left: 10%;
+    transform: rotate(20deg);
+}
+
+.project-cloud5-image {
+    width: 12%;
+    top: 550%;
+    left: 5%;
+}
+
+.project-bulb-image {
+    width: 6%;
+    top: 560%;
+    right: 15%;
+    transform: rotate(50deg);
 }

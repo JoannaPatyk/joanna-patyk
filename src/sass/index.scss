@@ -69,27 +69,24 @@ body {
     top: 80%;
     right: 3%;
     z-index: 100;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border: none;
     border-radius: var.$borderRadius;
-    color: var.$primary-pink;
-    filter: drop-shadow(1px 1px var.$peach);
     background-color: transparent;
     transition: var.$transition;
     overflow: hidden;
     cursor: pointer;
-    opacity: 0.8;
 
     &:hover {
-        transform: scale(0.8);
         opacity: 1;
+        transform: scale(0.8);
     }
 
     .btn-up-icon {
         font-size: var.$fontSize * 5;
-        animation: pulsating 3s infinite linear;
-        filter: drop-shadow(1px 1px var.$peach);
+        color: var.$orange-300;
+        filter: drop-shadow(2px 2px var.$orange-000);
     }
 }
 
@@ -104,7 +101,7 @@ body {
     width: var.$width;
     height: var.$height;
     z-index: -1;
-    transform: rotate(52deg);
+    transform: rotate(50deg);
 }
 
 #medium {
@@ -115,28 +112,28 @@ body {
 }
 
 #small-1 {
-    width: math.div(var.$width, 19);
-    height: math.div(var.$width, 19);
+    width: 95px;
+    height: 95px;
     transform: rotate(-80deg);
     animation: pulsatingSquare1 3s infinite;
 }
 
 #small-2 {
-    width: math.div(var.$width, 13);
-    height: math.div(var.$width, 13);
+    width: 120px;
+    height: 120px;
     transform: rotate(30deg);
-    animation: pulsatingSquare2 6s infinite;
+    animation: pulsatingSquare2 3s infinite;
 }
 
 #small-3 {
-    width: math.div(var.$width, 25);
-    height: math.div(var.$width, 25);
-    animation: pulsatingSquare3 3s infinite;
+    width: 65px;
+    height: 65px;
+    animation: pulsatingSquare3 4s infinite;
 }
 
 #small-4 {
-    width: math.div(var.$width, 11);
-    height: math.div(var.$width, 11);
+    width: 80px;
+    height: 80px;
     transform: rotate(20deg);
     animation: pulsatingSquare2 3s infinite;
 }

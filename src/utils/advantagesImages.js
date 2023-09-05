@@ -1,8 +1,8 @@
 import yellowStarsImage from '../images/yellow-stars.png';
 import greenDotsImage from '../images/green-dots.png';
 import pinkDotsImage from '../images/pink-dots.png';
-import planeImage from '../images/plane.png';
-import planetImage from '../images/planet.png';
+import planeImage from '../images/pink-plane.png';
+import planetImage from '../images/violet-planet.png';
 
 const landingImages = [
     {

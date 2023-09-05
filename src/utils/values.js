@@ -22,7 +22,7 @@ const values = [
         icon: <LuHeartHandshake />,
         title: 'Partnerstwo i zaufanie',
         text: [
-            <p key={0}>
+            <p key={1}>
                 Współpraca opiera się na <span>wzajemnym zaufaniu i otwartej komunikacji</span>. Dążę do zrozumienia
                 Twoich celów i wizji, aby móc w pełni oddać ich charakter w tworzonym projekcie. Regularnie dzielę się
                 postępem prac, aby osiągnąć optymalny rezultat.
@@ -34,7 +34,7 @@ const values = [
         icon: <RxRocket />,
         title: 'Optymalizacja i Szybkość',
         text: [
-            <p key={0}>
+            <p key={2}>
                 Strony internetowe powinny być nie tylko estetyczne, ale także szybkie i efektywne. Zwracam uwagę na
                 optymalizację kodu, obrazów i innych zasobów, <span>aby strona wczytywała się szybko i płynnie</span>.
                 To kluczowe dla dobrej jakości doświadczenia użytkownika.
@@ -46,7 +46,7 @@ const values = [
         icon: <PiMedalLight />,
         title: 'Etyka i Poufność',
         text: [
-            <p key={0}>
+            <p key={3}>
                 Szanuję prywatność odwiedzających i dbam o{' '}
                 <span>etyczne praktyki w obszarze zbierania i przetwarzania danych</span>. Gwarantuję poufność
                 przekazywanych informacji oraz dbam o zgodność z obowiązującymi przepisami dotyczącymi ochrony danych.

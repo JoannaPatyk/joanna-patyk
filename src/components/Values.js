@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Square from './Square';
+import Button from './Button';
 import '../css/values.css';
 import values from '../utils/values';
 import planeImage from '../images/paper-plane.png';
-import flowerImage from '../images/flower.png';
-import bulbImage from '../images/light-bulb.png';
+import flowerImage from '../images/violet-bg-flower.png';
+import bulbImage from '../images/violet-bg-bulb.png';
+import { MdOutlineKeyboardDoubleArrowRight, MdOutlineKeyboardDoubleArrowLeft } from 'react-icons/md';
 
 function Values() {
     const [activeId, setActiveId] = useState(null);
@@ -27,6 +29,36 @@ function Values() {
         setActiveTitle(title);
     };
 
+    const handleToggleLeft = () => {
+        if (activeId === null) return;
+
+        let currentIndex = values.findIndex((item) => item.id === activeId);
+        if (currentIndex === -1) return;
+
+        let newIndex = currentIndex - 1;
+        if (newIndex < 0) {
+            newIndex = values.length - 1;
+        }
+
+        const newValue = values[newIndex];
+        handleClick(newValue.id, newValue.text, newValue.title);
+    };
+
+    const handleToggleRight = () => {
+        if (activeId === null) return;
+
+        let currentIndex = values.findIndex((item) => item.id === activeId);
+        if (currentIndex === -1) return;
+
+        let newIndex = currentIndex + 1;
+        if (newIndex >= values.length) {
+            newIndex = 0;
+        }
+
+        const newValue = values[newIndex];
+        handleClick(newValue.id, newValue.text, newValue.title);
+    };
+
     const displayValues = values.map(({ id, icon, title, text }) => {
         const isActive = id === activeId;
         return (
@@ -44,18 +76,28 @@ function Values() {
     return (
         <div className="values-container">
             <h1>Jakie wartości mną kierują?</h1>
-            <h2>
+            <h3>
                 Poniżej znajdziesz zasady, które przewodzą mojemu podejściu do tworzenia pięknych, funkcjonalnych i
                 efektywnych stron. Jeśli jesteś zainteresowany/a współpracą przy tworzeniu swojej strony internetowej,
                 serdecznie zapraszam do kontaktu. Chętnie poznam Twoje potrzeby i pomogę stworzyć stronę, która
-                odzwierciedli Twój charakter. <br /> <span>Jeśli masz jeszcze jakieś pytania, śmiało pytaj!</span>
-            </h2>
+                odzwierciedli Twój charakter.
+            </h3>
+            <h2>Jeśli masz jeszcze jakieś pytania, śmiało pytaj!</h2>
             <div className="values">{displayValues}</div>
+
             <div className="values-description">
                 {activeDescription && (
-                    <div className="value-text">
+                    <div className="value-content">
                         <h2>{activeTitle}</h2>
-                        {activeDescription}
+                        <div className="value-text">
+                            <Button onClick={handleToggleLeft} nextClass="values-btn">
+                                <MdOutlineKeyboardDoubleArrowLeft />
+                            </Button>
+                            {activeDescription}
+                            <Button onClick={handleToggleRight} nextClass="values-btn">
+                                <MdOutlineKeyboardDoubleArrowRight />
+                            </Button>
+                        </div>
                     </div>
                 )}
             </div>
@@ -64,8 +106,8 @@ function Values() {
             <img src={planeImage} className="values-image-plane" alt="Strzałka" />
             <img src={bulbImage} className="values-image-bulb" alt="Żarówka" />
 
-            <Square id="small-3" top="103%" left="-8%" backgroundColor="#d68aa7" filterColor="#901a47" />
-            <Square id="small-1" top="95%" left="-20%" backgroundColor="#f7dcc5" filterColor="#e1a36e" />
+            <Square id="small-1" top="70%" left="-15%" backgroundColor="#d68aa7" filterColor="#901a47" />
+            <Square id="small-1" top="40%" left="110%" backgroundColor="#f9e3d1" filterColor="#e1a36e" />
         </div>
     );
 }

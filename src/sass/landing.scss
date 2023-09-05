@@ -20,18 +20,18 @@
 
     .part-1 {
         color: var.$primary-pink;
-        filter: drop-shadow(3px 3px var.$black);
+        filter: drop-shadow(3px 3px var.$secondary-pink);
     }
 
     .part-2 {
         color: var.$orange-300;
-        filter: drop-shadow(3px 3px var.$black);
+        filter: drop-shadow(3px 3px var.$orange-000);
     }
 }
 
 .background-image {
     position: absolute;
-    top: 2%;
+    top: -5%;
     right: 7%;
     width: 33%;
     filter: drop-shadow(6px 6px var.$orange-300);
@@ -42,10 +42,11 @@
     position: absolute;
     top: 72%;
     left: 25%;
-    width: 14%;
+    width: 18%;
 }
 
 .dot-image1 {
+    width: 20%;
     position: absolute;
     top: 10%;
     left: 10%;
@@ -55,25 +56,27 @@
 .stars-image1 {
     width: 15%;
     position: absolute;
-    top: 12%;
-    left: 32%;
+    top: 14%;
+    left: 34%;
     z-index: -3;
 }
 
 .stars-image2 {
     width: 10%;
     position: absolute;
-    top: 70%;
+    top: 68%;
     left: 10%;
     transform: rotate(20deg);
     z-index: -3;
 }
 
 .dot-image2 {
+    width: 20%;
     position: absolute;
     top: 45%;
-    left: 35%;
+    left: 38%;
     z-index: -3;
+    transform: rotate(-30deg);
 }
 
 @keyframes upAndDown {
