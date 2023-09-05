@@ -5,36 +5,11 @@ import starsImage1 from '../images/yellow-stars.png';
 import starsImage2 from '../images/big-star.png';
 
 const landingImages = [
-    {
-        id: 0,
-        src: dotImage1,
-        cls: 'dot-image1',
-        alt: 'Kropki'
-    },
-    {
-        id: 1,
-        src: starsImage2,
-        cls: 'stars-image2',
-        alt: 'Gwiazdki'
-    },
-    {
-        id: 2,
-        src: starsImage1,
-        cls: 'stars-image1',
-        alt: 'Gwiazdki'
-    },
-    {
-        id: 3,
-        src: dotImage2,
-        cls: 'dot-image2',
-        alt: 'Kropki'
-    },
-    {
-        id: 4,
-        src: backgroundImage,
-        cls: 'background-image',
-        alt: 'Żarówka'
-    }
+    { id: 0, src: dotImage1, cls: 'landing-images landing-dot1-image', alt: 'Kropki' },
+    { id: 1, src: starsImage2, cls: 'landing-images landing-stars2-image', alt: 'Gwiazdki' },
+    { id: 2, src: starsImage1, cls: 'landing-images landing-stars1-image', alt: 'Gwiazdki' },
+    { id: 3, src: dotImage2, cls: 'landing-images landing-dot2-image', alt: 'Kropki' },
+    { id: 4, src: backgroundImage, cls: 'landing-background-image', alt: 'Żarówka' }
 ];
 
 export default landingImages;

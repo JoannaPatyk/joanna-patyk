@@ -33,4 +33,9 @@
             filter: drop-shadow(2px 2px var.$secondary-pink);
         }
     }
+
+    .active {
+        color: var.$primary-pink;
+        filter: drop-shadow(2px 2px var.$secondary-pink);
+    }
 }

@@ -3,9 +3,7 @@ import Square from './Square';
 import Button from './Button';
 import '../css/values.css';
 import values from '../utils/values';
-import planeImage from '../images/paper-plane.png';
-import flowerImage from '../images/violet-bg-flower.png';
-import bulbImage from '../images/violet-bg-bulb.png';
+import valuesImage from '../utils/valuesImage';
 import { MdOutlineKeyboardDoubleArrowRight, MdOutlineKeyboardDoubleArrowLeft } from 'react-icons/md';
 
 function Values() {
@@ -73,6 +71,10 @@ function Values() {
         );
     });
 
+    const displayImages = valuesImage.map(({ id, src, className, alt }) => {
+        return <img key={id} src={src} className={className} alt={alt} />;
+    });
+
     return (
         <div className="values-container">
             <h1>Jakie wartości mną kierują?</h1>
@@ -101,11 +103,7 @@ function Values() {
                     </div>
                 )}
             </div>
-
-            <img src={flowerImage} className="values-image-flower" alt="Gwiazda" />
-            <img src={planeImage} className="values-image-plane" alt="Strzałka" />
-            <img src={bulbImage} className="values-image-bulb" alt="Żarówka" />
-
+            {displayImages}
             <Square id="small-1" top="70%" left="-15%" backgroundColor="#d68aa7" filterColor="#901a47" />
             <Square id="small-1" top="40%" left="110%" backgroundColor="#f9e3d1" filterColor="#e1a36e" />
         </div>
