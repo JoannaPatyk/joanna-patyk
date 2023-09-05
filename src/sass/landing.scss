@@ -29,7 +29,12 @@
     }
 }
 
-.background-image {
+.landing-images {
+    position: absolute;
+    z-index: -3;
+}
+
+.landing-background-image {
     position: absolute;
     top: -5%;
     right: 7%;
@@ -45,37 +50,29 @@
     width: 18%;
 }
 
-.dot-image1 {
+.landing-dot1-image {
     width: 20%;
-    position: absolute;
     top: 10%;
     left: 10%;
-    z-index: -3;
 }
 
-.stars-image1 {
+.landing-stars1-image {
     width: 15%;
-    position: absolute;
     top: 14%;
     left: 34%;
-    z-index: -3;
 }
 
-.stars-image2 {
+.landing-stars2-image {
     width: 10%;
-    position: absolute;
     top: 68%;
     left: 10%;
     transform: rotate(20deg);
-    z-index: -3;
 }
 
-.dot-image2 {
+.landing-dot2-image {
     width: 20%;
-    position: absolute;
     top: 45%;
     left: 38%;
-    z-index: -3;
     transform: rotate(-30deg);
 }
 

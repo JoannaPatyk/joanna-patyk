@@ -7,12 +7,11 @@ import DisplayProjects from '../components/DisplayProjects';
 import Footer from '../components/Footer';
 import projectImages from '../utils/projectImages';
 import projectsSquares from '../utils/projectsSquares';
-
 import '../css/projects.css';
 
 function Projects() {
-    const imageElements = projectImages.map((image, index) => (
-        <img key={index} src={image.src} className={image.className} alt="" />
+    const imageElements = projectImages.map(({ id, src, className, alt }) => (
+        <img key={id} src={src} className={className} alt={alt} />
     ));
 
     const squareElements = projectsSquares.map(({ id, cls, top, left, backgroundColor, filterColor }) => (

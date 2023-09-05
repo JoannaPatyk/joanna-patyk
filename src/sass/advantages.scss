@@ -113,55 +113,52 @@
     }
 }
 
-.stars {
+.advantages-images {
     position: absolute;
+    z-index: -3;
+}
+
+.advantages-stars {
     width: 20%;
     top: 12%;
     right: -15%;
-    z-index: -3;
 }
 
 .dot {
     width: 40%;
-    position: absolute;
-    z-index: -3;
 }
 
-.green-dots1 {
+.advantages-green-dots1 {
     bottom: 15%;
     left: 80%;
     z-index: -3;
     transform: rotate(-10deg);
 }
 
-.green-dots2 {
+.advantages-green-dots2 {
     top: 0%;
     left: 45%;
     z-index: -3;
     transform: rotate(10deg);
 }
 
-.pink-dots {
+.advantages-pink-dots {
     bottom: 0%;
     left: 15%;
     z-index: -3;
     transform: rotate(10deg);
 }
 
-.plane {
+.advantages-plane {
     width: 30%;
-    position: absolute;
     top: 15%;
     left: -20%;
     z-index: -3;
     transform: rotate(-18deg);
-    z-index: -3;
 }
 
-.planet {
+.advantages-planet {
     width: 16%;
-    position: absolute;
     top: 78%;
     right: 95%;
-    z-index: -3;
 }
