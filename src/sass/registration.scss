@@ -5,7 +5,7 @@
     position: relative;
     min-height: var.$height * 1.4;
     display: grid;
-    gap: var.$gap * 8;
+    gap: var.$gap * 6;
     grid-template-rows: 0.05fr 0.95fr;
     color: var.$peach;
 
@@ -19,7 +19,7 @@
         line-height: math.div(var.$lineHeight, 1.5);
         letter-spacing: var.$letterSpacing * 2;
         filter: drop-shadow(2px 2px var.$secondary-pink);
-        margin: 0 auto;
+        margin: var.$margin * 3 auto;
     }
 }
 
@@ -27,7 +27,7 @@
     width: 70%;
     margin: 0 auto;
     display: flex;
-    gap: var.$gap * 8;
+    gap: var.$gap * 6;
     align-items: center;
     flex-direction: column;
 
@@ -38,25 +38,26 @@
 
         h2 {
             font-size: var.$fontSize * 3;
-            font-weight: 400;
+            font-weight: 900;
             font-family: var.$secondary-fontFamily;
             line-height: var.$lineHeight * 0.75;
             letter-spacing: var.$letterSpacing * 2;
             text-transform: uppercase;
             color: var.$peach;
-            margin: var.$padding 0;
+            margin: var.$margin 0;
         }
 
         p {
-            font-size: var.$fontSize * 2;
+            font-size: var.$fontSize * 2.1;
             letter-spacing: var.$letterSpacing;
-            line-height: var.$lineHeight * 0.9;
+            line-height: var.$lineHeight;
             text-align: justify;
             color: var.$peach;
         }
 
         span {
             font-weight: 800;
+            color: var.$primary-pink;
             filter: drop-shadow(2px 2px var.$secondary-pink);
         }
     }
@@ -75,6 +76,7 @@
     position: absolute;
     top: 35%;
     right: 10%;
+    z-index: -2;
 }
 
 .background-image-flower {
@@ -82,4 +84,5 @@
     position: absolute;
     top: 60%;
     left: 10%;
+    z-index: -2;
 }

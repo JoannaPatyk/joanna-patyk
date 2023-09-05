@@ -2,7 +2,6 @@ import React from 'react';
 import Button from './Button';
 import Square from './Square';
 import Menu from './Menu';
-import Media from './Media';
 import '../css/applicationForm.css';
 import websiteTypes from '../utils/websiteTypes';
 
@@ -20,7 +19,6 @@ function ApplicationForm() {
     return (
         <>
             <Menu />
-            <Media />
             <div className="form-container">
                 <form className="contact-form">
                     <h1>FORMULARZ ZGŁOSZENIOWY</h1>
@@ -67,7 +65,7 @@ function ApplicationForm() {
                         wyślij
                     </Button>
 
-                    <Square id="small-1" top="90%" left="12%" backgroundColor="#f7dcc5" filterColor="#e1a36e" />
+                    <Square id="small-1" top="90%" left="12%" backgroundColor="#f9e3d1" filterColor="#e1a36e" />
                     <Square id="small-3" top="70%" left="5%" backgroundColor="#d68aa7 " filterColor="#901a47" />
 
                     <Square id="small-11" />

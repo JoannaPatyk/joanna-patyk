@@ -1,25 +1,23 @@
 @use './variables.scss' as var;
 
 .contact-icon-container {
-    position: absolute;
-    top: 8%;
-    right: 6%;
-    z-index: 100;
     display: flex;
     gap: var.$gap;
-}
+    align-items: center;
+    justify-content: center;
 
-.contact-icon {
-    z-index: 100;
-    font-size: var.$fontSize * 5.5;
-    color: var.$orange-300;
-    filter: drop-shadow(2px 2px var.$black);
-    transition: var.$transition;
-    cursor: pointer;
+    .contact-icon {
+        z-index: 100;
+        font-size: var.$fontSize * 5.5;
+        color: var.$orange-300;
+        filter: drop-shadow(2px 2px var.$orange-000);
+        transition: var.$transition;
+        cursor: pointer;
 
-    &:hover {
-        color: var.$primary-pink;
-        filter: drop-shadow(2px 2px var.$black);
-        transform: scale(0.9);
+        &:hover {
+            color: var.$primary-pink;
+            filter: drop-shadow(2px 2px var.$secondary-pink);
+            transform: scale(0.9);
+        }
     }
 }

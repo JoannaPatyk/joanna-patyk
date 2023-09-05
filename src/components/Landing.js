@@ -4,7 +4,6 @@ import '../css/landing.css';
 import Menu from './Menu';
 import Button from './Button';
 import Square from './Square';
-import Media from './Media';
 import landingImages from '../utils/landingImages';
 
 function Landing() {
@@ -22,7 +21,6 @@ function Landing() {
     return (
         <div className="landing-container">
             <Menu />
-            <Media />
             <div className="landing-content">
                 <h1 className="landing-title">
                     <span className="part-1">Twoja wizja</span>
@@ -34,11 +32,11 @@ function Landing() {
                 </Button>
             </div>
 
-            <Square id="big" top="5%" left="42%" backgroundColor="#f7dcc5" />
+            <Square id="big" top="5%" left="42%" backgroundColor="#f9e3d1" />
             <Square id="medium" top="80%" left="-30%" backgroundColor="#383040" />
-            <Square id="small-1" top="35%" left="53%" backgroundColor="#605966" filterColor="#383040" />
-            <Square id="small-2" top="78%" left="45%" backgroundColor="#d68aa7" filterColor="#901a47" />
-            <Square id="small-3" top="25%" left="10%" backgroundColor="#f7dcc5" filterColor="#e1a36e" />
+            <Square id="small-3" top="35%" left="53%" backgroundColor="#605966" filterColor="#383040" />
+            <Square id="small-2" top="80%" left="45%" backgroundColor="#d68aa7" filterColor="#901a47" />
+            <Square id="small-1" top="20%" left="10%" backgroundColor="#f9e3d1" filterColor="#e1a36e" />
 
             {displayImages}
         </div>

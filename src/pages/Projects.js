@@ -1,42 +1,38 @@
 import React from 'react';
 import Menu from '../components/Menu';
-import Media from '../components/Media';
+import Square from '../components/Square';
 import Banner from '../components/Banner';
 import ScrollButton from '../components/ScrollButton';
+import DisplayProjects from '../components/DisplayProjects';
 import Footer from '../components/Footer';
-import projects from '../utils/projects';
-import starsImage from '../images/yellow-stars.png';
+import projectImages from '../utils/projectImages';
+import projectsSquares from '../utils/projectsSquares';
 
 import '../css/projects.css';
 
 function Projects() {
-    const displayProjectContent = projects.map(({ id, title, images, description, characteristics, technologies }) => {
-        return (
-            <div key={id} className="project">
-                <h2 className="project-title">
-                    Projekt: <span>{title}</span>
-                </h2>
-                {images}
-                <div className="project-description">
-                    {description}
-                    <h4 className="points-title">Cechy projektu:</h4>
-                    <div className="characteristics">
-                        <ul>{characteristics}</ul>
-                    </div>
-                    <h4 className="points-title">Technologie użyte w projekcie:</h4>
-                    <div className="technologies">{technologies}</div>
-                </div>
-            </div>
-        );
-    });
+    const imageElements = projectImages.map((image, index) => (
+        <img key={index} src={image.src} className={image.className} alt="" />
+    ));
+
+    const squareElements = projectsSquares.map(({ id, cls, top, left, backgroundColor, filterColor }) => (
+        <Square
+            key={id}
+            id={id}
+            cls={cls}
+            top={top}
+            left={left}
+            backgroundColor={backgroundColor}
+            filterColor={filterColor}
+        />
+    ));
 
     return (
         <>
             <Menu />
-            <Media />
             <div className="projects-container">
                 <h1>
-                    Zapraszam do <span>zapoznania się</span> z częścią moich projektów
+                    Zapraszam do <span>zapoznania się</span> z częścią <span>wykonanych projektów</span>
                 </h1>
                 <h2> Każdy projekt to unikalne wyzwanie, którego podjęłam się z pasją i zaangażowaniem.</h2>
                 <h3 className="main-description">
@@ -49,9 +45,9 @@ function Projects() {
                         tworzenia stron internetowych!
                     </span>
                 </h3>
-                <div className="projects">{displayProjectContent}</div>
-
-                <img src={starsImage} className="stars-image" alt="" />
+                <DisplayProjects />
+                {imageElements}
+                {squareElements}
             </div>
             <ScrollButton />
             <Banner />
