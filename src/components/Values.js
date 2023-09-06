@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Square from './Square';
 import Button from './Button';
 import '../css/values.css';
 import values from '../utils/values';
 import valuesImage from '../utils/valuesImage';
+import valuesSquare from '../utils/valuesSquares';
+import DisplaySquares from '../components/DisplaySquares';
 import { MdOutlineKeyboardDoubleArrowRight, MdOutlineKeyboardDoubleArrowLeft } from 'react-icons/md';
 
 function Values() {
@@ -104,8 +105,7 @@ function Values() {
                 )}
             </div>
             {displayImages}
-            <Square id="small-1" top="70%" left="-15%" backgroundColor="#d68aa7" filterColor="#901a47" />
-            <Square id="small-1" top="40%" left="110%" backgroundColor="#f9e3d1" filterColor="#e1a36e" />
+            <DisplaySquares elements={valuesSquare} />
         </div>
     );
 }

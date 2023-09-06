@@ -1,7 +1,8 @@
 import React from 'react';
-import Square from './Square';
+import DisplaySquares from './DisplaySquares';
 import advantages from '../utils/advantages';
 import advantagesImages from '../utils/advantagesImages';
+import advantageSquares from '../utils/advantageSquares';
 import '../css/advantages.css';
 
 function Advantages() {
@@ -29,10 +30,7 @@ function Advantages() {
             </h2>
             <section className="advantage-container">{displayAdvantages}</section>
             {displayImages}
-
-            <Square id="medium" top="80%" left="-40%" backgroundColor="#383040" />
-            <Square id="small-2" top="60%" left="-19%" backgroundColor="#605966" filterColor="#383040" />
-            <Square id="small-1" top="35%" left="110%" backgroundColor="#d68aa7" filterColor="#901a47" />
+            <DisplaySquares elements={advantageSquares} />
         </div>
     );
 }
