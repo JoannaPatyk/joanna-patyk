@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Button from './Button';
-import '../css/values.css';
+import DisplaySquares from './DisplaySquares';
+import DisplayImages from './DisplayImages';
 import values from '../utils/values';
 import valuesImage from '../utils/valuesImage';
 import valuesSquare from '../utils/valuesSquares';
-import DisplaySquares from '../components/DisplaySquares';
+import '../css/values.css';
 import { MdOutlineKeyboardDoubleArrowRight, MdOutlineKeyboardDoubleArrowLeft } from 'react-icons/md';
 
 function Values() {
@@ -72,10 +73,6 @@ function Values() {
         );
     });
 
-    const displayImages = valuesImage.map(({ id, src, className, alt }) => {
-        return <img key={id} src={src} className={className} alt={alt} />;
-    });
-
     return (
         <div className="values-container">
             <h1>Jakie wartości mną kierują?</h1>
@@ -104,7 +101,7 @@ function Values() {
                     </div>
                 )}
             </div>
-            {displayImages}
+            <DisplayImages elements={valuesImage} />
             <DisplaySquares elements={valuesSquare} />
         </div>
     );

@@ -17,7 +17,7 @@ function DisplaySquares({ elements }) {
 }
 
 DisplaySquares.propTypes = {
-    elements: PropTypes.string
+    elements: PropTypes.array
 };
 
 export default DisplaySquares;

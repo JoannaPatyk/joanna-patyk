@@ -14,7 +14,7 @@ function Square({ id, className, top, left, backgroundColor, filterColor }) {
 }
 
 Square.propTypes = {
-    id: PropTypes.string,
+    id: PropTypes.any,
     className: PropTypes.string,
     top: PropTypes.string,
     left: PropTypes.string,

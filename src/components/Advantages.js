@@ -1,5 +1,6 @@
 import React from 'react';
 import DisplaySquares from './DisplaySquares';
+import DisplayImages from './DisplayImages';
 import advantages from '../utils/advantages';
 import advantagesImages from '../utils/advantagesImages';
 import advantageSquares from '../utils/advantageSquares';
@@ -15,10 +16,6 @@ function Advantages() {
         );
     });
 
-    const displayImages = advantagesImages.map(({ id, src, cls, alt }) => {
-        return <img key={id} src={src} className={cls} alt={alt} />;
-    });
-
     return (
         <div className="advantages-container">
             <h1>Czy warto posiadać stronę internetową?</h1>
@@ -29,7 +26,7 @@ function Advantages() {
                 online może być równoznaczny z utratą ogromnego potencjału rynkowego.
             </h2>
             <section className="advantage-container">{displayAdvantages}</section>
-            {displayImages}
+            <DisplayImages elements={advantagesImages} />
             <DisplaySquares elements={advantageSquares} />
         </div>
     );
