@@ -97,41 +97,43 @@ body {
     border-radius: var.$borderRadius;
 }
 
-#big {
+.big {
     width: var.$width;
     height: var.$height;
     z-index: -1;
     transform: rotate(50deg);
 }
 
-#medium {
+.medium {
     width: var.$width * 2;
     height: var.$height * 1.6;
     z-index: -2;
     transform: rotate(170deg);
 }
 
-#small-1 {
+.small-1 {
+    position: absolute;
+    border-radius: var.$borderRadius;
     width: 95px;
     height: 95px;
     transform: rotate(-80deg);
     animation: pulsatingSquare1 3s infinite;
 }
 
-#small-2 {
+.small-2 {
     width: 120px;
     height: 120px;
     transform: rotate(30deg);
     animation: pulsatingSquare2 3s infinite;
 }
 
-#small-3 {
+.small-3 {
     width: 65px;
     height: 65px;
     animation: pulsatingSquare3 4s infinite;
 }
 
-#small-4 {
+.small-4 {
     width: 80px;
     height: 80px;
     transform: rotate(20deg);

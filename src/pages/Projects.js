@@ -1,10 +1,10 @@
 import React from 'react';
 import Menu from '../components/Menu';
-import Square from '../components/Square';
 import Banner from '../components/Banner';
 import ScrollButton from '../components/ScrollButton';
 import DisplayProjects from '../components/DisplayProjects';
 import Footer from '../components/Footer';
+import DisplaySquares from '../components/DisplaySquares';
 import projectImages from '../utils/projectImages';
 import projectsSquares from '../utils/projectsSquares';
 import '../css/projects.css';
@@ -12,18 +12,6 @@ import '../css/projects.css';
 function Projects() {
     const imageElements = projectImages.map(({ id, src, className, alt }) => (
         <img key={id} src={src} className={className} alt={alt} />
-    ));
-
-    const squareElements = projectsSquares.map(({ id, cls, top, left, backgroundColor, filterColor }) => (
-        <Square
-            key={id}
-            id={id}
-            cls={cls}
-            top={top}
-            left={left}
-            backgroundColor={backgroundColor}
-            filterColor={filterColor}
-        />
     ));
 
     return (
@@ -46,7 +34,7 @@ function Projects() {
                 </h3>
                 <DisplayProjects />
                 {imageElements}
-                {squareElements}
+                <DisplaySquares elements={projectsSquares} />
             </div>
             <ScrollButton />
             <Banner />

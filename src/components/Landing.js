@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import '../css/landing.css';
 import Menu from './Menu';
 import Button from './Button';
-import Square from './Square';
+import DisplaySquares from './DisplaySquares';
+import landingSquare from '../utils/landingSquares';
 import landingImages from '../utils/landingImages';
 
 function Landing() {
@@ -31,13 +32,7 @@ function Landing() {
                     kontakt
                 </Button>
             </div>
-
-            <Square id="big" top="5%" left="42%" backgroundColor="#f9e3d1" />
-            <Square id="medium" top="80%" left="-30%" backgroundColor="#383040" />
-            <Square id="small-3" top="35%" left="53%" backgroundColor="#605966" filterColor="#383040" />
-            <Square id="small-2" top="80%" left="45%" backgroundColor="#d68aa7" filterColor="#901a47" />
-            <Square id="small-1" top="20%" left="10%" backgroundColor="#f9e3d1" filterColor="#e1a36e" />
-
+            <DisplaySquares elements={landingSquare} />
             {displayImages}
         </div>
     );
