@@ -90,6 +90,24 @@ body {
     }
 }
 
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var.$gap * 2;
+}
+
+.toggle-btn {
+    border: none;
+    filter: none;
+    color: var.$primary-pink;
+    font-size: var.$fontSize * 4;
+    background-color: transparent;
+    filter: drop-shadow(2px 2px var.$secondary-pink);
+    animation: scale 2s infinite;
+    cursor: pointer;
+}
+
 // SQUARE
 
 .square {

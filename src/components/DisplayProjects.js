@@ -1,4 +1,5 @@
 import React from 'react';
+import Slider from './Slider';
 import projects from '../utils/projects';
 import { MdOutlineKeyboardDoubleArrowRight } from 'react-icons/md';
 
@@ -9,7 +10,7 @@ function DisplayProjects() {
                 return (
                     <div key={id} className="project">
                         <h2 className="project-title">{title}</h2>
-                        {images}
+                        <Slider array={images} />
                         <div className="project-description">
                             {description}
                             <h4 className="points-title">Cechy projektu:</h4>
