@@ -4,28 +4,48 @@
 .form-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     overflow: hidden;
 }
 
 .contact-form {
     width: 50%;
     display: flex;
-    gap: var.$gap * 1.5;
+    gap: var.$gap * 4;
     flex-direction: column;
     margin: var.$margin * 4 auto;
 
     h1 {
         font-weight: 800;
-        font-size: var.$fontSize * 2.5;
+        font-size: var.$fontSize * 3.5;
+        text-align: center;
         color: var.$primary-pink;
         letter-spacing: var.$letterSpacing;
+        filter: drop-shadow(2px 2px var.$secondary-pink);
+    }
+
+    h2 {
+        margin: 0 auto;
+        width: 60%;
+        font-weight: 800;
+        font-size: var.$fontSize * 3;
+        text-align: center;
+        letter-spacing: var.$letterSpacing;
+        line-height: var.$lineHeight * 0.8;
+
+        span {
+            color: var.$orange-300;
+            filter: drop-shadow(2px 2px var.$orange-000);
+        }
     }
 
     h3 {
         font-size: var.$fontSize * 1.8;
         font-weight: 400;
-        line-height: 1.6;
+        line-height: var.$lineHeight;
+
+        span {
+            font-weight: 800;
+        }
     }
 }
 
@@ -35,40 +55,52 @@
     flex-direction: column;
 }
 
+.question {
+    display: flex;
+    gap: var.$gap;
+    flex-direction: column;
+}
+
 .checkbox-container {
     display: block;
     position: relative;
     padding-left: var.$padding * 2;
-    margin-bottom: var.$margin * 0.5;
+    margin-bottom: var.$margin * 0.8;
     cursor: pointer;
     font-size: var.$fontSize * 1.6;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
 
-.checkbox-container input {
-    position: absolute;
-    opacity: 0;
-    height: 0;
-    width: 0;
-    cursor: pointer;
+    input {
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+        cursor: pointer;
+    }
+
+    p {
+        margin-top: var.$margin;
+        width: 70%;
+    }
 }
 
 .checkmark {
     position: absolute;
     top: 50%;
     left: 0;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     transform: translateY(-50%);
-    background-color: var.$peach;
-    border-radius: 50%;
+    background-color: var.$orange-300;
+    border-radius: var.$borderRadius;
 }
 
 .checkbox-container input:checked ~ .checkmark {
-    background-color: var.$orange-400;
+    background-color: var.$orange-000;
+    filter: drop-shadow(2px 2px var.$orange-100);
 }
 
 .checkmark:after {
@@ -94,21 +126,12 @@
 .application-btn {
     width: 30%;
     margin-left: var.$margin * 8;
-    margin-top: var.$margin * 2;
 }
 
 label {
     color: var.$black;
     font-size: var.$fontSize * 1.6;
-    font-weight: 300;
-    line-height: 2;
-}
-
-label:nth-last-of-type(1) {
-    line-height: 1.5;
-    font-size: var.$fontSize * 1.7;
-    letter-spacing: var.$letterSpacing;
-    font-family: 'Times New Roman', sans-serif;
+    line-height: var.$lineHeight;
 }
 
 input,
@@ -120,10 +143,9 @@ textarea {
     font-family: inherit;
     border-radius: var.$borderRadius;
     background-color: var.$white;
-}
-
-textarea {
-    min-height: 15vh;
+    box-shadow: 2px 2px 5px var.$orange-000;
+    filter: drop-shadow(5px 5px var.$orange-300);
+    outline: none;
 }
 
 input::placeholder,
@@ -131,26 +153,38 @@ textarea::placeholder {
     opacity: 0.8;
 }
 
-.contact-flower2-image {
+.contact-images {
     position: absolute;
-    top: 30%;
-    right: 58%;
-    width: 16%;
-    transform: rotate(-10deg);
+    z-index: -3;
 }
 
-.contact-flower-image {
-    position: absolute;
-    top: 85%;
-    right: 8%;
-    width: 15%;
+.contact-stars-image {
+    width: 10%;
+    top: 12%;
+    right: 15%;
+}
+
+.contact-pink-bulb-image {
+    width: 8%;
+    top: 50%;
+    left: 10%;
 }
 
 .contact-plane-image {
-    position: absolute;
-    bottom: -80%;
-    right: 65%;
-    width: 28%;
-    z-index: -1;
-    transform: rotate(20deg);
+    width: 16%;
+    top: 140%;
+    right: 15%;
+    transform: rotate(220deg);
+}
+
+.contact-planet-image {
+    width: 16%;
+    top: 70%;
+    right: 15%;
+}
+
+.contact-stars2-image {
+    width: 10%;
+    top: 120%;
+    left: 10%;
 }

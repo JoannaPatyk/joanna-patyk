@@ -1,10 +1,13 @@
 import React from 'react';
 import Button from './Button';
-import DisplaySquares from '../components/DisplaySquares';
 import Menu from './Menu';
-import '../css/applicationForm.css';
+import DisplaySquares from './DisplaySquares';
+import DisplayImages from './DisplayImages';
 import contactSquares from '../utils/contactSquares';
+import contactImages from '../utils/contactImages';
 import websiteTypes from '../utils/websiteTypes';
+import formElements from '../utils/formElements';
+import '../css/applicationForm.css';
 
 function ApplicationForm() {
     const displayCheckbox = websiteTypes.map(({ id, label }) => {
@@ -23,49 +26,45 @@ function ApplicationForm() {
             <div className="form-container">
                 <form className="contact-form">
                     <h1>FORMULARZ ZGŁOSZENIOWY</h1>
+                    <h2>
+                        Napisz, chętnie <span>odpowiem na Twoje</span> pytania!
+                    </h2>
                     <h3>
-                        Poniżej znajduje się formularz zgłoszeniowy zawierający kilka pytań. Udzielenie odpowiedzi na
-                        nie umożliwi przesłanie wstępnej wyceny. Ostateczne koszty zostaną przedstawione po ustaleniu
-                        szczegółów.
+                        Poniżej znajduje się formularz zgłoszeniowy zawierający kilka pytań.{' '}
+                        <span>Udzielenie odpowiedzi na nie umożliwi przesłanie wstępnej wyceny.</span> Ostateczne koszty
+                        zostaną przedstawione po ustaleniu szczegółów.
                     </h3>
-
                     <div className="questions">
-                        <label htmlFor="name">1. Imię:</label>
-                        <input id="name" type="text" placeholder="Imię..." />
-
-                        <label htmlFor="email">2. Adres e-mail:</label>
-                        <input id="email" type="email" placeholder="E-mail..." />
-
-                        <label htmlFor="email">3. Numer telefonu:</label>
-                        <input id="email" type="number" placeholder="Numer telefonu..." />
-
-                        <label htmlFor="email">3. Jakiej tematyki ma dotyczyć strona?</label>
-                        <input id="email" type="text" placeholder="Branża..." />
-
-                        <label htmlFor="email">4. Jakiego rodzaju strona Cię interesuje?</label>
-                        {displayCheckbox}
-
-                        <label htmlFor="appearance">
-                            5. Czy masz już jakaś wizję lub oczekiwania jak powinna wyglądać strona?
-                        </label>
-                        <textarea id="appearance" type="text" placeholder="Treść wiadomości..." />
-
-                        <label htmlFor="message">6. Czy jest coś jeszcze o czym chcesz wspomnieć?</label>
-                        <textarea id="message" placeholder="Treść wiadomości..."></textarea>
-
+                        <div className="question">
+                            <label htmlFor="email">
+                                1. Jakiego rodzaju strona Cię interesuje?
+                                {displayCheckbox}
+                            </label>
+                        </div>
+                        {formElements.map(({ id, label, type, placeholder }) => (
+                            <div key={id} className="question">
+                                <label htmlFor={id}>{label}</label>
+                                {type === 'textarea' ? (
+                                    <textarea id={id} placeholder={placeholder}></textarea>
+                                ) : (
+                                    <input id={id} type={type} placeholder={placeholder} />
+                                )}
+                            </div>
+                        ))}
                         <label className="checkbox-container" htmlFor="agreement">
                             <input type="checkbox" id="agreement" />
                             <span className="checkmark"></span>
-                            <i>
+                            <p>
                                 Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z ustawą o ochronie danych
                                 osobowych w związku z realizacją zgłoszenia.
-                            </i>
+                            </p>
                         </label>
                     </div>
                     <Button nextClass="application-btn" type="submit">
                         wyślij
                     </Button>
                 </form>
+                <DisplayImages elements={contactImages} />
                 <DisplaySquares elements={contactSquares} />
             </div>
         </>

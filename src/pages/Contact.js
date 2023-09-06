@@ -1,8 +1,8 @@
 import React from 'react';
 import ApplicationForm from '../components/ApplicationForm';
+import ScrollButton from '../components/ScrollButton';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
-import ScrollButton from '../components/ScrollButton';
 
 function Contact() {
     return (

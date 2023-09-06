@@ -5,15 +5,12 @@ import ScrollButton from '../components/ScrollButton';
 import DisplayProjects from '../components/DisplayProjects';
 import Footer from '../components/Footer';
 import DisplaySquares from '../components/DisplaySquares';
+import DisplayImages from '../components/DisplayImages';
 import projectImages from '../utils/projectImages';
 import projectsSquares from '../utils/projectsSquares';
 import '../css/projects.css';
 
 function Projects() {
-    const imageElements = projectImages.map(({ id, src, className, alt }) => (
-        <img key={id} src={src} className={className} alt={alt} />
-    ));
-
     return (
         <>
             <Menu />
@@ -33,7 +30,7 @@ function Projects() {
                     </span>
                 </h3>
                 <DisplayProjects />
-                {imageElements}
+                <DisplayImages elements={projectImages} />
                 <DisplaySquares elements={projectsSquares} />
             </div>
             <ScrollButton />

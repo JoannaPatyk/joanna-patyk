@@ -4,6 +4,7 @@ import '../css/landing.css';
 import Menu from './Menu';
 import Button from './Button';
 import DisplaySquares from './DisplaySquares';
+import DisplayImages from './DisplayImages';
 import landingSquare from '../utils/landingSquares';
 import landingImages from '../utils/landingImages';
 
@@ -14,10 +15,6 @@ function Landing() {
         navigate('/contact');
         window.scrollTo(0, 0);
     };
-
-    const displayImages = landingImages.map(({ id, src, cls, alt }) => {
-        return <img key={id} src={src} className={cls} alt={alt} />;
-    });
 
     return (
         <div className="landing-container">
@@ -33,7 +30,7 @@ function Landing() {
                 </Button>
             </div>
             <DisplaySquares elements={landingSquare} />
-            {displayImages}
+            <DisplayImages elements={landingImages} />
         </div>
     );
 }

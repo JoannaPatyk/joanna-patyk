@@ -63,26 +63,26 @@
     }
 }
 
-.background-image-plane {
-    width: 20%;
+.registration-images {
     position: absolute;
+    z-index: -2;
+}
+
+.registration-plane-image {
+    width: 20%;
     top: 5%;
     left: 5%;
     transform: rotate(5deg);
 }
 
-.background-image-ideas {
+.registration-ideas-image {
     width: 12%;
-    position: absolute;
     top: 35%;
     right: 10%;
-    z-index: -2;
 }
 
-.background-image-flower {
+.registration-flower-image {
     width: 12%;
-    position: absolute;
     top: 60%;
     left: 10%;
-    z-index: -2;
 }
