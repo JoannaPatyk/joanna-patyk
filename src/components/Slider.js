@@ -19,14 +19,14 @@ function Slider({ array }) {
         let nextIndex = currentIndex - 1;
 
         if (nextIndex < 1) {
-            nextIndex = array.length;
+            nextIndex = array.length - 1;
         }
         setCurrentIndex(nextIndex);
     };
     return (
         <div className="slider-container">
             <button onClick={goToPrevSlide} className="toggle-btn">
-                <MdOutlineKeyboardDoubleArrowLeft />
+                <MdOutlineKeyboardDoubleArrowLeft className="toggle-icon" />
             </button>
             {array.map(({ id, src, className, alt }) => (
                 <img
@@ -38,7 +38,7 @@ function Slider({ array }) {
                 />
             ))}
             <button onClick={goToNextSlide} className="toggle-btn">
-                <MdOutlineKeyboardDoubleArrowRight />
+                <MdOutlineKeyboardDoubleArrowRight className="toggle-icon" />
             </button>
         </div>
     );

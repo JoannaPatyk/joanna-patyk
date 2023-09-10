@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../css/landing.css';
-import Menu from './Menu';
 import Button from './Button';
 import DisplaySquares from './DisplaySquares';
 import DisplayImages from './DisplayImages';
@@ -18,7 +17,6 @@ function Landing() {
 
     return (
         <div className="landing-container">
-            <Menu />
             <div className="landing-content">
                 <h1 className="landing-title">
                     <span className="part-1">Twoja wizja</span>

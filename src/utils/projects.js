@@ -29,6 +29,7 @@ import id1 from '../screens/id-1.png';
 
 import { FaReact, FaCss3Alt, FaHtml5, FaNodeJs } from 'react-icons/fa';
 import { SiStyledcomponents, SiExpress, SiMongodb } from 'react-icons/si';
+import { DiJavascript1 } from 'react-icons/di';
 
 const projects = [
     {
@@ -93,26 +94,30 @@ const projects = [
                 <p className="react">React</p>
             </div>,
             <div key={1} className="technologie">
+                <DiJavascript1 />
+                <p className="react">JavaScript</p>
+            </div>,
+            <div key={2} className="technologie">
                 <SiStyledcomponents />
                 <p className="styled">Styled-components</p>
             </div>,
-            <div key={2} className="technologie">
+            <div key={3} className="technologie">
                 <FaCss3Alt />
                 <p className="css">CSS</p>
             </div>,
-            <div key={3} className="technologie">
+            <div key={4} className="technologie">
                 <FaHtml5 />
                 <p className="html">HTML</p>
             </div>,
-            <div key={4} className="technologie">
+            <div key={5} className="technologie">
                 <FaNodeJs />
                 <p className="node">Node.js</p>
             </div>,
-            <div key={5} className="technologie">
+            <div key={6} className="technologie">
                 <SiExpress />
                 <p className="express">Express.js</p>
             </div>,
-            <div key={6} className="technologie">
+            <div key={7} className="technologie">
                 <SiMongodb />
                 <p className="mongo">Mongodb</p>
             </div>

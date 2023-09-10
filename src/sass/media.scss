@@ -9,8 +9,8 @@
     .contact-icon {
         z-index: 100;
         font-size: var.$fontSize * 5.5;
-        color: var.$orange-300;
-        filter: drop-shadow(2px 2px var.$orange-000);
+        color: var.$orange-400;
+        filter: drop-shadow(3px 3px var.$orange-000);
         transition: var.$transition;
         cursor: pointer;
 
@@ -18,6 +18,26 @@
             color: var.$primary-pink;
             filter: drop-shadow(2px 2px var.$secondary-pink);
             transform: scale(0.9);
+        }
+    }
+}
+
+@media (max-width: 980px) {
+    .contact-icon-container {
+        gap: var.$gap * 0.7;
+
+        .contact-icon {
+            font-size: var.$fontSize * 5;
+        }
+    }
+}
+
+@media (max-width: 875px) {
+    .contact-icon-container {
+        gap: var.$gap * 0.5;
+
+        .contact-icon {
+            font-size: var.$fontSize * 4.5;
         }
     }
 }

@@ -6,15 +6,84 @@
 
     p {
         font-size: var.$fontSize * 3;
-        font-weight: 400;
+        font-weight: 200;
         line-height: 14vh;
         text-align: center;
         color: var.$black;
-        filter: drop-shadow(1px 1px var.$white);
+        letter-spacing: var.$letterSpacing * 0.8;
 
         span {
             font-weight: 800;
-            filter: drop-shadow(1px 1px var.$peach);
+            color: var.$primary-pink;
+            font-family: var.$secondary-fontFamily;
+            filter: drop-shadow(2px 2px var.$secondary-pink);
+        }
+    }
+}
+
+@media (max-width: 1550px) {
+    .banner-container {
+        p {
+            font-size: var.$fontSize * 2.5;
+        }
+    }
+}
+
+@media (max-width: 1290px) {
+    .banner-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            width: 40%;
+            font-size: var.$fontSize * 2;
+            line-height: var.$lineHeight * 0.8;
+        }
+    }
+}
+
+@media (max-width: 1180px) {
+    .banner-container {
+        p {
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 985px) {
+    .banner-container {
+        p {
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: 820px) {
+    .banner-container {
+        p {
+            width: 70%;
+            font-size: var.$fontSize * 1.8;
+
+            span {
+                filter: drop-shadow(1px 1px var.$secondary-pink);
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .banner-container {
+        p {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    .banner-container {
+        p {
+            font-size: var.$fontSize * 1.6;
         }
     }
 }

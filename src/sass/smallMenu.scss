@@ -1,19 +1,104 @@
 @use './variables.scss' as var;
+@use 'sass:math';
 
-.small-menu-container {
-    .menu {
-        position: absolute;
-        top: -30%;
-        left: -50%;
-        display: flex;
-        gap: var.$gap * 2;
-        flex-direction: column;
-        margin-left: var.$padding * 10;
-        padding-left: var.$padding * 2;
-        margin-top: var.$margin * 4;
+.menu-container {
+    width: 100vw;
+    height: 10vh;
+    margin: 0;
+    box-shadow: 2px 2px 10px var.$orange-200;
+
+    .menu-icon {
+        color: var.$orange-400;
+        line-height: 10vh;
+        padding-left: var.$padding;
+        padding-top: var.$padding * 0.5;
+        filter: drop-shadow(2px 2px var.$orange-000);
     }
 
-    .menu-element {
-        text-align: left;
+    .small-menu {
+        height: 90vh;
+        width: 100%;
+        position: absolute;
+        top: 17vh;
+        left: 0%;
+        z-index: 10;
+        display: flex;
+        gap: var.$gap * 5;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var.$secondary-violet;
+        overflow: hidden;
+
+        .small-menu-element {
+            text-align: left;
+            font-size: var.$fontSize * 4;
+            padding: 0 var.$padding;
+            color: var.$orange-400;
+            filter: drop-shadow(3px 3px var.$orange-000);
+            font-weight: 900;
+            font-family: var.$secondary-fontFamily;
+            letter-spacing: var.$letterSpacing * 3;
+            text-transform: uppercase;
+            border: 1px solid transparent;
+            text-align: center;
+            transition: var.$transition;
+            cursor: pointer;
+
+            &:hover {
+                color: var.$primary-pink;
+                transform: scale(0.85);
+                filter: drop-shadow(2px 2px var.$secondary-pink);
+            }
+        }
+
+        .smallMenu-images {
+            width: 50%;
+            position: absolute;
+            z-index: -3;
+            transform: rotate(-30deg);
+        }
+
+        .smallMenu-stars {
+            top: 5%;
+            right: 0;
+        }
+
+        .smallMenu-plants {
+            bottom: 5%;
+            left: 0;
+        }
+    }
+}
+
+@media (max-width: 695px) {
+    .small-menu {
+        .smallMenu-images {
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: 695px) {
+    .small-menu {
+        .menu-element {
+            font-size: var.$fontSize * 4;
+        }
+
+        .smallMenu-images {
+            width: 70%;
+        }
+    }
+}
+
+@media (max-width: 445px) {
+    .small-menu {
+        width: 100vw;
+        left: 0;
+        border-radius: 0;
+
+        .menu-element {
+            font-size: var.$fontSize * 3.5;
+        }
     }
 }
