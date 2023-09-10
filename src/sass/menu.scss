@@ -4,9 +4,10 @@
 .menu-container {
     display: grid;
     grid-template-columns: 0.9fr 0.1fr;
+    box-shadow: 1px 1px 4px var.$orange-000;
 
     .menu {
-        min-height: math.div(var.$height, 8);
+        min-height: 10vh;
         display: flex;
         gap: var.$gap * 2;
         align-items: center;
@@ -17,7 +18,7 @@
         padding: 0 var.$padding;
         color: var.$orange-300;
         filter: drop-shadow(2px 2px var.$orange-000);
-        font-size: var.$fontSize * 3.5;
+        font-size: var.$fontSize * 3.3;
         font-weight: 900;
         font-family: var.$secondary-fontFamily;
         letter-spacing: var.$letterSpacing * 3;
@@ -37,5 +38,61 @@
     .active {
         color: var.$primary-pink;
         filter: drop-shadow(2px 2px var.$secondary-pink);
+    }
+}
+
+.menu-box {
+    display: none;
+}
+
+@media (max-width: 1615px) {
+    .menu-container {
+        grid-template-columns: 0.85fr 0.15fr;
+    }
+}
+
+@media (max-width: 1315px) {
+    .menu-container {
+        grid-template-columns: 0.95fr 0.05fr;
+
+        .menu {
+            padding-left: var.$padding * 5;
+        }
+    }
+}
+
+@media (max-width: 980px) {
+    .menu-container {
+        .menu {
+            padding-left: var.$padding * 3;
+        }
+
+        .menu-element {
+            margin: var.$margin 0;
+            padding: 0 var.$padding * 0.5;
+            font-size: var.$fontSize * 2.8;
+        }
+    }
+}
+
+@media (max-width: 875px) {
+    .menu-container {
+        margin: var.$margin * 2;
+
+        .menu {
+            display: none;
+        }
+
+        .menu-box {
+            display: block;
+        }
+
+        .menu-icon {
+            font-size: var.$fontSize * 4;
+            border: none;
+            color: var.$orange-300;
+            background-color: transparent;
+            filter: drop-shadow(1px 1px var.$orange-000);
+        }
     }
 }

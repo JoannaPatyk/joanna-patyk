@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TbArrowBigUpLines } from 'react-icons/tb';
+import { GoRocket } from 'react-icons/go';
 
 function ScrollButton() {
     const [showButton, setShowButton] = useState(false);
@@ -33,7 +33,7 @@ function ScrollButton() {
         <>
             {showButton && (
                 <button id="btn-up" onClick={handleButtonUp}>
-                    <TbArrowBigUpLines className="btn-up-icon" />
+                    <GoRocket className="btn-up-icon" />
                 </button>
             )}
         </>

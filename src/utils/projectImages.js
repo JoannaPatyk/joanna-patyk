@@ -5,7 +5,6 @@ import yellowCloudImage from '../images/yellow-cloud.png';
 import bookImage from '../images/pink-book.png';
 import violetCloudImage from '../images/violet-cloud.png';
 import planeImage from '../images/pink-plane.png';
-import bulbImage from '../images/pink-bulb.png';
 
 const projectImages = [
     { id: 0, src: starsImage, className: 'project-images project-stars-image', alt: 'Gwiazdy' },
@@ -18,11 +17,9 @@ const projectImages = [
     { id: 7, src: bookImage, className: 'project-images project-book-image', alt: 'Książka' },
     { id: 8, src: violetCloudImage, className: 'project-images project-cloud2-image', alt: 'Chmura' },
     { id: 9, src: violetCloudImage, className: 'project-images project-cloud3-image', alt: 'Chmura' },
-    { id: 10, src: starsImage, className: 'project-images project-stars5-image', alt: 'Gwiazdy' },
     { id: 11, src: starsImage, className: 'project-images project-stars6-image', alt: 'Gwiazdy' },
     { id: 12, src: planeImage, className: 'project-images project-plane-image', alt: 'Samolot' },
-    { id: 13, src: yellowCloudImage, className: 'project-images project-cloud5-image', alt: 'Chmura' },
-    { id: 14, src: bulbImage, className: 'project-images project-bulb-image', alt: 'Żarówka' }
+    { id: 13, src: yellowCloudImage, className: 'project-images project-cloud5-image', alt: 'Chmura' }
 ];
 
 export default projectImages;

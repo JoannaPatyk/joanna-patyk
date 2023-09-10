@@ -1,0 +1,154 @@
+@use './variables.scss' as var;
+@use 'sass:math';
+
+.topBanner-container {
+    min-height: 7vh;
+    display: flex;
+    gap: var.$gap * 4;
+    align-items: center;
+    justify-content: center;
+    color: var.$orange-400;
+    background-color: var.$secondary-violet;
+
+    .slogan {
+        display: flex;
+        gap: var.$gap * 2;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            font-size: var.$fontSize * 1.7;
+            text-align: center;
+            font-weight: 100;
+            text-transform: uppercase;
+            letter-spacing: var.$letterSpacing * 1.5;
+            line-height: var.$lineHeight * 0.9;
+            filter: drop-shadow(1px 1px var.$orange-000);
+        }
+    }
+
+    .top-banner-icon {
+        font-size: var.$fontSize * 3;
+        filter: drop-shadow(1px 1px var.$orange-000);
+        animation: scale 2s infinite ease-in;
+    }
+
+    .slogan-btn {
+        font-size: var.$fontSize * 1.5;
+        animation: scale 3s infinite linear;
+        margin: 0;
+    }
+}
+
+@media (max-width: 1450px) {
+    .topBanner-container {
+        .slogan {
+            p {
+                font-size: var.$fontSize * 1.6;
+            }
+        }
+
+        .slogan-btn {
+            font-size: var.$fontSize * 1.3;
+            padding: var.$padding * 0.55;
+        }
+
+        .top-banner-icon {
+            font-size: var.$fontSize * 3;
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .topBanner-container {
+        .slogan {
+            flex-direction: column;
+            gap: var.$gap * 0.25;
+
+            p {
+                font-size: var.$fontSize * 1.3;
+            }
+        }
+
+        .top-banner-icon {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .topBanner-container {
+        gap: var.$gap * 2;
+    }
+}
+
+@media (max-width: 700px) {
+    .topBanner-container {
+        .slogan {
+            p {
+                font-size: var.$fontSize * 1.3;
+            }
+        }
+
+        .slogan-btn {
+            font-size: var.$fontSize * 1.2;
+            padding: var.$padding * 0.5;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .topBanner-container {
+        gap: var.$gap;
+
+        .slogan {
+            p {
+                font-size: var.$fontSize * 1.2;
+                filter: none;
+            }
+        }
+
+        .slogan-btn {
+            width: 30%;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .topBanner-container {
+        gap: var.$gap * 0.5;
+
+        .slogan {
+            gap: 0;
+
+            p {
+                font-size: var.$fontSize;
+            }
+        }
+
+        .slogan-btn {
+            width: 30%;
+            font-size: var.$fontSize;
+            filter: drop-shadow(3px 3px var.$orange-000);
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .topBanner-container {
+        gap: var.$gap * 0.2;
+
+        .slogan {
+            gap: var.$gap * 0.05;
+
+            p {
+                font-size: var.$fontSize * 0.8;
+            }
+        }
+
+        .slogan-btn {
+            padding: var.$padding * 0.15;
+            font-size: var.$fontSize * 0.8;
+        }
+    }
+}

@@ -3,7 +3,7 @@
 
 .registration-container {
     position: relative;
-    min-height: var.$height * 1.4;
+    min-height: 140vh;
     display: grid;
     gap: var.$gap * 6;
     grid-template-rows: 0.05fr 0.95fr;
@@ -16,7 +16,7 @@
         color: var.$peach;
         font-size: var.$fontSize * 4;
         font-family: var.$secondary-fontFamily;
-        line-height: math.div(var.$lineHeight, 1.5);
+        line-height: var.$lineHeight * 0.9;
         letter-spacing: var.$letterSpacing * 2;
         filter: drop-shadow(2px 2px var.$secondary-pink);
         margin: var.$margin * 3 auto;
@@ -85,4 +85,199 @@
     width: 12%;
     top: 60%;
     left: 10%;
+}
+
+@media (max-width: 1545px) {
+    .registration-container {
+        gap: var.$gap * 5;
+
+        h1 {
+            font-size: var.$fontSize * 3.5;
+            margin: var.$margin * 2.5 auto;
+        }
+    }
+
+    .steps-container {
+        width: 75%;
+        gap: var.$gap * 5;
+
+        .step {
+            width: 70%;
+
+            h2 {
+                font-size: var.$fontSize * 2.5;
+            }
+
+            p {
+                font-size: var.$fontSize * 1.8;
+            }
+        }
+    }
+}
+
+@media (max-width: 1545px) {
+    .registration-plane-image {
+        top: 10%;
+    }
+}
+
+@media (max-width: 1325px) {
+    .registration-ideas-image {
+        width: 13%;
+        top: 39%;
+    }
+
+    .registration-flower-image {
+        left: 8%;
+    }
+}
+
+@media (max-width: 1050px) {
+    .registration-container {
+        h1 {
+            width: 55%;
+        }
+    }
+
+    .registration-ideas-image {
+        top: 45%;
+    }
+}
+
+@media (max-width: 850px) {
+    .registration-container {
+        h1 {
+            width: 65%;
+            margin: var.$margin * 2 auto;
+        }
+    }
+
+    .steps-container {
+        width: 75%;
+
+        .step {
+            width: 80%;
+        }
+    }
+
+    .registration-ideas-image,
+    .registration-flower-image,
+    .registration-plane-image {
+        display: none;
+    }
+}
+
+@media (max-width: 705px) {
+    .steps-container {
+        .step {
+            h2 {
+                font-size: var.$fontSize * 2;
+            }
+
+            p {
+                font-size: var.$fontSize * 1.5;
+            }
+        }
+    }
+
+    .registration-ideas-image {
+        top: 95%;
+    }
+}
+
+@media (max-width: 650px) {
+    .registration-container {
+        h1 {
+            width: 80%;
+            font-size: var.$fontSize * 2.5;
+            margin: 0 auto;
+        }
+    }
+
+    .steps-container {
+        width: 80%;
+
+        .step {
+            h2 {
+                font-size: var.$fontSize * 2;
+            }
+
+            p {
+                font-size: var.$fontSize * 1.5;
+            }
+        }
+    }
+
+    .registration-ideas-image {
+        width: 18%;
+        top: 50%;
+    }
+
+    .registration-flower-image {
+        width: 18%;
+        top: 75%;
+    }
+}
+
+@media (max-width: 650px) {
+    .registration-container {
+        h1 {
+            font-size: var.$fontSize * 2.2;
+        }
+    }
+
+    .steps-container {
+        .step {
+            h2 {
+                font-size: var.$fontSize * 1.8;
+            }
+
+            p {
+                font-size: var.$fontSize * 1.4;
+            }
+        }
+    }
+
+    .registration-images {
+        display: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .registration-container {
+        gap: var.$gap * 4;
+    }
+
+    .steps-container {
+        gap: var.$gap * 3;
+
+        .step {
+            h2 {
+                letter-spacing: var.$letterSpacing;
+            }
+
+            p {
+                letter-spacing: var.$letterSpacing * 0.7;
+                line-height: var.$lineHeight;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .registration-container {
+        gap: var.$gap * 3.5;
+    }
+
+    .steps-container {
+        .step {
+            h2 {
+                font-size: var.$fontSize * 1.6;
+            }
+
+            p {
+                font-size: var.$fontSize * 1.3;
+            }
+        }
+    }
 }

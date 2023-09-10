@@ -1,5 +1,4 @@
 import React from 'react';
-import Menu from '../components/Menu';
 import Banner from '../components/Banner';
 import ScrollButton from '../components/ScrollButton';
 import DisplayProjects from '../components/DisplayProjects';
@@ -13,7 +12,6 @@ import '../css/projects.css';
 function Projects() {
     return (
         <>
-            <Menu />
             <div className="projects-container">
                 <h1>
                     Zapraszam do <span>zapoznania się</span> z częścią <span>wykonanych projektów</span>
@@ -29,11 +27,14 @@ function Projects() {
                         tworzenia stron internetowych!
                     </span>
                 </h3>
-                <DisplayProjects />
-                <DisplayImages elements={projectImages} />
+                <ScrollButton />
+                <div className="container">
+                    <DisplayProjects />
+                </div>
+
                 <DisplaySquares elements={projectsSquares} />
             </div>
-            <ScrollButton />
+            <DisplayImages elements={projectImages} />
             <Banner />
             <Footer />
         </>

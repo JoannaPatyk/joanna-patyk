@@ -2,16 +2,40 @@
 
 .footer-content {
     position: relative;
-    height: 10vh;
+    height: 6vh;
     width: 100%;
-    background-color: var.$orange-300;
-    overflow: hidden;
+    background-color: var.$peach;
+    box-shadow: 1px 1px 4px var.$orange-000;
 
     p {
         font-weight: 500;
-        line-height: 10vh;
+        line-height: 6vh;
         text-align: center;
         font-size: var.$fontSize * 1.8;
         color: var.$black;
+    }
+}
+
+@media (max-width: 925px) {
+    .footer-content {
+        p {
+            font-size: var.$fontSize * 1.6;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .footer-content {
+        p {
+            font-size: var.$fontSize * 1.2;
+        }
+    }
+}
+
+@media (max-width: 365px) {
+    .footer-content {
+        p {
+            font-size: var.$fontSize;
+        }
     }
 }

@@ -5,15 +5,15 @@ const formElements = [
     { id: 'theme', label: '5. Jakiej tematyki ma dotyczyć strona?', type: 'text', placeholder: 'Branża...' },
     {
         id: 'appearance',
-        label: '6. Czy masz już jakaś wizję lub oczekiwania jak powinna wyglądać strona?',
+        label: '6. Czy masz już jakąś wizję jak powinna wyglądać strona?',
         type: 'text',
         placeholder: 'Treść wiadomości...'
     },
     {
         id: 'message',
         label: '7. Czy jest coś jeszcze o czym chcesz wspomnieć?',
-        type: 'text'
-        // placeholder: 'Treść wiadomości...'
+        type: 'text',
+        placeholder: 'Treść wiadomości...'
     }
 ];
 
