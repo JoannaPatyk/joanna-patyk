@@ -2,17 +2,49 @@
 
 .footer-content {
     position: relative;
-    height: 6vh;
+    min-height: 10vh;
     width: 100%;
-    background-color: var.$peach;
-    box-shadow: 1px 1px 4px var.$orange-000;
+    // box-shadow: 1px 1px 4px var.$orange-000;
 
     p {
         font-weight: 500;
         line-height: 6vh;
         text-align: center;
         font-size: var.$fontSize * 1.8;
-        color: var.$black;
+    }
+
+    hr {
+        width: 40%;
+        margin: 0 auto;
+        color: var.$peach;
+    }
+
+    .footer-text {
+        width: 60%;
+        display: grid;
+        gap: var.$gap;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+        text-align: center;
+        margin: 0 auto;
+        padding: var.$padding * 4 0;
+
+        .footer-text-element {
+            display: grid;
+            grid-template-rows: 1fr 2fr;
+            place-items: center;
+
+            h2 {
+                color: var.$primary-violet;
+                font-size: var.$fontSize * 3;
+                font-family: var.$secondary-fontFamily;
+                line-height: var.$lineHeight * 0.8;
+            }
+
+            p {
+                line-height: var.$lineHeight * 0.8;
+            }
+        }
     }
 }
 

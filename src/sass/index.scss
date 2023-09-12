@@ -20,25 +20,24 @@ body {
 // BUTTONS
 
 .basic-btn {
-    padding: var.$padding * 0.7;
+    padding: var.$padding * 0.5;
     text-transform: uppercase;
-    font-family: inherit;
-    font-size: var.$fontSize * 2.2;
+    font-size: var.$fontSize * 3;
     font-family: var.$secondary-fontFamily;
-    letter-spacing: var.$letterSpacing * 3;
+    letter-spacing: var.$letterSpacing * 4;
     font-weight: 900;
     color: var.$orange-000;
     border: none;
     border-radius: var.$borderRadius;
-    background-color: var.$orange-400;
-    filter: drop-shadow(6px 6px var.$orange-000);
+    background-color: var.$orange-300;
+    filter: drop-shadow(5px 5px var.$orange-000);
     transition: var.$transition;
     cursor: pointer;
 
     &:hover {
-        color: var.$orange-400;
         transform: scale(0.9);
-        background-color: var.$orange-000;
+        color: var.$peach;
+        background-color: var.$primary-pink;
         filter: none;
     }
 }
@@ -57,13 +56,13 @@ body {
     border: none;
     border-radius: var.$borderRadius;
     background-color: transparent;
-    transition: var.$transition;
+    transition: var.$transition ease-out;
     overflow: hidden;
     cursor: pointer;
 
     &:hover {
         opacity: 1;
-        transform: scale(0.8);
+        transform: scale(0.7);
     }
 
     .btn-up-icon {
@@ -104,16 +103,16 @@ body {
 }
 
 .big {
-    width: var.$width;
-    height: var.$height;
-    z-index: -1;
-    transform: rotate(50deg);
+    width: var.$width * 2;
+    height: var.$width * 2;
+    z-index: -5;
+    transform: rotate(20deg);
 }
 
 .medium {
     width: var.$width * 2;
-    height: var.$height * 1.8;
-    z-index: -2;
+    height: var.$height * 0.5;
+    z-index: -3;
     transform: rotate(170deg);
 }
 
@@ -209,9 +208,9 @@ body {
 }
 
 @media (max-width: 1540px) {
-    .big {
-        display: none;
-    }
+    // .big {
+    //     display: none;
+    // }
 
     .small-2 {
         width: 100px;

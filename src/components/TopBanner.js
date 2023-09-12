@@ -1,27 +1,28 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../components/Button';
+import ArrowIcon from './ArrowIcon';
 import '../css/topBanner.css';
-import { HiArrowLongRight } from 'react-icons/hi2';
+import { scrollToTop } from '../utils/scrollToTop';
 
 function TopBanner() {
     const navigate = useNavigate();
 
     const handleClick = () => {
         navigate('/contact');
-        window.scrollTo(0, 0);
+        scrollToTop();
     };
 
     return (
         <div className="topBanner-container">
             <div className="slogan">
                 <p>Projektowanie stron internetowych</p>
-                <HiArrowLongRight className="top-banner-icon" />
+                <ArrowIcon />
                 <p>Tworzenie Stron www w Krakowie</p>
-                <HiArrowLongRight className="top-banner-icon" />
+                <ArrowIcon />
             </div>
 
-            <Button nextClass="slogan-btn" onClick={handleClick}>
+            <Button nextClass="call-to-action-button" onClick={handleClick}>
                 darmowa wycena
             </Button>
         </div>

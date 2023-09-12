@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Bitter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Bitter&family=Rubik+Gemstones:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /* COLORS */
 
 $primary-pink: #d68aa7;
 $secondary-pink: #901a47;
 $primary-violet: #605966;
-$secondary-violet: #383040;
+$secondary-violet: #302939;
 
 $orange-000: #bf613f;
 $orange-100: #d98c4a;
 $orange-200: #e1a36e;
 $orange-300: #ffdab9;
-$orange-400: #ffdab9;
+$orange-400: #ffeddc;
 
 $gray-100: #f2f2f2;
 $gray-200: #a9a9a9;
@@ -21,12 +21,13 @@ $black: #444444;
 $white: #fefcfd;
 $red: #be0303;
 $green: #2e8b57;
-$peach: #fff5ec;
+$peach: #fffbf8;
 
 /* FONT */
 
 $primary-fontFamily: 'Comfortaa', sans-serif;
 $secondary-fontFamily: 'Bitter', sans-serif;
+$third-fontFamily: 'Rubik Gemstones', cursive;
 
 $fontSize: 10px;
 $letterSpacing: 1px;

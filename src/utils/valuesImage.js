@@ -1,11 +1,11 @@
-import planeImage from '../images/paper-plane.png';
-import flowerImage from '../images/violet-bg-flower.png';
-import bulbImage from '../images/violet-bg-bulb.png';
+import React from 'react';
+import { PiFlowerLight, PiHandHeartThin, PiPaintBrushThin, PiButterflyThin } from 'react-icons/pi';
 
 const valuesImage = [
-    { id: 0, src: flowerImage, className: 'values-images values-flower-image', alt: 'Gwiazda' },
-    { id: 1, src: planeImage, className: 'values-images values-plane-image', alt: 'Strzałka' },
-    { id: 2, src: bulbImage, className: 'values-images values-bulb-image', alt: 'Żarówka' }
+    { id: 0, icon: <PiFlowerLight className="values-images values-flower-image" /> },
+    { id: 1, icon: <PiHandHeartThin className="values-images values-heart-image" /> },
+    { id: 2, icon: <PiPaintBrushThin className="values-images values-brush-image" /> },
+    { id: 3, icon: <PiButterflyThin className="values-images values-butterfly-image" /> }
 ];
 
 export default valuesImage;

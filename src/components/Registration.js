@@ -17,11 +17,13 @@ function Registration() {
     });
 
     return (
-        <div className="registration-container">
-            <h1>Poszukujesz kogoś kto stworzy stronę internetową Twojej firmy?</h1>
-            <section className="steps-container">{displaySteps}</section>
-            <DisplayImages elements={registrationImages} />
+        <div className="background-container">
+            <div className="registration-container">
+                <h1>Poszukujesz kogoś kto stworzy stronę internetową Twojej firmy?</h1>
+                <section className="steps-container">{displaySteps}</section>
+            </div>
             <DisplaySquares elements={registrationSquare} />
+            <DisplayImages elements={registrationImages} />
         </div>
     );
 }

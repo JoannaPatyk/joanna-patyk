@@ -3,11 +3,12 @@
 
 .menu-container {
     display: grid;
-    grid-template-columns: 0.9fr 0.1fr;
-    box-shadow: 1px 1px 4px var.$orange-000;
+    grid-template-columns: 0.85fr 0.15fr;
+    box-shadow: 4px 4px 6px var.$peach;
+    background-color: var.$secondary-violet;
 
     .menu {
-        min-height: 10vh;
+        min-height: 9vh;
         display: flex;
         gap: var.$gap * 2;
         align-items: center;
@@ -17,10 +18,10 @@
     .menu-element {
         padding: 0 var.$padding;
         color: var.$orange-300;
-        filter: drop-shadow(2px 2px var.$orange-000);
-        font-size: var.$fontSize * 3.3;
-        font-weight: 900;
-        font-family: var.$secondary-fontFamily;
+        filter: drop-shadow(3px 3px var.$orange-000);
+        font-size: var.$fontSize * 3.5;
+        font-weight: 500;
+        font-family: var.$third-fontFamily;
         letter-spacing: var.$letterSpacing * 3;
         text-transform: uppercase;
         border: 1px solid transparent;

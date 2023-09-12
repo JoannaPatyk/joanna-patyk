@@ -1,11 +1,16 @@
 @use './variables.scss' as var;
 @use 'sass:math';
 
+.background-values-container {
+    background-color: var.$secondary-violet;
+}
+
 .values-container {
     position: relative;
     width: 60%;
-    min-height: 100vh;
-    margin: 0 auto var.$margin * 6;
+    min-height: 70vh;
+    margin: 0 auto;
+    padding-top: var.$padding * 10;
     display: flex;
     gap: var.$gap * 6;
     flex-direction: column;
@@ -15,31 +20,33 @@
 
     h1 {
         text-align: center;
-        font-weight: 800;
+        font-weight: 100;
         color: var.$peach;
         font-size: var.$fontSize * 4;
-        font-family: var.$secondary-fontFamily;
+        font-family: var.$third-fontFamily;
         line-height: math.div(var.$lineHeight, 1.8);
-        text-align: justify;
+        text-align: center;
+        text-transform: uppercase;
         letter-spacing: var.$letterSpacing * 2;
-        filter: drop-shadow(2px 2px var.$secondary-pink);
+        filter: drop-shadow(3px 3px var.$secondary-pink);
         margin: 0 auto;
     }
 
     h2 {
-        font-weight: 800;
-        font-size: var.$fontSize * 2.5;
+        font-weight: 100;
+        font-size: var.$fontSize * 3;
         color: var.$primary-pink;
+        letter-spacing: var.$letterSpacing;
         filter: drop-shadow(2px 2px var.$secondary-pink);
     }
 
     h3 {
-        width: 80%;
+        width: 90%;
         font-weight: 400;
         font-size: var.$fontSize * 1.6;
         letter-spacing: var.$letterSpacing;
+        line-height: var.$lineHeight * 1.1;
         text-align: justify;
-        line-height: 2;
     }
 }
 
@@ -62,52 +69,45 @@
     }
 
     .value-icon {
-        font-size: var.$fontSize * 10;
+        font-size: var.$fontSize * 12;
         background-color: transparent;
         border: none;
         color: var.$peach;
-        filter: drop-shadow(3px 3px var.$secondary-pink);
+        filter: drop-shadow(2px 2px var.$primary-pink);
         transition: var.$transition;
         opacity: 0.3;
         cursor: pointer;
     }
 }
 
-.values-description {
-    width: 90%;
-    min-height: 22vh;
-    border-radius: var.$borderRadius;
-    padding: var.$margin;
-}
-
 .value-content {
     display: flex;
+    gap: var.$gap * 2;
+    min-height: 30vh;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: -3 * var.$padding;
 
     h2 {
-        margin-bottom: var.$margin;
         color: var.$peach;
         font-size: var.$fontSize * 3;
-        font-family: var.$secondary-fontFamily;
-        font-weight: 800;
+        font-family: var.$third-fontFamily;
+        font-weight: 100;
         text-align: center;
-        filter: drop-shadow(2px 2px var.$secondary-pink);
+        filter: drop-shadow(3px 3px var.$secondary-pink);
         text-transform: uppercase;
         letter-spacing: var.$letterSpacing * 2;
-        transition: var.$transition;
     }
 
     .value-text {
-        display: flex;
-        gap: var.$gap * 5;
+        display: grid;
+        grid-template-columns: 0.5fr 4fr 0.5fr;
+        gap: var.$gap * 2;
 
         p {
-            min-height: 22vh;
-            margin-bottom: var.$margin;
             color: var.$peach;
-            font-weight: 200;
+            font-weight: 100;
             font-size: var.$fontSize * 1.6;
             line-height: var.$lineHeight * 1.2;
             letter-spacing: var.$letterSpacing;
@@ -131,55 +131,44 @@
     }
 }
 
-.value.active .value-icon {
-    opacity: 1;
-}
-
 .values-images {
     position: absolute;
-    z-index: -2;
+    opacity: 0.3;
+    color: var.$primary-pink;
+    font-size: var.$fontSize * 10;
 }
 
 .values-flower-image {
-    width: 13%;
-    top: 5%;
-    right: -10%;
+    top: 0%;
+    right: 5%;
     transform: rotate(-20deg);
 }
 
-.values-plane-image {
-    width: 23%;
-    top: 22%;
-    left: -22%;
+.values-heart-image {
+    top: 10%;
+    left: -5%;
     transform: rotate(-10deg);
 }
 
-.values-bulb-image {
-    width: 12%;
-    top: 80%;
-    right: -13%;
+.values-brush-image {
+    top: 78%;
+    right: -5%;
+}
+
+.values-butterfly-image {
+    top: 85%;
+    left: 10%;
     transform: rotate(30deg);
 }
 
-@media (max-width: 1490px) {
+@media (max-width: 1680px) {
     .values-container {
         width: 70%;
-
-        h1 {
-            font-size: var.$fontSize * 3;
-            letter-spacing: var.$letterSpacing;
-        }
-
-        h2 {
-            font-size: var.$fontSize * 2.2;
-        }
     }
 }
 
 @media (max-width: 1385px) {
     .values {
-        width: 70%;
-
         .value-icon {
             font-size: var.$fontSize * 8;
         }
@@ -191,48 +180,35 @@
         width: 80%;
 
         h1 {
-            font-size: var.$fontSize * 2.8;
+            font-size: var.$fontSize * 3.5;
         }
 
         h2 {
-            font-size: var.$fontSize * 2;
+            font-size: var.$fontSize * 2.8;
         }
-    }
-
-    .values-flower-image {
-        top: 3%;
-        right: -5%;
-    }
-
-    .values-plane-image {
-        width: 15%;
-        top: 35%;
-        left: -5%;
-    }
-
-    .values-bulb-image {
-        top: 90%;
-        right: 0%;
-        transform: rotate(30deg);
     }
 }
 
 @media (max-width: 1095px) {
     .values-container {
-        width: 80%;
+        h2 {
+            width: 70%;
+            text-align: center;
+            line-height: var.$lineHeight * 0.8;
+        }
     }
 }
 
-@media (max-width: 905px) {
+@media (max-width: 985px) {
     .values-container {
-        width: 100%;
-
         h1 {
-            font-size: var.$fontSize * 2.6;
+            font-size: var.$fontSize * 3;
+            line-height: var.$lineHeight;
+            filter: drop-shadow(1px 1px var.$secondary-pink);
         }
 
         h2 {
-            font-size: var.$fontSize * 1.8;
+            font-size: var.$fontSize * 2.4;
         }
     }
 
@@ -240,55 +216,47 @@
         .value-text {
             p {
                 font-size: var.$fontSize * 1.4;
+
+                span {
+                    filter: drop-shadow(1px 1px var.$secondary-pink);
+                }
             }
         }
     }
 
     .values-flower-image {
-        width: 20%;
-        top: -10%;
-        right: 10%;
-        transform: rotate(-40deg);
+        top: 0%;
+        right: 3%;
     }
 
-    .values-plane-image {
-        top: 95%;
-        left: 12%;
+    .values-brush-image {
+        top: 88%;
+        right: 5%;
     }
 
-    .values-bulb-image {
-        top: 95%;
-        right: 15%;
+    .values-butterfly-image {
+        top: 87%;
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 790px) {
     .values-container {
-        gap: var.$gap * 4;
-
-        h1 {
-            font-size: var.$fontSize * 2.4;
-        }
-
         h2 {
-            font-size: var.$fontSize * 1.6;
+            filter: drop-shadow(1px 1px var.$secondary-pink);
         }
 
         h3 {
-            font-size: var.$fontSize * 1.4;
+            font-size: var.$fontSize * 1.5;
         }
     }
 
     .value-content {
         .value-text {
-            gap: var.$gap * 3;
-
-            p {
-                font-size: var.$fontSize * 1.3;
-            }
+            grid-template-columns: 0.5fr 6fr 0.5fr;
 
             .values-btn {
-                font-size: var.$fontSize * 3;
+                padding: 0;
+                font-size: var.$fontSize * 2.5;
             }
         }
     }
@@ -299,88 +267,54 @@
         grid-template-columns: 2fr 2fr;
 
         .value-icon {
-            font-size: var.$fontSize * 8;
+            font-size: var.$fontSize * 9;
         }
+    }
+
+    .values-images {
+        font-size: var.$fontSize * 8;
+    }
+
+    .values-heart-image {
+        top: 5%;
     }
 }
 
 @media (max-width: 680px) {
-    .values-plane-image {
-        top: 100%;
-        left: 12%;
-    }
-
-    .values-bulb-image {
-        top: 95%;
-        right: 15%;
-    }
-
     .value-content {
         .value-text {
             display: flex;
             gap: var.$gap * 2;
-
-            p {
-                min-height: 28vh;
-            }
         }
+    }
+
+    .values-flower-image {
+        top: -3%;
+    }
+
+    .values-heart-image {
+        top: 3%;
+    }
+
+    .values-brush-image {
+        top: 90%;
+    }
+
+    .values-butterfly-image {
+        top: 90%;
     }
 }
 
-@media (max-width: 570px) {
-    .values-flower-image,
-    .values-plane-image,
-    .values-bulb-image {
-        display: none;
-    }
-
+@media (max-width: 600px) {
     .value-content {
-        .value-text {
-            p {
-                min-height: 30vh;
-            }
-        }
-    }
-}
-
-@media (max-width: 520px) {
-    .value-content {
-        .value-text {
-            p {
-                min-height: 34vh;
-            }
-        }
-    }
-
-    .values-description {
-        padding: 0;
-    }
-}
-
-@media (max-width: 470px) {
-    .values-container {
-        h1 {
-            width: 70%;
-            text-align: center;
-            font-size: var.$fontSize * 2.5;
-            line-height: var.$lineHeight;
-        }
+        margin-top: -1 * var.$padding;
 
         h2 {
-            width: 50%;
-            text-align: center;
-            line-height: var.$lineHeight;
+            width: 100%;
         }
-    }
 
-    .value-content {
         .value-text {
-            p {
-                min-height: 45vh;
-                width: 70%;
-                margin: 0 auto;
-                line-height: var.$lineHeight;
-            }
+            grid-template-columns: 0fr 6fr 0fr;
 
             .values-btn {
                 display: none;
@@ -389,12 +323,25 @@
     }
 }
 
-@media (max-width: 390px) {
-    .value-content {
-        .value-text {
-            p {
-                width: 80%;
-            }
+@media (max-width: 470px) {
+    .values-container {
+        gap: var.$gap * 3;
+
+        h1 {
+            text-align: center;
+            font-size: var.$fontSize * 2.1;
         }
+
+        h2 {
+            width: 100%;
+        }
+
+        h3 {
+            font-size: var.$fontSize * 1.3;
+        }
+    }
+
+    .values-butterfly-image {
+        top: 92%;
     }
 }
