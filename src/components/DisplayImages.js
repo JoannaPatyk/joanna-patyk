@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function DisplayImages({ elements }) {
-    return elements.map(({ id, src, className, alt }) => {
-        return <img key={id} src={src} className={className} alt={alt} />;
+    return elements.map(({ id, icon }) => {
+        return <div key={id}>{icon}</div>;
     });
 }
 

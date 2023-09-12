@@ -2,7 +2,7 @@
 
 .banner-container {
     min-height: 14vh;
-    background-color: var.$orange-400;
+    background-color: #fff0e3;
 
     p {
         font-size: var.$fontSize * 3;
@@ -15,8 +15,7 @@
         span {
             font-weight: 800;
             color: var.$primary-pink;
-            font-family: var.$secondary-fontFamily;
-            filter: drop-shadow(2px 2px var.$secondary-pink);
+            filter: drop-shadow(3px 3px var.$secondary-pink);
         }
     }
 }

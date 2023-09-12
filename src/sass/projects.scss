@@ -2,7 +2,6 @@
 @use 'sass:math';
 
 .projects-container {
-    //
     width: 50%;
     display: flex;
     min-height: 620vh;
@@ -216,87 +215,74 @@
 .project-images {
     position: absolute;
     z-index: -3;
+    opacity: 0.3;
+    color: var.$orange-200;
+    font-size: var.$fontSize * 10;
 }
 
-.project-stars-image {
-    width: 10%;
-    top: 28%;
-    left: 18%;
-}
-
-.project-rocket-image {
-    width: 10%;
-    top: 165%;
-    left: 15%;
-}
-
-.project-planet-image {
-    width: 13%;
-    top: 90%;
-    right: 7%;
-    transform: rotate(50deg);
-}
-
-.project-cloud-image {
-    width: 6%;
-    top: 380%;
+.project-puzzle-image {
+    top: 45%;
     left: 20%;
-}
-
-.project-cloud4-image {
-    width: 10%;
-    top: 350%;
-    left: 10%;
-}
-
-.project-book-image {
-    width: 8%;
-    top: 320%;
-    right: 10%;
     transform: rotate(20deg);
 }
 
-.project-cloud2-image {
-    width: 8%;
-    top: 575%;
+.project-wave-image {
+    top: 165%;
+    left: 10%;
+}
+
+.project-umbrella-image {
+    top: 90%;
+    right: 10%;
+    transform: rotate(40deg);
+}
+
+.project-water-image {
+    top: 370%;
+    left: 12%;
+}
+
+.project-tree-image {
+    top: 300%;
+    left: 20%;
+}
+
+.project-sun-image {
+    top: 320%;
+    right: 10%;
+    transform: rotate(10deg);
+}
+
+.project-smiley-image {
+    top: 550%;
     right: 15%;
 }
 
-.project-cloud3-image {
-    width: 10%;
-    top: 550%;
+.project-paw-image {
+    top: 575%;
+    left: 10%;
+    transform: rotate(-20deg);
+}
+
+.project-star-image {
+    top: 185%;
     right: 10%;
 }
 
-.project-stars3-image {
-    width: 5%;
-    top: 15%;
-    right: 23%;
-}
-
-.project-stars4-image {
-    width: 4%;
-    top: 84%;
+.project-line-image {
+    top: 384%;
     right: 13%;
 }
 
-.project-stars6-image {
-    width: 10%;
-    top: 480%;
-    right: 15%;
+.project-plant-image {
+    top: 485%;
+    right: 20%;
 }
 
-.project-plane-image {
-    width: 15%;
-    top: 540%;
-    left: 10%;
-    transform: rotate(30deg);
-}
-
-.project-cloud5-image {
-    width: 12%;
-    top: 450%;
-    left: 5%;
+.project-moon-image {
+    top: 430%;
+    left: 14%;
+    transform: rotate(-10deg);
 }
 
 @media (max-width: 1700px) {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { MdOutlineKeyboardDoubleArrowRight, MdOutlineKeyboardDoubleArrowLeft } from 'react-icons/md';
+import { SlArrowRight, SlArrowLeft } from 'react-icons/sl';
 
 function Slider({ array }) {
     const [currentIndex, setCurrentIndex] = useState(1);
@@ -26,7 +26,7 @@ function Slider({ array }) {
     return (
         <div className="slider-container">
             <button onClick={goToPrevSlide} className="toggle-btn">
-                <MdOutlineKeyboardDoubleArrowLeft className="toggle-icon" />
+                <SlArrowLeft className="toggle-icon" />
             </button>
             {array.map(({ id, src, className, alt }) => (
                 <img
@@ -38,7 +38,7 @@ function Slider({ array }) {
                 />
             ))}
             <button onClick={goToNextSlide} className="toggle-btn">
-                <MdOutlineKeyboardDoubleArrowRight className="toggle-icon" />
+                <SlArrowRight className="toggle-icon" />
             </button>
         </div>
     );

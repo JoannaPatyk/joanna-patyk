@@ -2,12 +2,12 @@
 @use 'sass:math';
 
 .topBanner-container {
-    min-height: 7vh;
+    min-height: 6vh;
     display: flex;
-    gap: var.$gap * 4;
+    gap: var.$gap * 5;
     align-items: center;
     justify-content: center;
-    color: var.$orange-400;
+    color: var.$peach;
     background-color: var.$secondary-violet;
 
     .slogan {
@@ -17,26 +17,27 @@
         justify-content: center;
 
         p {
-            font-size: var.$fontSize * 1.7;
+            font-size: var.$fontSize * 1.8;
             text-align: center;
             font-weight: 100;
+            font-family: var.$secondary-fontFamily;
             text-transform: uppercase;
             letter-spacing: var.$letterSpacing * 1.5;
             line-height: var.$lineHeight * 0.9;
-            filter: drop-shadow(1px 1px var.$orange-000);
         }
     }
 
     .top-banner-icon {
-        font-size: var.$fontSize * 3;
-        filter: drop-shadow(1px 1px var.$orange-000);
-        animation: scale 2s infinite ease-in;
+        font-size: var.$fontSize * 2.5;
     }
 
-    .slogan-btn {
+    .call-to-action-button {
         font-size: var.$fontSize * 1.5;
-        animation: scale 3s infinite linear;
-        margin: 0;
+        letter-spacing: var.$letterSpacing;
+        filter: drop-shadow(3px 3px var.$orange-000);
+        animation: scale 3s infinite ease-in-out;
+        transition: var.$transition;
+        cursor: pointer;
     }
 }
 
@@ -48,7 +49,7 @@
             }
         }
 
-        .slogan-btn {
+        .call-to-action-button {
             font-size: var.$fontSize * 1.3;
             padding: var.$padding * 0.55;
         }
@@ -90,7 +91,7 @@
             }
         }
 
-        .slogan-btn {
+        .call-to-action-button {
             font-size: var.$fontSize * 1.2;
             padding: var.$padding * 0.5;
         }
@@ -99,8 +100,6 @@
 
 @media (max-width: 640px) {
     .topBanner-container {
-        gap: var.$gap;
-
         .slogan {
             p {
                 font-size: var.$fontSize * 1.2;
@@ -108,7 +107,7 @@
             }
         }
 
-        .slogan-btn {
+        .call-to-action-button {
             width: 30%;
         }
     }
@@ -116,7 +115,7 @@
 
 @media (max-width: 550px) {
     .topBanner-container {
-        gap: var.$gap * 0.5;
+        gap: var.$gap;
 
         .slogan {
             gap: 0;
@@ -126,8 +125,9 @@
             }
         }
 
-        .slogan-btn {
+        .call-to-action-button {
             width: 30%;
+            margin-top: var.$margin * 0.25;
             font-size: var.$fontSize;
             filter: drop-shadow(3px 3px var.$orange-000);
         }
@@ -146,8 +146,8 @@
             }
         }
 
-        .slogan-btn {
-            padding: var.$padding * 0.15;
+        .call-to-action-button {
+            padding: var.$padding * 0.25;
             font-size: var.$fontSize * 0.8;
         }
     }

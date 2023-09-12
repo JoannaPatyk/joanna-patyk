@@ -2,8 +2,8 @@ import React, { useState, useRef } from 'react';
 import Media from './Media';
 import { useNavigate } from 'react-router-dom';
 import links from '../utils/links';
-import { MdOutlineKeyboardDoubleArrowLeft } from 'react-icons/md';
-import { HiOutlineMenu } from 'react-icons/hi';
+import { PiCaretLeftThin } from 'react-icons/pi';
+import { HiMenuAlt2 } from 'react-icons/hi';
 import '../css/menu.css';
 import SmallMenu from './SmallMenu';
 
@@ -51,7 +51,7 @@ function Menu() {
             </nav>
             <div className="menu-box">
                 <button className="menu-icon" onClick={handleToggle}>
-                    {isOpen ? <MdOutlineKeyboardDoubleArrowLeft /> : <HiOutlineMenu />}
+                    {isOpen ? <PiCaretLeftThin /> : <HiMenuAlt2 />}
                 </button>
                 {isOpen ? <SmallMenu isOpen={isOpen} setIsOpen={setIsOpen} /> : null}
             </div>

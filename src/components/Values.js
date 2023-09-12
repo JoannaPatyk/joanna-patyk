@@ -6,7 +6,7 @@ import values from '../utils/values';
 import valuesImage from '../utils/valuesImage';
 import valuesSquare from '../utils/valuesSquares';
 import '../css/values.css';
-import { MdOutlineKeyboardDoubleArrowRight, MdOutlineKeyboardDoubleArrowLeft } from 'react-icons/md';
+import { SlArrowRight, SlArrowLeft } from 'react-icons/sl';
 
 function Values() {
     const [activeId, setActiveId] = useState(null);
@@ -74,35 +74,37 @@ function Values() {
     });
 
     return (
-        <div className="values-container">
-            <h1>Jakie wartości mną kierują?</h1>
-            <h3>
-                Poniżej znajdziesz zasady, które przewodzą mojemu podejściu do tworzenia pięknych, funkcjonalnych i
-                efektywnych stron. Jeśli jesteś zainteresowany/a współpracą przy tworzeniu swojej strony internetowej,
-                serdecznie zapraszam do kontaktu. Chętnie poznam Twoje potrzeby i pomogę stworzyć stronę, która
-                odzwierciedli Twój charakter.
-            </h3>
-            <h2>Jeśli masz jeszcze jakieś pytania, śmiało pytaj!</h2>
-            <div className="values">{displayValues}</div>
+        <div className="background-values-container">
+            <div className="values-container">
+                <h1>Jakie wartości mną kierują?</h1>
+                <h3>
+                    Poniżej znajdziesz zasady, które przewodzą mojemu podejściu do tworzenia pięknych, funkcjonalnych i
+                    efektywnych stron. Jeśli jesteś zainteresowany/a współpracą przy tworzeniu swojej strony
+                    internetowej, serdecznie zapraszam do kontaktu. Chętnie poznam Twoje potrzeby i pomogę stworzyć
+                    stronę, która odzwierciedli Twój charakter.
+                </h3>
+                <h2>Jeśli masz jeszcze jakieś pytania, śmiało pytaj!</h2>
+                <div className="values">{displayValues}</div>
 
-            <div className="values-description">
-                {activeDescription && (
-                    <div className="value-content">
-                        <h2>{activeTitle}</h2>
-                        <div className="value-text">
-                            <Button onClick={handleToggleLeft} nextClass="values-btn">
-                                <MdOutlineKeyboardDoubleArrowLeft />
-                            </Button>
-                            {activeDescription}
-                            <Button onClick={handleToggleRight} nextClass="values-btn">
-                                <MdOutlineKeyboardDoubleArrowRight />
-                            </Button>
+                <div className="values-description">
+                    {activeDescription && (
+                        <div className="value-content">
+                            <h2>{activeTitle}</h2>
+                            <div className="value-text">
+                                <Button onClick={handleToggleLeft} nextClass="values-btn">
+                                    <SlArrowLeft />
+                                </Button>
+                                {activeDescription}
+                                <Button onClick={handleToggleRight} nextClass="values-btn">
+                                    <SlArrowRight />
+                                </Button>
+                            </div>
                         </div>
-                    </div>
-                )}
+                    )}
+                </div>
+                <DisplayImages elements={valuesImage} />
+                <DisplaySquares elements={valuesSquare} />
             </div>
-            <DisplayImages elements={valuesImage} />
-            <DisplaySquares elements={valuesSquare} />
         </div>
     );
 }
