@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { GoRocket } from 'react-icons/go';
+import { RxRocket } from 'react-icons/rx';
 
 function ScrollButton() {
     const [showButton, setShowButton] = useState(false);
@@ -33,7 +33,7 @@ function ScrollButton() {
         <>
             {showButton && (
                 <button id="btn-up" onClick={handleButtonUp}>
-                    <GoRocket className="btn-up-icon" />
+                    <RxRocket className="btn-up-icon" />
                 </button>
             )}
         </>

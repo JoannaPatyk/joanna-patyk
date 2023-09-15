@@ -28,6 +28,7 @@ function Landing() {
                     kontakt
                 </Button>
             </div>
+
             <DisplaySquares elements={landingSquare} />
             <DisplayImages elements={landingImages} />
             <img src={backgroundImage} className="landing-background-image" alt="Żarówka" />

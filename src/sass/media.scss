@@ -38,6 +38,7 @@
 
         .contact-icon {
             font-size: var.$fontSize * 4.5;
+            filter: drop-shadow(1.5px 1.5px var.$orange-000);
         }
     }
 }
