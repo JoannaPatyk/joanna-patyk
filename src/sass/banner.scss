@@ -2,7 +2,7 @@
 
 .banner-container {
     min-height: 14vh;
-    background-color: #fff0e3;
+    background-color: var.$orange-400;
 
     p {
         font-size: var.$fontSize * 3;
@@ -13,8 +13,9 @@
         letter-spacing: var.$letterSpacing * 0.8;
 
         span {
-            font-weight: 800;
+            font-weight: 100;
             color: var.$primary-pink;
+            font-family: var.$third-fontFamily;
             filter: drop-shadow(3px 3px var.$secondary-pink);
         }
     }
@@ -35,9 +36,13 @@
         justify-content: center;
 
         p {
-            width: 40%;
+            width: 50%;
             font-size: var.$fontSize * 2;
             line-height: var.$lineHeight * 0.8;
+
+            span {
+                filter: drop-shadow(1.5px 1.5px var.$black);
+            }
         }
     }
 }
@@ -65,7 +70,7 @@
             font-size: var.$fontSize * 1.8;
 
             span {
-                filter: drop-shadow(1px 1px var.$secondary-pink);
+                filter: none;
             }
         }
     }

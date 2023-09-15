@@ -12,15 +12,19 @@
     display: flex;
     gap: var.$gap * 4;
     flex-direction: column;
-    margin: var.$margin * 4 auto;
+    margin: var.$margin * 10 auto;
 
     h1 {
-        font-weight: 800;
-        font-size: var.$fontSize * 3.5;
+        font-weight: 100;
+        font-size: var.$fontSize * 4;
+        font-family: var.$third-fontFamily;
         text-align: center;
-        color: var.$primary-pink;
         letter-spacing: var.$letterSpacing;
-        filter: drop-shadow(2px 2px var.$secondary-pink);
+
+        span {
+            color: var.$primary-pink;
+            filter: drop-shadow(2px 2px var.$secondary-pink);
+        }
     }
 
     h2 {
@@ -51,34 +55,68 @@
             font-weight: 800;
         }
     }
+
+    h4 {
+        width: 40%;
+        margin: 0 auto;
+        font-weight: 100;
+        font-size: var.$fontSize * 1.6;
+        line-height: var.$lineHeight;
+        text-align: center;
+
+        .email-icon {
+            width: 100%;
+            z-index: 100;
+            text-align: center;
+            font-size: var.$fontSize * 5.5;
+            color: var.$orange-300;
+            filter: drop-shadow(3px 3px var.$orange-000);
+            transition: var.$transition;
+            cursor: pointer;
+
+            &:hover {
+                color: var.$primary-pink;
+                filter: drop-shadow(2px 2px var.$secondary-pink);
+                transform: scale(0.9);
+            }
+        }
+    }
+
+    .application-btn {
+        width: 30%;
+        margin: 0 auto;
+        font-size: var.$fontSize * 2;
+    }
 }
 
 .questions {
     display: flex;
-    gap: var.$gap;
+    gap: var.$gap * 2;
     flex-direction: column;
-    margin: 0 auto;
+    align-items: center;
     padding: 0 var.$padding;
-}
 
-.question {
-    display: flex;
-    gap: var.$gap;
-    flex-direction: column;
-    margin-left: var.$margin * 6;
+    .question {
+        width: 70%;
+        display: flex;
+        gap: var.$gap * 0.8;
+        flex-direction: column;
+    }
 }
 
 .checkbox-container {
-    display: block;
-    position: relative;
-    padding-left: var.$padding * 2;
-    margin-bottom: var.$margin * 0.8;
+    width: 80%;
+    display: flex;
+    gap: var.$gap * 2;
+    align-items: center;
     cursor: pointer;
+
     font-size: var.$fontSize * 1.6;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    margin: 0 auto;
 
     input {
         position: absolute;
@@ -89,24 +127,20 @@
     }
 
     p {
-        margin-top: var.$margin;
+        width: 90%;
     }
 }
 
 .checkmark {
-    position: absolute;
-    top: 50%;
-    left: 0;
+    width: 30%;
     height: 20px;
     width: 20px;
-    transform: translateY(-50%);
     background-color: var.$orange-300;
     border-radius: var.$borderRadius;
 }
 
 .checkbox-container input:checked ~ .checkmark {
     background-color: var.$orange-000;
-    filter: drop-shadow(2px 2px var.$orange-100);
 }
 
 .checkmark:after {
@@ -129,21 +163,15 @@
     background: var.$peach;
 }
 
-.application-btn {
-    width: 30%;
-    margin: 0 auto;
-}
-
 label {
     color: var.$black;
     font-size: var.$fontSize * 1.6;
     line-height: var.$lineHeight;
 }
 
-input,
-textarea {
-    width: 70%;
-    padding: var.$padding * 0.75;
+input {
+    width: 100%;
+    padding: var.$padding * 0.7;
     margin: var.$margin * 0.5;
     border: none;
     font-family: inherit;
@@ -161,38 +189,42 @@ textarea::placeholder {
 
 .contact-images {
     position: absolute;
+    font-size: var.$fontSize * 12;
+    color: var.$primary-pink;
+    opacity: 0.4;
     z-index: -3;
 }
 
-.contact-stars-image {
-    width: 10%;
-    top: 12%;
-    right: 15%;
+.contact-phone-image {
+    top: 130%;
+    left: 15%;
 }
 
-.contact-pink-bulb-image {
-    width: 8%;
+.contact-star-image {
     top: 50%;
     left: 10%;
 }
 
-.contact-plane-image {
-    width: 16%;
-    top: 140%;
+.contact-rainbow-image {
+    top: 155%;
     right: 15%;
-    transform: rotate(220deg);
 }
 
-.contact-planet-image {
-    width: 16%;
+.contact-rocket-image {
     top: 70%;
     right: 15%;
 }
 
-.contact-stars2-image {
-    width: 10%;
-    top: 120%;
-    left: 10%;
+.contact-pin-image {
+    top: 20%;
+    left: 50%;
+    font-size: var.$fontSize * 6;
+}
+
+.contact-clip-image {
+    top: 185%;
+    left: 25%;
+    font-size: var.$fontSize * 6;
 }
 
 @media (max-width: 1650px) {
@@ -217,16 +249,23 @@ textarea::placeholder {
 @media (max-width: 1380px) {
     .contact-form {
         width: 70%;
+
+        h1 {
+            width: 80%;
+            margin: 0 auto;
+            font-size: var.$fontSize * 3.8;
+        }
+
+        h2 {
+            width: 70%;
+            font-size: var.$fontSize * 2.5;
+        }
     }
 }
 
 @media (max-width: 1200px) {
     .contact-form {
         width: 80%;
-
-        h2 {
-            font-size: var.$fontSize * 2.5;
-        }
     }
 }
 
@@ -257,29 +296,31 @@ textarea::placeholder {
 
 @media (max-width: 800px) {
     .contact-form {
-        width: 100%;
-
         h1 {
             font-size: var.$fontSize * 3;
         }
 
         h2 {
-            font-size: var.$fontSize * 2.2;
+            font-size: var.$fontSize * 1.8;
         }
 
         h3 {
             font-size: var.$fontSize * 1.6;
+        }
+
+        h4 {
+            width: 50%;
+            font-size: var.$fontSize * 1.4;
+        }
+
+        .application-btn {
+            width: 40%;
         }
     }
 
     label {
         color: var.$black;
         font-size: var.$fontSize * 1.2;
-    }
-
-    input,
-    textarea {
-        width: 80%;
     }
 
     .checkbox-container {
@@ -290,8 +331,8 @@ textarea::placeholder {
         }
     }
 
-    .application-btn {
-        width: 40%;
+    .contact-images {
+        font-size: var.$fontSize * 6;
     }
 }
 
@@ -314,29 +355,77 @@ textarea::placeholder {
 @media (max-width: 590px) {
     .contact-form {
         h1 {
-            width: 60%;
+            width: 85%;
             margin: 0 auto;
             line-height: var.$lineHeight * 0.7;
-            font-size: var.$fontSize * 2.5;
+            font-size: var.$fontSize * 2.6;
         }
+
         h2 {
-            width: 60%;
+            width: 80%;
             line-height: var.$lineHeight * 0.9;
             font-size: var.$fontSize * 2;
         }
+
+        h4 {
+            width: 55%;
+        }
+
+        .application-btn {
+            width: 50%;
+        }
     }
 
-    .question {
-        margin-left: var.$margin * 2;
-    }
-
-    .application-btn {
-        width: 50%;
+    .questions {
+        .question {
+            margin-left: var.$margin * 2;
+        }
     }
 
     .checkbox-container {
         p {
             font-size: var.$fontSize;
+        }
+    }
+
+    input {
+        margin: 0;
+    }
+}
+
+@media (max-width: 510px) {
+    .contact-form {
+        h4 {
+            width: 60%;
+            font-size: var.$fontSize * 1.2;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .contact-form {
+        h1 {
+            font-size: var.$fontSize * 2.4;
+        }
+
+        h2 {
+            font-size: var.$fontSize * 1.6;
+        }
+
+        h3 {
+            font-size: var.$fontSize * 1.2;
+        }
+
+        .application-btn {
+            width: 60%;
+        }
+    }
+
+    .questions {
+        padding: 0;
+
+        .question {
+            margin-left: 0;
         }
     }
 }

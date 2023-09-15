@@ -26,8 +26,8 @@ const advantages = [
         title: 'przystępna promocja firmy',
         text: [
             <p key={0}>
-                Własna strona internetowa umożliwia wykorzystanie różnorodnych narzędzi marketingowych, co pomaga w
-                dotarciu do różnych Klientów i budowaniu marki.
+                Własna strona umożliwia wykorzystanie różnorodnych narzędzi marketingowych, co pomaga w dotarciu do
+                Klientów i budowaniu marki.
             </p>
         ]
     }

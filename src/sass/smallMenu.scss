@@ -6,7 +6,7 @@
 
     .menu-icon {
         color: var.$orange-300;
-        line-height: 10vh;
+        line-height: 8vh;
         padding-left: var.$padding;
         padding-top: var.$padding * 0.5;
         font-size: var.$fontSize * 5;
@@ -15,10 +15,10 @@
     }
 
     .small-menu {
-        height: 80vh;
+        height: 86vh;
         width: 100%;
         position: absolute;
-        top: 15vh;
+        top: 14vh;
         left: 0%;
         z-index: 10;
         display: flex;

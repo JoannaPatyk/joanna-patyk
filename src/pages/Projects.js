@@ -28,12 +28,10 @@ function Projects() {
                     </span>
                 </h3>
                 <ScrollButton />
-                <div className="container">
-                    <DisplayProjects />
-                </div>
-
-                <DisplaySquares elements={projectsSquares} />
+                <DisplayProjects />
             </div>
+
+            <DisplaySquares elements={projectsSquares} />
             <DisplayImages elements={projectImages} />
             <Banner />
             <Footer />

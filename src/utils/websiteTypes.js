@@ -1,19 +1,19 @@
 const websiteTypes = [
     {
         id: 0,
-        label: 'single page (jedna strona główna),'
+        label: 'single page,'
     },
     {
         id: 1,
-        label: 'multi page (strona z wieloma podstronami),'
+        label: 'multi page,'
     },
     {
         id: 2,
-        label: 'blog (strona z uporządkowanymi wpisami),'
+        label: 'blog,'
     },
     {
         id: 3,
-        label: 'sklep internetowy (automatyczna platforma sprzedażowa).'
+        label: 'sklep internetowy.'
     }
 ];
 

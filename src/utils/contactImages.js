@@ -1,14 +1,20 @@
-import yellowStarsImage from '../images/yellow-stars.png';
-import pinkBulbImage from '../images/pink-bulb.png';
-import planeImage from '../images/pink-plane.png';
-import planetImage from '../images/violet-planet.png';
+import React from 'react';
+import {
+    PiWhatsappLogoThin,
+    PiStarThin,
+    PiRainbowThin,
+    PiRocketLaunchThin,
+    PiPushPinThin,
+    PiPaperclipThin
+} from 'react-icons/pi';
 
 const contactImages = [
-    { id: 0, src: yellowStarsImage, className: 'contact-images contact-stars-image', alt: 'Gwiazdy' },
-    { id: 1, src: pinkBulbImage, className: 'contact-images contact-pink-bulb-image', alt: 'Żarówka' },
-    { id: 2, src: planeImage, className: 'contact-images contact-plane-image', alt: 'Papierowy samolot' },
-    { id: 3, src: planetImage, className: 'contact-images contact-planet-image', alt: 'Planeta' },
-    { id: 4, src: yellowStarsImage, className: 'contact-images contact-stars2-image', alt: 'Gwiazdy' }
+    { id: 0, icon: <PiWhatsappLogoThin className="contact-images contact-phone-image" /> },
+    { id: 1, icon: <PiStarThin className="contact-images contact-star-image" /> },
+    { id: 2, icon: <PiRainbowThin className="contact-images contact-rainbow-image" /> },
+    { id: 3, icon: <PiRocketLaunchThin className="contact-images contact-rocket-image" /> },
+    { id: 4, icon: <PiPushPinThin className="contact-images contact-pin-image" /> },
+    { id: 5, icon: <PiPaperclipThin className="contact-images contact-clip-image" /> }
 ];
 
 export default contactImages;

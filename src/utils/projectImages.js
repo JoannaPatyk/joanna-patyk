@@ -10,7 +10,10 @@ import {
     PiPawPrintThin,
     PiShootingStarThin,
     PiLineSegmentsThin,
-    PiPottedPlantThin
+    PiPottedPlantThin,
+    PiBalloonThin,
+    PiCactusThin,
+    PiPaletteThin
 } from 'react-icons/pi';
 
 const projectImages = [
@@ -24,7 +27,10 @@ const projectImages = [
     { id: 7, icon: <PiPawPrintThin className="project-images project-paw-image" /> },
     { id: 8, icon: <PiShootingStarThin className="project-images project-star-image" /> },
     { id: 9, icon: <PiLineSegmentsThin className="project-images project-line-image" /> },
-    { id: 11, icon: <PiPottedPlantThin className="project-images project-plant-image" /> }
+    { id: 11, icon: <PiPottedPlantThin className="project-images project-plant-image" /> },
+    { id: 12, icon: <PiBalloonThin className="project-images project-balloon-image" /> },
+    { id: 13, icon: <PiCactusThin className="project-images project-cactus-image" /> },
+    { id: 14, icon: <PiPaletteThin className="project-images project-palette-image" /> }
 ];
 
 export default projectImages;

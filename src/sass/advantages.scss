@@ -4,14 +4,12 @@
 .advantages-container {
     position: relative;
     width: 60%;
-    min-height: 60vh;
-    margin: 0 auto;
+    margin: var.$margin * 8 auto;
     display: flex;
     gap: var.$gap * 6;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: var.$padding * 15;
 
     h1 {
         text-align: center;
@@ -27,7 +25,6 @@
     }
 
     h2 {
-        width: 90%;
         font-weight: 400;
         font-size: var.$fontSize * 1.6;
         letter-spacing: var.$letterSpacing;
@@ -38,71 +35,48 @@
             font-weight: 800;
         }
     }
-}
 
-.advantage-container {
-    margin: 0 auto;
-    display: grid;
-    gap: var.$gap * 2;
-    grid-template-columns: 1fr 1fr 1fr;
-
-    h2 {
-        font-size: var.$fontSize * 2.5;
-        font-weight: 200;
-        font-family: var.$third-fontFamily;
-        line-height: math.div(var.$lineHeight, 1.5);
-        letter-spacing: var.$letterSpacing;
-        color: var.$primary-pink;
-        text-transform: uppercase;
-        text-align: center;
-    }
-
-    p {
-        font-size: var.$fontSize * 1.6;
-        line-height: var.$lineHeight;
-    }
-
-    .advantage {
-        padding: var.$padding * 2;
-        display: grid;
-        gap: var.$gap;
-        grid-template-rows: 1fr 2fr;
-        place-items: center;
-        font-weight: 400;
-        background-color: transparent;
-        transition: var.$transition;
-        text-align: justify;
-        cursor: pointer;
-
-        &:hover {
-            transform: scale(0.95);
-        }
-
-        &:hover h2 {
-            color: var.$secondary-pink;
-        }
-    }
-}
-
-.advantage-title {
-    display: flex;
-    gap: var.$gap * 3;
-    flex-direction: column;
-    align-items: center;
-    align-items: center;
-
-    h1 {
-        font-weight: 800;
-        color: var.$orange-200;
-        line-height: var.$lineHeight * 0.7;
-        letter-spacing: var.$letterSpacing;
-        text-align: center;
-        filter: drop-shadow(1px 1px var.$black);
-    }
-
-    .information-btn {
-        width: 50%;
+    .advantage-container {
         margin: 0 auto;
+        display: grid;
+        gap: var.$gap * 6;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .advantage {
+            display: grid;
+            gap: var.$gap * 3;
+            grid-template-rows: 0.5fr 1fr;
+            place-items: center;
+            font-weight: 400;
+            background-color: transparent;
+            transition: var.$transition;
+            text-align: justify;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(0.95);
+            }
+
+            &:hover h2 {
+                color: var.$secondary-pink;
+            }
+
+            h2 {
+                font-size: var.$fontSize * 2.5;
+                font-weight: 200;
+                font-family: var.$third-fontFamily;
+                line-height: math.div(var.$lineHeight, 1.5);
+                letter-spacing: var.$letterSpacing;
+                color: var.$primary-pink;
+                text-transform: uppercase;
+                text-align: center;
+            }
+
+            p {
+                font-size: var.$fontSize * 1.6;
+                line-height: var.$lineHeight;
+            }
+        }
     }
 }
 
@@ -114,42 +88,36 @@
     font-size: var.$fontSize * 10;
 }
 
-.advantages-stars {
+.advantages-planet-image {
     top: 15%;
     right: -12%;
 }
 
-.advantages-green-dots1 {
+.advantages-orange-image {
     bottom: 13%;
     left: 75%;
     transform: rotate(-10deg);
 }
 
-.advantages-green-dots2 {
+.advantages-line-image {
     top: 5%;
     left: 40%;
 }
 
-.advantages-pink-dots {
+.advantages-eye-image {
     bottom: 5%;
     left: 8%;
     transform: rotate(10deg);
 }
 
-.advantages-plane {
+.advantages-currency-image {
     top: 30%;
     left: -15%;
     transform: rotate(-18deg);
 }
 
-.advantages-planet {
-    top: 78%;
-    right: 95%;
-}
-
 @media (max-width: 1680px) {
     .advantages-container {
-        width: 70%;
         gap: var.$gap * 5;
 
         h1 {
@@ -157,28 +125,24 @@
         }
 
         h2 {
-            font-size: var.$fontSize * 1.5;
-        }
-    }
-
-    .advantage-container {
-        h2 {
-            font-size: var.$fontSize * 2;
+            font-size: var.$fontSize * 1.4;
         }
 
-        p {
-            padding: 0 var.$padding;
-            font-size: var.$fontSize * 1.5;
-        }
+        .advantage-container {
+            gap: var.$gap * 4;
 
-        .advantage {
-            padding: var.$padding;
-        }
-    }
+            .advantage {
+                gap: var.$gap * 2;
 
-    .advantages-plane {
-        top: 18%;
-        left: -10%;
+                h2 {
+                    font-size: var.$fontSize * 2;
+                }
+
+                p {
+                    font-size: var.$fontSize * 1.4;
+                }
+            }
+        }
     }
 }
 
@@ -190,29 +154,29 @@
             filter: drop-shadow(2px 2px var.$black);
         }
     }
-
-    .advantages-planet {
-        top: 75%;
-        right: 80%;
-    }
 }
 
 @media (max-width: 1180px) {
     .advantages-container {
-        width: 80%;
+        width: 65%;
         gap: var.$gap * 4;
+
+        h1 {
+            width: 80%;
+        }
     }
 }
 
 @media (max-width: 1080px) {
     p {
-        padding: 0 var.$padding * 0.5;
         font-size: var.$fontSize * 1.4;
     }
 }
 
 @media (max-width: 990px) {
     .advantages-container {
+        width: 70%;
+
         h1 {
             width: 80%;
             font-size: var.$fontSize * 3;
@@ -221,106 +185,68 @@
         h2 {
             width: 95%;
         }
-    }
 
-    .advantage-container {
-        display: flex;
-        gap: var.$gap * 3;
-        flex-direction: column;
+        .advantage-container {
+            display: flex;
+            gap: var.$gap * 6;
+            flex-direction: column;
 
-        h2 {
-            text-align: center;
-            padding: var.$padding * 0.25;
+            .advantage {
+                h2 {
+                    text-align: center;
+                    padding: var.$padding * 0.25;
+                }
+            }
         }
-
-        .advantage {
-            padding: var.$padding * 0.5;
-        }
-    }
-
-    .advantages-planet {
-        width: 22%;
-        top: 75%;
-        right: 80%;
     }
 }
 
 @media (max-width: 770px) {
     .advantages-container {
-        padding: var.$padding * 5 0;
-
         h1 {
             width: 100%;
-            margin: 0;
-            margin-bottom: var.$margin * 2;
-            filter: drop-shadow(1px 1px var.$black);
-        }
-    }
-
-    .advantage-container {
-        h2 {
-            font-size: var.$fontSize * 2;
+            font-size: var.$fontSize * 2.6;
+            filter: drop-shadow(1.5px 1.5px var.$black);
         }
 
-        p {
-            font-size: var.$fontSize * 1.3;
-        }
+        .advantage-container {
+            .advantage {
+                h2 {
+                    font-size: var.$fontSize * 2;
+                }
 
-        .advantage {
-            padding: 0;
+                p {
+                    font-size: var.$fontSize * 1.3;
+                }
+            }
         }
     }
 
     .advantages-images {
         font-size: var.$fontSize * 8;
     }
-
-    .advantages-green-dots2 {
-        top: 0%;
-        left: 40%;
-    }
 }
 
-@media (max-width: 460px) {
-    .advantages-container {
-        min-height: 160vh;
-    }
-
+@media (max-width: 480px) {
     .advantages-container {
         h1 {
-            font-size: var.$fontSize * 2.1;
+            font-size: var.$fontSize * 2.2;
         }
 
         h2 {
-            font-size: var.$fontSize * 1.3;
+            font-size: var.$fontSize * 1.4;
             line-height: var.$lineHeight;
         }
-    }
 
-    .advantage-container {
-        .advantage {
-            grid-template-rows: 0.25fr 0.75fr;
-        }
+        .advantage-container {
+            .advantage {
+                grid-template-rows: 0.25fr 0.75fr;
+            }
 
-        p {
-            font-size: var.$fontSize * 1.2;
-            letter-spacing: var.$letterSpacing * 0.8;
-        }
-    }
-
-    .advantages-green-dots2 {
-        top: 5%;
-    }
-}
-
-@media (max-width: 420px) {
-    .advantages-green-dots2 {
-        top: 3%;
-    }
-
-    .advantages-container {
-        h1 {
-            margin-bottom: 0;
+            p {
+                font-size: var.$fontSize * 1.2;
+                letter-spacing: var.$letterSpacing * 0.8;
+            }
         }
     }
 }
