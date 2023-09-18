@@ -23,9 +23,14 @@ import sbq5 from '../screens/sbq-5.png';
 import sbq6 from '../screens/sbq-6.png';
 import sbq7 from '../screens/sbq-7.png';
 import sbq8 from '../screens/sbq-8.png';
-import sbq9 from '../screens/sbq-9.png';
 
 import id1 from '../screens/id-1.png';
+import id2 from '../screens/id-2.png';
+import id3 from '../screens/id-3.png';
+import id4 from '../screens/id-4.png';
+import id5 from '../screens/id-5.png';
+import id6 from '../screens/id-6.png';
+import id7 from '../screens/id-7.png';
 
 import { FaReact, FaCss3Alt, FaHtml5, FaNodeJs } from 'react-icons/fa';
 import { SiStyledcomponents, SiExpress, SiMongodb } from 'react-icons/si';
@@ -138,8 +143,7 @@ const projects = [
             { id: 5, src: sbq5, className: 'project-image sbq-image1', alt: 'Informacje o zakresie usług' },
             { id: 6, src: sbq6, className: 'project-image sbq-image1', alt: 'Informację ze stopki' },
             { id: 7, src: sbq7, className: 'project-image sbq-image1', alt: 'Strona główna z aktywnym przyciskiem' },
-            { id: 8, src: sbq8, className: 'project-image sbq-image1', alt: 'Opis jednej z usług' },
-            { id: 9, src: sbq9, className: 'project-image sbq-image1', alt: 'Podstrona z formularzem kontaktowym' }
+            { id: 8, src: sbq8, className: 'project-image sbq-image1', alt: 'Opis jednej z usług' }
         ],
         description: [
             <h3 key={0}>
@@ -197,7 +201,15 @@ const projects = [
                 Wizytówka architekta wnętrz
             </a>
         ],
-        images: [{ id: 1, src: id1, className: 'project-image id-image1', alt: 'Strona główna' }],
+        images: [
+            { id: 1, src: id1, className: 'project-image id-image1', alt: 'Strona główna' },
+            { id: 2, src: id2, className: 'project-image id-image1', alt: 'Slider' },
+            { id: 3, src: id3, className: 'project-image id-image1', alt: 'Zalety' },
+            { id: 4, src: id4, className: 'project-image id-image1', alt: 'Realizacja usługi' },
+            { id: 5, src: id5, className: 'project-image id-image1', alt: 'Kontakt' },
+            { id: 6, src: id6, className: 'project-image id-image1', alt: 'Projekty' },
+            { id: 7, src: id7, className: 'project-image id-image1', alt: 'Strona główna' }
+        ],
         description: [
             <h3 key={0}>
                 Stworzyłam przykładowy projekt będący dynamiczną wizytówką dla architekta wnętrz. Dzięki wyjątkowemu

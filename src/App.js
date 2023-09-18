@@ -13,10 +13,12 @@ function App() {
                 <TopBanner />
                 <Menu />
                 <Routes>
-                    <Route path="/joanna-patyk" element={<Home />} />
+                    <Route path="*" element={<Home />} />
                     <Route path="/" element={<Home />} />
-                    <Route path="projects" element={<Projects />} />
-                    <Route path="contact" element={<Contact />} />
+                    {/* <Route path="projects" element={<Projects />} /> */}
+                    <Route path="projects/" element={<Projects />} />
+
+                    <Route path="contact/" element={<Contact />} />
                 </Routes>
             </div>
         </Router>

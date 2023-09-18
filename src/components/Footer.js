@@ -16,7 +16,8 @@ function Footer() {
                 </div>
                 <div className="footer-text-element">
                     <h2>Kontakt</h2>
-                    <p>email@email.pl</p>
+                    <p>Joanna Patyk</p>
+                    <p>patykjoanna93@gmail.com</p>
                     <Media />
                 </div>
                 <div className="footer-text-element">
