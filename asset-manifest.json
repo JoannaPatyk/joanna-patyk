@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/joanna-patyk-website/static/css/main.6542109a.css",
-    "main.js": "/joanna-patyk-website/static/js/main.a6f11e7c.js",
+    "main.js": "/joanna-patyk-website/static/js/main.a7c1eeb8.js",
     "static/media/id-1.png": "/joanna-patyk-website/static/media/id-1.e172a47615f01701c779.png",
     "static/media/sbq-1.png": "/joanna-patyk-website/static/media/sbq-1.02539e238d3fd0e012d5.png",
     "static/media/sbq-2.png": "/joanna-patyk-website/static/media/sbq-2.7f8b0e563c606a537049.png",
@@ -28,10 +28,10 @@
     "static/media/bulb.png": "/joanna-patyk-website/static/media/bulb.90384974952751eb2452.png",
     "index.html": "/joanna-patyk-website/index.html",
     "main.6542109a.css.map": "/joanna-patyk-website/static/css/main.6542109a.css.map",
-    "main.a6f11e7c.js.map": "/joanna-patyk-website/static/js/main.a6f11e7c.js.map"
+    "main.a7c1eeb8.js.map": "/joanna-patyk-website/static/js/main.a7c1eeb8.js.map"
   },
   "entrypoints": [
     "static/css/main.6542109a.css",
-    "static/js/main.a6f11e7c.js"
+    "static/js/main.a7c1eeb8.js"
   ]
 }
