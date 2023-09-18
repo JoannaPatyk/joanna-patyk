@@ -1,16 +1,37 @@
 {
   "files": {
-    "main.css": "/static/css/main.0b93f22d.css",
-    "main.js": "/static/js/main.6e4ebc77.js",
-    "static/media/bulb.png": "/static/media/bulb.90384974952751eb2452.png",
-    "static/media/stars2.png": "/static/media/stars2.00cb1d97ae600dfbb78f.png",
-    "static/media/stars1.png": "/static/media/stars1.ad96e529adb4acdbb2f2.png",
-    "index.html": "/index.html",
-    "main.0b93f22d.css.map": "/static/css/main.0b93f22d.css.map",
-    "main.6e4ebc77.js.map": "/static/js/main.6e4ebc77.js.map"
+    "main.css": "/joanna-patyk-website/static/css/main.6542109a.css",
+    "main.js": "/joanna-patyk-website/static/js/main.a6f11e7c.js",
+    "static/media/id-1.png": "/joanna-patyk-website/static/media/id-1.e172a47615f01701c779.png",
+    "static/media/sbq-1.png": "/joanna-patyk-website/static/media/sbq-1.02539e238d3fd0e012d5.png",
+    "static/media/sbq-2.png": "/joanna-patyk-website/static/media/sbq-2.7f8b0e563c606a537049.png",
+    "static/media/sbq-7.png": "/joanna-patyk-website/static/media/sbq-7.338143cdaa097acc6d02.png",
+    "static/media/sbq-5.png": "/joanna-patyk-website/static/media/sbq-5.3c538d80d2ee0cb63e32.png",
+    "static/media/sbq-4.png": "/joanna-patyk-website/static/media/sbq-4.2b098fa9d26d59bf922d.png",
+    "static/media/het-3.png": "/joanna-patyk-website/static/media/het-3.34aaae592878f1ae37cf.png",
+    "static/media/het-1.png": "/joanna-patyk-website/static/media/het-1.ddb9b0f5e999f91769f9.png",
+    "static/media/het-2.png": "/joanna-patyk-website/static/media/het-2.fc97629d386e2fe3f1ad.png",
+    "static/media/sbq-9.png": "/joanna-patyk-website/static/media/sbq-9.8c1e5abb5625602d00c0.png",
+    "static/media/sbq-8.png": "/joanna-patyk-website/static/media/sbq-8.889ee7234f61ee8935b7.png",
+    "static/media/het-13.png": "/joanna-patyk-website/static/media/het-13.a75b678862c11e5a56e4.png",
+    "static/media/het-12.png": "/joanna-patyk-website/static/media/het-12.df275632d60233ef4550.png",
+    "static/media/het-7.png": "/joanna-patyk-website/static/media/het-7.775cc9524b642fe11f55.png",
+    "static/media/het-11.png": "/joanna-patyk-website/static/media/het-11.8bbddb6757a742852705.png",
+    "static/media/het-9.png": "/joanna-patyk-website/static/media/het-9.40e647cfa92b5ad35b62.png",
+    "static/media/het-8.png": "/joanna-patyk-website/static/media/het-8.82e50d142692be05c2bc.png",
+    "static/media/het-4.png": "/joanna-patyk-website/static/media/het-4.e579c7c5a16284f95033.png",
+    "static/media/het-5.png": "/joanna-patyk-website/static/media/het-5.8b3ca783f820b009f3c3.png",
+    "static/media/het-10.png": "/joanna-patyk-website/static/media/het-10.20c4c4f380b6c98bb9ba.png",
+    "static/media/het-6.png": "/joanna-patyk-website/static/media/het-6.28757767e2c43599994d.png",
+    "static/media/sbq-3.png": "/joanna-patyk-website/static/media/sbq-3.11053345a92eb7c7fd27.png",
+    "static/media/sbq-6.png": "/joanna-patyk-website/static/media/sbq-6.73de5895c6de3b4d24ff.png",
+    "static/media/bulb.png": "/joanna-patyk-website/static/media/bulb.90384974952751eb2452.png",
+    "index.html": "/joanna-patyk-website/index.html",
+    "main.6542109a.css.map": "/joanna-patyk-website/static/css/main.6542109a.css.map",
+    "main.a6f11e7c.js.map": "/joanna-patyk-website/static/js/main.a6f11e7c.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b93f22d.css",
-    "static/js/main.6e4ebc77.js"
+    "static/css/main.6542109a.css",
+    "static/js/main.a6f11e7c.js"
   ]
 }
