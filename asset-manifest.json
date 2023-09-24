@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/joanna-patyk/static/css/main.6542109a.css",
-    "main.js": "/joanna-patyk/static/js/main.21bcb1bc.js",
+    "main.js": "/joanna-patyk/static/js/main.b8f29ba1.js",
     "static/media/id-6.png": "/joanna-patyk/static/media/id-6.d41cdfb401125070e61d.png",
     "static/media/id-5.png": "/joanna-patyk/static/media/id-5.7fb8a4ac2dfc947b20f2.png",
     "static/media/sbq-4.png": "/joanna-patyk/static/media/sbq-4.f51e508183c0d93d29ff.png",
@@ -33,10 +33,10 @@
     "static/media/bulb.png": "/joanna-patyk/static/media/bulb.90384974952751eb2452.png",
     "index.html": "/joanna-patyk/index.html",
     "main.6542109a.css.map": "/joanna-patyk/static/css/main.6542109a.css.map",
-    "main.21bcb1bc.js.map": "/joanna-patyk/static/js/main.21bcb1bc.js.map"
+    "main.b8f29ba1.js.map": "/joanna-patyk/static/js/main.b8f29ba1.js.map"
   },
   "entrypoints": [
     "static/css/main.6542109a.css",
-    "static/js/main.21bcb1bc.js"
+    "static/js/main.b8f29ba1.js"
   ]
 }
