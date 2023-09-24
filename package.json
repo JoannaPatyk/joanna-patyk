@@ -1,11 +1,14 @@
 {
-    "name": "joanna-patyk-website",
+    "name": "joanna-patyk",
+    "homepage": "https://joannapatyk.github.io/joanna-patyk/",
     "version": "0.1.0",
     "private": true,
+    "author": "Joanna Patyk",
     "dependencies": {
         "@testing-library/jest-dom": "^6.1.2",
         "@testing-library/react": "^14.0.0",
         "@testing-library/user-event": "^14.4.3",
+        "gh-pages": "^6.0.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-icons": "^4.10.1",
@@ -36,7 +39,9 @@
         "prettier-fix": "npx prettier --write .",
         "gulp-styles": "npx gulp styles",
         "gulp-watch": "npx gulp watch",
-        "serve": "npx serve -s build"
+        "serve": "npx serve -s build",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [
