@@ -1,20 +1,15 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
 import Media from './Media';
 import { useNavigate } from 'react-router-dom';
 import links from '../utils/links';
-import { PiCaretLeftThin } from 'react-icons/pi';
-import { HiMenuAlt2 } from 'react-icons/hi';
+import { PiXThin, PiTextAlignLeftThin } from 'react-icons/pi';
 import '../css/menu.css';
 import SmallMenu from './SmallMenu';
 
-function Menu() {
-    const [isOpen, setIsOpen] = useState(false);
+function Menu({ handleToggle, isOpen, setIsOpen }) {
     const navigate = useNavigate();
     const menuRef = useRef(null);
-
-    const handleToggle = () => {
-        setIsOpen(!isOpen);
-    };
 
     const handleChangePage = (path) => {
         navigate(path);
@@ -51,7 +46,7 @@ function Menu() {
             </nav>
             <div className="menu-box">
                 <button className="menu-icon" onClick={handleToggle}>
-                    {isOpen ? <PiCaretLeftThin /> : <HiMenuAlt2 />}
+                    {isOpen ? <PiXThin /> : <PiTextAlignLeftThin />}
                 </button>
                 {isOpen ? <SmallMenu isOpen={isOpen} setIsOpen={setIsOpen} /> : null}
             </div>
@@ -59,5 +54,11 @@ function Menu() {
         </div>
     );
 }
+
+Menu.propTypes = {
+    handleToggle: PropTypes.func,
+    setIsOpen: PropTypes.func,
+    isOpen: PropTypes.bool
+};
 
 export default Menu;

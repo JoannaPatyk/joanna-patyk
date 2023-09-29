@@ -97,6 +97,10 @@
     }
 }
 
+.blur-background {
+    filter: blur(3px);
+}
+
 @keyframes upAndDown {
     0% {
         top: -8%;
@@ -435,6 +439,8 @@
 @media (max-width: 570px) {
     .landing-container {
         .landing-content {
+            width: 90%;
+
             .landing-title {
                 padding: 0;
                 width: 90%;
@@ -442,26 +448,27 @@
             }
         }
 
-        .landing-images {
-            font-size: var.$fontSize * 6;
-        }
-
         .landing-cloud-image {
             top: 58%;
         }
 
         .landing-balloon-image {
-            top: 58%;
-            left: 3%;
+            top: 60%;
+            left: 0%;
+        }
+
+        .landing-iceCreme-image {
+            top: 10%;
+            left: 65%;
         }
 
         .landing-spiral-image {
-            font-size: var.$fontSize * 3;
+            font-size: var.$fontSize * 4;
         }
 
         .landing-wave-image {
             top: 5%;
-            font-size: var.$fontSize * 3;
+            font-size: var.$fontSize * 4;
         }
     }
 }

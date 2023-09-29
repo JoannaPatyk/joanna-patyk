@@ -336,7 +336,11 @@
 @media (max-width: 600px) {
     .background-values-container {
         .values-container {
-            width: 75%;
+            width: 90%;
+
+            h3 {
+                width: 100%;
+            }
         }
 
         .values-description {

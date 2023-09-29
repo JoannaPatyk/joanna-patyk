@@ -12,7 +12,7 @@ import '../css/projects.css';
 function Projects() {
     return (
         <>
-            <div className="projects-container">
+            <main className="projects-container">
                 <h1>
                     Zapraszam do <span>zapoznania się</span> z częścią <span>wykonanych projektów</span>
                 </h1>
@@ -29,7 +29,7 @@ function Projects() {
                 </h3>
                 <ScrollButton />
                 <DisplayProjects />
-            </div>
+            </main>
 
             <DisplaySquares elements={projectsSquares} />
             <DisplayImages elements={projectImages} />

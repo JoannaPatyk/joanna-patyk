@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import '../css/landing.css';
 import Button from './Button';
@@ -8,7 +9,7 @@ import landingSquare from '../utils/landingSquares';
 import landingImages from '../utils/landingImages';
 import backgroundImage from '../images/bulb.png';
 
-function Landing() {
+function Landing({ isOpen }) {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -17,7 +18,7 @@ function Landing() {
     };
 
     return (
-        <div className="landing-container">
+        <div className={isOpen ? 'landing-container blur-background' : 'landing-container'}>
             <div className="landing-content">
                 <h1 className="landing-title">
                     <span className="part-1">Twoja wizja</span>
@@ -28,12 +29,15 @@ function Landing() {
                     kontakt
                 </Button>
             </div>
-
             <DisplaySquares elements={landingSquare} />
             <DisplayImages elements={landingImages} />
             <img src={backgroundImage} className="landing-background-image" alt="Żarówka" />
         </div>
     );
 }
+
+Landing.propTypes = {
+    isOpen: PropTypes.boolean
+};
 
 export default Landing;
