@@ -323,13 +323,19 @@
     @media (max-width: 595px) {
         .background-registration-container {
             .registration-container {
+                width: 90%;
+                margin: 0 auto var.$margin * 6;
+
                 h1 {
+                    width: 100%;
                     font-size: var.$fontSize * 2.5;
                 }
 
                 .steps-container {
+                    width: 100%;
+
                     .step {
-                        width: 90%;
+                        width: 100%;
 
                         h2 {
                             font-size: var.$fontSize * 1.8;

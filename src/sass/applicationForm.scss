@@ -95,10 +95,9 @@
     gap: var.$gap * 2;
     flex-direction: column;
     align-items: center;
-    padding: 0 var.$padding;
 
     .question {
-        width: 70%;
+        width: 100%;
         display: flex;
         gap: var.$gap * 0.8;
         flex-direction: column;
@@ -106,18 +105,16 @@
 }
 
 .checkbox-container {
-    width: 80%;
     display: flex;
     gap: var.$gap * 2;
     align-items: center;
     cursor: pointer;
-
     font-size: var.$fontSize * 1.6;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    margin: 0 auto;
+    margin: 0 var.$margin * 0.5;
 
     input {
         position: absolute;
@@ -128,12 +125,11 @@
     }
 
     p {
-        width: 90%;
+        width: 95%;
     }
 }
 
 .checkmark {
-    width: 30%;
     height: 20px;
     width: 20px;
     background-color: var.$orange-300;
@@ -170,10 +166,10 @@ label {
     line-height: var.$lineHeight;
 }
 
-input {
+input,
+textarea {
     width: 100%;
     padding: var.$padding * 0.7;
-    margin: var.$margin * 0.5;
     border: none;
     font-family: inherit;
     border-radius: var.$borderRadius;
@@ -181,6 +177,11 @@ input {
     box-shadow: 2px 2px 5px var.$orange-000;
     filter: drop-shadow(4px 4px var.$orange-300);
     outline: none;
+}
+
+textarea {
+    height: 15vh;
+    padding: var.$padding;
 }
 
 input::placeholder,
@@ -198,12 +199,12 @@ textarea::placeholder {
 
 .contact-phone-image {
     top: 130%;
-    left: 15%;
+    left: 10%;
 }
 
 .contact-star-image {
     top: 50%;
-    left: 10%;
+    left: 15%;
 }
 
 .contact-rainbow-image {
@@ -224,7 +225,7 @@ textarea::placeholder {
 
 .contact-clip-image {
     top: 185%;
-    left: 25%;
+    left: 15%;
     font-size: var.$fontSize * 6;
 }
 
@@ -264,16 +265,8 @@ textarea::placeholder {
     }
 }
 
-@media (max-width: 1200px) {
-    .contact-form {
-        width: 80%;
-    }
-}
-
 @media (max-width: 1040px) {
     .contact-form {
-        width: 90%;
-
         h2 {
             font-size: var.$fontSize * 2.5;
         }
@@ -297,6 +290,8 @@ textarea::placeholder {
 
 @media (max-width: 800px) {
     .contact-form {
+        width: 80%;
+
         h1 {
             font-size: var.$fontSize * 3;
         }
@@ -353,8 +348,10 @@ textarea::placeholder {
     }
 }
 
-@media (max-width: 590px) {
+@media (max-width: 600px) {
     .contact-form {
+        width: 90%;
+
         h1 {
             width: 85%;
             margin: 0 auto;

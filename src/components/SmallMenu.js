@@ -31,12 +31,12 @@ function SmallMenu({ isOpen, setIsOpen }) {
                     }
                 }}
             >
-                {text}
+                <p>{text}</p>
             </div>
         );
     });
 
-    return <nav className="small-menu">{displayMenu}</nav>;
+    return <nav className={isOpen ? 'small-menu small-menu-move' : 'small-menu'}>{displayMenu}</nav>;
 }
 
 SmallMenu.propTypes = {

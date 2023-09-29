@@ -93,7 +93,7 @@
 
             .project-image {
                 width: 100%;
-                border: 15px solid var.$peach;
+                border: 10px solid var.$peach;
                 border-radius: var.$borderRadius;
                 box-shadow: 2px 2px 5px var.$orange-000;
                 filter: drop-shadow(10px 10px var.$orange-300);
@@ -127,6 +127,7 @@
                     display: flex;
                     gap: var.$gap * 2;
                     flex-direction: column;
+                    list-style-type: none;
 
                     li {
                         font-size: var.$fontSize * 1.6;
@@ -481,6 +482,10 @@
                     }
                 }
 
+                .project-image {
+                    border: 5px solid var.$peach;
+                }
+
                 .project-description {
                     gap: var.$gap * 2.5;
 
@@ -545,7 +550,7 @@
 
 @media (max-width: 550px) {
     .projects-container {
-        width: 75%;
+        width: 90%;
 
         h1 {
             font-size: var.$fontSize * 2.6;

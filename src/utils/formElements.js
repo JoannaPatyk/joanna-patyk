@@ -6,13 +6,13 @@ const formElements = [
     {
         id: 'appearance',
         label: '6. Czy masz już jakąś wizję jak powinna wyglądać strona?',
-        type: 'text',
+        type: 'textarea',
         placeholder: 'Treść wiadomości...'
     },
     {
         id: 'message',
         label: '7. Czy jest coś jeszcze o czym chcesz wspomnieć?',
-        type: 'text',
+        type: 'textarea',
         placeholder: 'Treść wiadomości...'
     }
 ];

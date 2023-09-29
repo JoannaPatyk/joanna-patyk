@@ -227,6 +227,13 @@
     }
 }
 
+@media (max-width: 600px) {
+    .advantages-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
 @media (max-width: 480px) {
     .advantages-container {
         h1 {
