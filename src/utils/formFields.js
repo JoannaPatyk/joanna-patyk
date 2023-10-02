@@ -1,6 +1,6 @@
 const formFields = [
     { id: 'name', label: '2. Imię:', name: 'name', type: 'text', placeholder: 'Imię...' },
-    { id: 'email', label: '3. Adres e-mail:', name: 'email', type: 'email', placeholder: 'E-mail...' },
+    { id: 'email', label: '3. Adres e-mail:', name: 'email', type: 'text', placeholder: 'E-mail...' },
     { id: 'phone', label: '4. Numer telefonu:', name: 'phone', type: 'number', placeholder: 'Numer telefonu...' },
     {
         id: 'theme',
