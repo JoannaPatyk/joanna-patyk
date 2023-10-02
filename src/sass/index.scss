@@ -42,6 +42,11 @@ body {
     }
 }
 
+.basic-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
 #btn-up {
     display: flex;
     align-items: center;
