@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { showErrorEmailMessage, showError, showMessage } from '../utils/notification';
 import Button from './Button';
 import DisplaySquares from './DisplaySquares';
 import DisplayImages from './DisplayImages';
@@ -58,7 +59,7 @@ function ApplicationForm() {
         e.preventDefault();
 
         if (!isEmailValid(toSend.email) || toSend.email === '') {
-            alert('Proszę podać prawidłowy adres email.');
+            showErrorEmailMessage();
             return;
         }
 
@@ -70,11 +71,12 @@ function ApplicationForm() {
                 process.env.REACT_APP_PUBLIC_KEY
             );
 
-            alert('Dziękujemy 😊, wiadomość została wysłana!');
+            showMessage();
             setToSend(initialState);
+            setButtonDisabled(true);
             setChecked(!checked);
         } catch (error) {
-            alert('Nie udało się, spróbuj ponownie 😟');
+            showError();
         }
     };
 

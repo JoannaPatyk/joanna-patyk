@@ -100,6 +100,30 @@ body {
     }
 }
 
+// TOASTIFY
+
+.toast-error-message,
+.toast-success-message {
+    width: 102%;
+    padding: var.$padding * 1.5;
+    color: var.$black;
+    font-weight: 800;
+    background-color: var.$peach;
+    font-family: var.$primary-fontFamily;
+    font-size: var.$fontSize * 1.2;
+    letter-spacing: var.$letterSpacing * 0.5;
+    line-height: 1.8;
+    border-radius: 60px;
+}
+
+.success-bar {
+    background-color: var.$secondary-violet;
+}
+
+.error-bar {
+    background-color: var.$primary-pink;
+}
+
 // SQUARE
 
 .square {

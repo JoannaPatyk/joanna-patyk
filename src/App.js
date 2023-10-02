@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
@@ -40,6 +42,7 @@ function App() {
                     <Route path="contact/" element={<Contact />} />
                     <Route path="*" element={<Home />} />
                 </Routes>
+                <ToastContainer position="top-left" />
             </div>
         </Router>
     );
