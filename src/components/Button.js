@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Button({ id, children, onClick, nextClass, disabled = false, type = 'button' }) {
     return (
         <button id={id} type={type} onClick={onClick} className={`basic-btn ${nextClass}`} disabled={disabled}>
-            {children}
+            <p>{children}</p>
         </button>
     );
 }

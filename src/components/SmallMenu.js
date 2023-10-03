@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import links from '../utils/links';
@@ -12,7 +12,23 @@ function SmallMenu({ isOpen, setIsOpen }) {
         setIsOpen(!isOpen);
     };
 
-    const displayMenu = links.map(({ id, text, path }) => {
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (isOpen && event.target.closest('.small-menu') === null) {
+                setIsOpen(false);
+            }
+        };
+
+        if (isOpen) {
+            document.addEventListener('mousedown', handleOutsideClick);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        };
+    }, [isOpen, setIsOpen]);
+
+    const displayMenu = links.map(({ id, icon, text, path }) => {
         return (
             <div
                 className="small-menu-element"
@@ -31,7 +47,10 @@ function SmallMenu({ isOpen, setIsOpen }) {
                     }
                 }}
             >
-                <p>{text}</p>
+                <div className="small-menu-content">
+                    {icon}
+                    <p>{text}</p>
+                </div>
             </div>
         );
     });

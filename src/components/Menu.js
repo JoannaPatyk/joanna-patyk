@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Media from './Media';
 import { useNavigate } from 'react-router-dom';
 import links from '../utils/links';
-import { PiXThin, PiTextAlignLeftThin } from 'react-icons/pi';
+import { PiX, PiTextAlignLeft } from 'react-icons/pi';
 import '../css/menu.css';
 import SmallMenu from './SmallMenu';
 
@@ -46,7 +46,7 @@ function Menu({ handleToggle, isOpen, setIsOpen }) {
             </nav>
             <div className="menu-box">
                 <button className="menu-icon" onClick={handleToggle}>
-                    {isOpen ? <PiXThin /> : <PiTextAlignLeftThin />}
+                    {isOpen ? <PiX /> : <PiTextAlignLeft />}
                 </button>
                 {isOpen ? <SmallMenu isOpen={isOpen} setIsOpen={setIsOpen} /> : null}
             </div>

@@ -26,18 +26,22 @@ body {
     font-family: var.$secondary-fontFamily;
     letter-spacing: var.$letterSpacing * 4;
     font-weight: 900;
-    color: var.$orange-000;
+    color: var.$white;
     border: none;
     border-radius: var.$borderRadius;
-    background-color: var.$orange-300;
-    filter: drop-shadow(5px 5px var.$orange-000);
+    background-color: var.$primary-pink;
+    filter: drop-shadow(4px 4px var.$secondary-pink);
     transition: var.$transition;
     cursor: pointer;
+
+    p {
+        filter: drop-shadow(1px 1px var.$black);
+    }
 
     &:hover {
         transform: scale(0.9);
         color: var.$peach;
-        background-color: var.$primary-pink;
+        background-color: var.$secondary-pink;
         filter: none;
     }
 }
@@ -70,10 +74,15 @@ body {
         transform: scale(0.7);
     }
 
+    &:hover .btn-up-icon {
+        color: var.$primary-pink;
+        filter: drop-shadow(1px 1px var.$secondary-pink);
+    }
+
     .btn-up-icon {
         font-size: var.$fontSize * 4;
-        color: var.$orange-200;
-        filter: drop-shadow(2px 2px var.$orange-000);
+        color: var.$orange-100;
+        filter: drop-shadow(1px 1px var.$orange-000);
         transform: rotate(-45deg);
     }
 }
@@ -104,7 +113,7 @@ body {
 
 .toast-error-message,
 .toast-success-message {
-    width: 102%;
+    width: 98%;
     padding: var.$padding * 1.5;
     color: var.$black;
     font-weight: 800;

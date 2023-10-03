@@ -29,7 +29,6 @@ import id2 from '../screens/id-2.png';
 import id3 from '../screens/id-3.png';
 import id4 from '../screens/id-4.png';
 import id5 from '../screens/id-5.png';
-import id6 from '../screens/id-6.png';
 
 import { FaReact, FaCss3Alt, FaHtml5, FaNodeJs } from 'react-icons/fa';
 import { SiStyledcomponents, SiExpress, SiMongodb } from 'react-icons/si';
@@ -205,8 +204,7 @@ const projects = [
             { id: 2, src: id2, className: 'project-image id-image1', alt: 'Slider' },
             { id: 3, src: id3, className: 'project-image id-image1', alt: 'Zalety' },
             { id: 4, src: id4, className: 'project-image id-image1', alt: 'Realizacja usługi' },
-            { id: 5, src: id5, className: 'project-image id-image1', alt: 'Kontakt' },
-            { id: 6, src: id6, className: 'project-image id-image1', alt: 'Projekty' }
+            { id: 5, src: id5, className: 'project-image id-image1', alt: 'Kontakt' }
         ],
         description: [
             <h3 key={0}>

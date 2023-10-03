@@ -18,7 +18,7 @@
         h1 {
             text-align: center;
             font-weight: 100;
-            color: var.$peach;
+            color: var.$primary-pink;
             font-size: var.$fontSize * 4;
             font-family: var.$third-fontFamily;
             line-height: math.div(var.$lineHeight, 1.8);
@@ -34,7 +34,6 @@
             font-size: var.$fontSize * 3;
             color: var.$primary-pink;
             letter-spacing: var.$letterSpacing;
-            filter: drop-shadow(2px 2px var.$secondary-pink);
         }
 
         h3 {
@@ -51,7 +50,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             place-content: center;
-            gap: var.$gap * 10;
+            gap: var.$gap * 8;
 
             .value {
                 margin-top: var.$margin * 1.5;
@@ -69,11 +68,11 @@
             }
 
             .value-icon {
-                font-size: var.$fontSize * 12;
+                font-size: var.$fontSize * 10;
                 background-color: transparent;
                 border: none;
                 color: var.$peach;
-                filter: drop-shadow(2px 2px var.$primary-pink);
+                filter: drop-shadow(2px 2px var.$secondary-pink);
                 transition: var.$transition;
                 opacity: 0.3;
                 cursor: pointer;
@@ -92,12 +91,12 @@
             margin-top: -3 * var.$padding;
 
             h2 {
-                color: var.$peach;
+                color: var.$primary-pink;
                 font-size: var.$fontSize * 3;
                 font-family: var.$third-fontFamily;
                 font-weight: 100;
                 text-align: center;
-                filter: drop-shadow(3px 3px var.$secondary-pink);
+                filter: drop-shadow(2px 2px var.$secondary-pink);
                 text-transform: uppercase;
                 letter-spacing: var.$letterSpacing * 2;
             }
@@ -118,7 +117,7 @@
                     span {
                         font-weight: 800;
                         color: var.$primary-pink;
-                        filter: drop-shadow(2px 2px var.$secondary-pink);
+                        filter: drop-shadow(1px 1px var.$secondary-pink);
                     }
                 }
 
