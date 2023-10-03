@@ -6,8 +6,8 @@ const advantages = [
         title: 'dobre pierwsze wrażenie',
         text: [
             <p key={0}>
-                Strona jest wizytówką firmy w świecie online. Estetyczny wygląd tworzy pozytywne pierwsze wrażenie,
-                zachęcając odwiedzających do dalszej komunikacji.
+                Strona jest wizytówką firmy w świecie online. Estetyczny wygląd tworzy pozytywne wrażenie, zachęcając
+                odwiedzających do dalszej komunikacji.
             </p>
         ]
     },

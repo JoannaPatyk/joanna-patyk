@@ -33,42 +33,56 @@
 
     .small-menu {
         inset: 0;
-        width: 80vw;
-        height: 85vh;
+        width: 50vw;
+        height: 25vh;
         position: absolute;
-        top: 15vh;
-        left: 0;
+        top: calc(15vh + 5px);
+        left: 5px;
         z-index: -1;
         display: flex;
         gap: var.$gap * 2;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: var.$orange-400;
-        filter: drop-shadow(10px 10px var.$orange-300);
+        border-radius: var.$borderRadius * 1.4;
+        background-color: var.$secondary-violet;
         transition: var.$transition;
         opacity: 0;
 
-        .small-menu-element {
-            width: 80%;
-            background-color: var.$peach;
+        .small-menu-content {
+            width: 40vw;
+            height: 4vh;
+            padding-left: var.$padding;
+            display: flex;
+            gap: var.$gap * 0.5;
+            align-items: center;
+            background-color: var.$primary-pink;
+            border-radius: var.$borderRadius;
+            filter: drop-shadow(2px 2px var.$secondary-pink);
+            transition: var.$transition;
             cursor: pointer;
 
+            .small-menu-icon {
+                font-size: var.$fontSize * 2;
+                color: var.$white;
+                filter: drop-shadow(1px 1px var.$black);
+            }
+
             p {
+                color: var.$white;
                 font-size: var.$fontSize * 1.6;
-                padding: var.$padding * 0.5;
-                font-weight: 100;
+                font-weight: 500;
+                font-family: var.$secondary-fontFamily;
                 letter-spacing: var.$letterSpacing * 2;
+                filter: drop-shadow(1px 1px var.$black);
                 text-transform: uppercase;
                 transition: var.$transition;
             }
-
-            :hover {
-                color: var.$white;
-                background-color: var.$orange-100;
-                margin-left: var.$margin * 2;
-            }
         }
+    }
+
+    .small-menu-content:hover {
+        transform: scale(0.95);
     }
 
     .small-menu-move {
@@ -80,19 +94,22 @@
 @media (max-width: 695px) {
     .menu-container {
         .small-menu {
-            .small-menu-element {
-                font-size: var.$fontSize * 1.8;
-                filter: drop-shadow(1px 1px var.$orange-000);
+            .small-menu-content {
+                p {
+                    font-size: var.$fontSize * 1.4;
+                }
             }
         }
     }
 }
 
-@media (max-width: 445px) {
+@media (max-width: 395px) {
     .menu-container {
         .small-menu {
-            .small-menu-element {
-                font-size: var.$fontSize * 1.6;
+            .small-menu-content {
+                p {
+                    font-size: var.$fontSize * 1.2;
+                }
             }
         }
     }

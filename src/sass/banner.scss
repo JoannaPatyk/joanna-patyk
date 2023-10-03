@@ -2,21 +2,25 @@
 
 .banner-container {
     min-height: 14vh;
-    background-color: var.$orange-400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var.$orange-300;
 
     p {
-        font-size: var.$fontSize * 3;
-        font-weight: 200;
-        line-height: 14vh;
+        font-size: var.$fontSize * 2.8;
+        font-weight: 100;
+        line-height: 1.5;
         text-align: center;
         color: var.$black;
         letter-spacing: var.$letterSpacing * 0.8;
 
         span {
             font-weight: 100;
-            color: var.$primary-pink;
+            color: var.$orange-200;
             font-family: var.$third-fontFamily;
-            filter: drop-shadow(3px 3px var.$secondary-pink);
+            filter: drop-shadow(2px 2px var.$black);
+            text-transform: uppercase;
         }
     }
 }
@@ -39,10 +43,6 @@
             width: 50%;
             font-size: var.$fontSize * 2;
             line-height: var.$lineHeight * 0.8;
-
-            span {
-                filter: drop-shadow(1.5px 1.5px var.$black);
-            }
         }
     }
 }
@@ -51,6 +51,10 @@
     .banner-container {
         p {
             width: 50%;
+
+            span {
+                filter: drop-shadow(1px 1px var.$secondary-violet);
+            }
         }
     }
 }
@@ -68,10 +72,6 @@
         p {
             width: 70%;
             font-size: var.$fontSize * 1.8;
-
-            span {
-                filter: none;
-            }
         }
     }
 }

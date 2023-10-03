@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify';
 
 export const showErrorEmailMessage = () => {
-    toast.error('Nie udało się, proszę podać prawidłowy adres e-mail!', {
+    toast.error('Coś poszło nie tak, proszę podać prawidłowy adres e-mail ...', {
         position: toast.POSITION.TOP_RIGHT,
         className: 'toast-error-message',
         progressClassName: 'error-bar',

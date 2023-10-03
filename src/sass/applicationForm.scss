@@ -12,11 +12,12 @@
     display: flex;
     gap: var.$gap * 4;
     flex-direction: column;
-    margin: var.$margin * 10 auto;
+    margin: var.$margin * 8 auto;
 
     h1 {
         width: 95%;
         font-weight: 100;
+        color: var.$secondary-violet;
         font-size: var.$fontSize * 5.5;
         font-family: var.$third-fontFamily;
         text-align: center;
@@ -113,7 +114,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    margin: 0 var.$margin * 0.5;
+    margin: var.$margin * 0.75;
 
     input {
         position: absolute;
@@ -173,8 +174,8 @@ textarea {
     font-family: inherit;
     border-radius: var.$borderRadius;
     background-color: var.$white;
-    box-shadow: 2px 2px 5px var.$orange-000;
-    filter: drop-shadow(4px 4px var.$orange-300);
+    box-shadow: 1px 1px 4px var.$orange-000;
+    filter: drop-shadow(2px 2px var.$orange-300);
     outline: none;
 }
 
@@ -197,8 +198,9 @@ textarea::placeholder {
 }
 
 .contact-phone-image {
-    top: 130%;
-    left: 10%;
+    top: 125%;
+    left: 50%;
+    font-size: var.$fontSize * 8;
 }
 
 .contact-star-image {
@@ -235,7 +237,6 @@ textarea::placeholder {
 
     .checkbox-container {
         width: 80%;
-        margin: 0 auto;
     }
 }
 
@@ -260,6 +261,10 @@ textarea::placeholder {
         h2 {
             width: 70%;
             font-size: var.$fontSize * 2.5;
+
+            span {
+                filter: drop-shadow(1px 1px var.$orange-000);
+            }
         }
     }
 }
@@ -290,6 +295,7 @@ textarea::placeholder {
 @media (max-width: 800px) {
     .contact-form {
         width: 80%;
+        margin: var.$margin * 6 auto;
 
         h1 {
             font-size: var.$fontSize * 3;
@@ -311,6 +317,11 @@ textarea::placeholder {
         .application-btn {
             width: 40%;
         }
+    }
+
+    .checkmark {
+        height: 15px;
+        width: 15px;
     }
 
     label {
@@ -383,10 +394,6 @@ textarea::placeholder {
         p {
             font-size: var.$fontSize;
         }
-    }
-
-    input {
-        margin: 0;
     }
 }
 

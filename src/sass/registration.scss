@@ -6,21 +6,22 @@
     background-color: var.$secondary-violet;
 
     .registration-container {
+        margin-top: var.$margin * 2;
         display: grid;
         gap: var.$gap * 6;
         grid-template-rows: 0.05fr 0.95fr;
         color: var.$peach;
 
         h1 {
-            width: 50%;
+            width: 60%;
             text-align: center;
             font-weight: 100;
             color: var.$peach;
-            font-size: var.$fontSize * 5.5;
+            font-size: var.$fontSize * 4.4;
             font-family: var.$third-fontFamily;
             line-height: var.$lineHeight * 0.9;
             letter-spacing: var.$letterSpacing * 2;
-            filter: drop-shadow(4px 4px var.$secondary-pink);
+            filter: drop-shadow(3px 3px var.$secondary-pink);
             margin: 0 auto;
         }
 
@@ -109,8 +110,7 @@
             gap: var.$gap * 5.5;
 
             h1 {
-                width: 55%;
-                font-size: var.$fontSize * 4.8;
+                font-size: var.$fontSize * 4.4;
             }
         }
     }
@@ -137,17 +137,7 @@
                     p {
                         font-size: var.$fontSize * 1.8;
                     }
-                }
-            }
-        }
-    }
-}
 
-@media (max-width: 1545px) {
-    .background-registration-container {
-        .registration-container {
-            .steps-container {
-                .step {
                     span {
                         font-size: var.$fontSize * 2.2;
                     }
@@ -176,10 +166,6 @@
         .registration-container {
             gap: var.$gap * 4.5;
 
-            h1 {
-                width: 55%;
-            }
-
             .steps-container {
                 .step {
                     span {
@@ -197,6 +183,10 @@
             .steps-container {
                 .step {
                     width: 80%;
+
+                    h1 {
+                        font-size: var.$fontSize * 3;
+                    }
 
                     h2 {
                         font-size: var.$fontSize * 2.2;
@@ -307,14 +297,6 @@
     }
 
     @media (max-width: 650px) {
-        .background-registration-container {
-            .registration-container {
-                h1 {
-                    font-size: var.$fontSize * 2.5;
-                }
-            }
-        }
-
         .registration-rainbow-image {
             top: 10%;
         }
@@ -328,7 +310,6 @@
 
                 h1 {
                     width: 100%;
-                    font-size: var.$fontSize * 2.5;
                 }
 
                 .steps-container {
@@ -405,10 +386,6 @@
         .background-registration-container {
             .registration-container {
                 gap: var.$gap * 3;
-
-                h1 {
-                    font-size: var.$fontSize * 2.1;
-                }
 
                 .steps-container {
                     gap: var.$gap * 2;

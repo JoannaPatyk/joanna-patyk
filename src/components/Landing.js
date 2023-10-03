@@ -9,7 +9,7 @@ import landingSquare from '../utils/landingSquares';
 import landingImages from '../utils/landingImages';
 import backgroundImage from '../images/bulb.png';
 
-function Landing({ isOpen }) {
+function Landing() {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -18,7 +18,7 @@ function Landing({ isOpen }) {
     };
 
     return (
-        <div className={isOpen ? 'landing-container blur-background' : 'landing-container'}>
+        <div className="landing-container">
             <div className="landing-content">
                 <h1 className="landing-title">
                     <span className="part-1">Twoja wizja</span>
