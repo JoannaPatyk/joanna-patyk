@@ -17,7 +17,6 @@ const initialState = {
     singleCheck: '',
     multiCheck: '',
     blogCheck: '',
-    shopCheck: '',
     theme: '',
     appearance: '',
     message: ''
@@ -29,7 +28,7 @@ function ApplicationForm() {
     const [checked, setChecked] = useState(false);
     const [buttonDisabled, setButtonDisabled] = useState(true);
 
-    const { singleCheck, multiCheck, blogCheck, shopCheck } = toSend;
+    const { singleCheck, multiCheck, blogCheck } = toSend;
 
     const checkboxOptions = [
         { name: 'single', label: 'single page - jednostronicowa strona, bez zakładek', checked: singleCheck },
