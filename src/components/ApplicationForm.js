@@ -32,10 +32,9 @@ function ApplicationForm() {
     const { singleCheck, multiCheck, blogCheck, shopCheck } = toSend;
 
     const checkboxOptions = [
-        { name: 'single', label: 'single page', checked: singleCheck },
-        { name: 'multi', label: 'multi page', checked: multiCheck },
-        { name: 'blog', label: 'blog', checked: blogCheck },
-        { name: 'shop', label: 'sklep internetowy', checked: shopCheck }
+        { name: 'single', label: 'single page - jednostronicowa strona, bez zakładek', checked: singleCheck },
+        { name: 'multi', label: 'multi page -  strona z kilkoma zakładkami', checked: multiCheck },
+        { name: 'blog', label: 'blog - strona z regularnymi wpisami', checked: blogCheck }
     ];
 
     const handleFormFieldChange = (e, field) => {
