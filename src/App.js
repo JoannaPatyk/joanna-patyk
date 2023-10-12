@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import TopBanner from './components/TopBanner';
 import Menu from './components/Menu';
 
@@ -40,6 +41,7 @@ function App() {
                     <Route path="/" element={<Home isOpen={isOpen} />} />
                     <Route path="projects/" element={<Projects />} />
                     <Route path="contact/" element={<Contact />} />
+                    <Route path="privacy-policy/" element={<PrivacyPolicy />} />
                     <Route path="*" element={<Home />} />
                 </Routes>
                 <ToastContainer position="top-left" />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Media from '../components/Media';
 import PageLink from '../components/PageLink';
 import links from '../utils/links';
@@ -29,7 +30,12 @@ function Footer() {
                 </div>
             </div>
             <hr />
-            <p className="copyright-text">Copyright © 2023 | All Rights Reserved</p>
+            <p className="copyright-text">
+                Copyright © 2023 | All Rights Reserved |{' '}
+                <Link to="/privacy-policy" className="policy-link">
+                    Polityka prywatności
+                </Link>{' '}
+            </p>
         </div>
     );
 }

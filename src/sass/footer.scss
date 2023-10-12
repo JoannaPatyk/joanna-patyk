@@ -89,6 +89,20 @@
     #footer-menu-btn:hover {
         transform: scale(0.95);
     }
+
+    .policy-link {
+        color: var.$orange-200;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: var.$transition;
+        filter: drop-shadow(1px 1px var.$orange-000);
+        cursor: pointer;
+
+        &:hover {
+            font-size: var.$fontSize * 1.2;
+        }
+    }
 }
 
 @media (max-width: 1285px) {
@@ -189,6 +203,14 @@
                     font-size: var.$fontSize * 2;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .footer-content {
+        .copyright-text {
+            font-size: var.$fontSize * 0.9;
         }
     }
 }
