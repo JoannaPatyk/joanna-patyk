@@ -41,8 +41,8 @@ import ls8 from '../screens/ls-8.png';
 import ls9 from '../screens/ls-9.png';
 
 import { FaReact, FaCss3Alt, FaHtml5, FaNodeJs } from 'react-icons/fa';
-import { SiStyledcomponents, SiExpress, SiMongodb } from 'react-icons/si';
-import { FaWordpress } from 'react-icons/fa6';
+import { SiStyledcomponents, SiExpress, SiMongodb, SiEnvato, SiAdobe } from 'react-icons/si';
+import { FaWordpress, FaElementor } from 'react-icons/fa6';
 import { DiJavascript1 } from 'react-icons/di';
 
 const projects = [
@@ -301,7 +301,19 @@ const projects = [
         technologies: [
             <div key={0} className="technologie">
                 <FaWordpress />
-                <p className="react">WordPress</p>
+                <p className="wordpress">WordPress</p>
+            </div>,
+            <div key={0} className="technologie">
+                <FaElementor />
+                <p className="elementor">Elementor</p>
+            </div>,
+            <div key={0} className="technologie">
+                <SiEnvato />
+                <p className="envato">Envato</p>
+            </div>,
+            <div key={0} className="technologie">
+                <SiAdobe />
+                <p className="adobe">Adobe Color</p>
             </div>
         ]
     }

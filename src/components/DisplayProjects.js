@@ -17,7 +17,7 @@ function DisplayProjects() {
                             <div className="characteristics">
                                 <ul>{characteristics}</ul>
                             </div>
-                            <h4 className="points-title">Zastosowane technologie:</h4>
+                            <h4 className="points-title">Zastosowane technologie i narzędzia:</h4>
                             <div className="technologies">{technologies}</div>
                             {id != 3 ? (
                                 <>
