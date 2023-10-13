@@ -19,10 +19,14 @@ function DisplayProjects() {
                             </div>
                             <h4 className="points-title">Zastosowane technologie:</h4>
                             <div className="technologies">{technologies}</div>
-                            <h4 className="points-title">Link:</h4>
-                            <div className="link-content">
-                                <MdOutlineKeyboardDoubleArrowRight className="link-icon" /> {title}
-                            </div>
+                            {id != 3 ? (
+                                <>
+                                    <h4 className="points-title">Link:</h4>
+                                    <div className="link-content">
+                                        <MdOutlineKeyboardDoubleArrowRight className="link-icon" /> {title}
+                                    </div>
+                                </>
+                            ) : null}
                         </div>
                     </div>
                 );
