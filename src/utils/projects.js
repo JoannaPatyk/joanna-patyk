@@ -277,8 +277,8 @@ const projects = [
         ],
         description: [
             <h3 key={0}>
-                Korzystając z systemu zarządzania treścią na stronie, jakim jest Wordpress, stworzyłam przykładowy
-                projekt będący wizytówką dla kancelarii prawnej. Potencjalni klienci mogą łatwo przeglądać dostępne
+                Korzystając z systemu zarządzania treścią na stronie www, jakim jest Wordpress, stworzyłam przykładowy
+                projekt będący wizytówką dla kancelarii prawnej. Potencjalni Klienci mogą łatwo przeglądać dostępne
                 usługi. Witryna zawiera stronę główną z ogólnymi informacjami na temat kancelarii, zakresem usług oraz
                 danymi kontaktowymi. Kolejna zakładka zawiera informacje o pracownikach oraz przykładowe opinie
                 klientów. Na następnej podstronie znajdują się szersze informacje o świadczonych usługach. Ostatnia
