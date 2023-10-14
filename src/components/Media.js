@@ -10,7 +10,7 @@ function Media() {
                 <AiFillGithub className="contact-icon" />
             </a>
 
-            <a href="mailto:joannakosjose@gmail.com">
+            <a href="mailto:patykjoanna93@gmail.com">
                 <HiOutlineMailOpen className="contact-icon" />
             </a>
         </div>
