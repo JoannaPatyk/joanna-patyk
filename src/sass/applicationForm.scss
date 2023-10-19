@@ -48,25 +48,15 @@
     }
 
     h3 {
-        margin: 0 auto;
-        font-size: var.$fontSize * 1.8;
-        font-weight: 400;
-        line-height: var.$lineHeight;
-
-        span {
-            font-weight: 800;
-        }
-    }
-
-    h4 {
         width: 40%;
-        margin: 0 auto;
+        margin: var.$margin * 2 auto 0;
         font-weight: 100;
-        font-size: var.$fontSize * 1.6;
+        font-size: var.$fontSize * 1.8;
         line-height: var.$lineHeight;
         text-align: center;
 
         .email-icon {
+            margin-top: var.$margin;
             width: 100%;
             z-index: 100;
             text-align: center;
@@ -306,10 +296,6 @@ textarea::placeholder {
         }
 
         h3 {
-            font-size: var.$fontSize * 1.6;
-        }
-
-        h4 {
             width: 50%;
             font-size: var.$fontSize * 1.4;
         }
@@ -351,10 +337,6 @@ textarea::placeholder {
         h2 {
             font-size: var.$fontSize * 2;
         }
-
-        h3 {
-            font-size: var.$fontSize * 1.4;
-        }
     }
 }
 
@@ -375,7 +357,7 @@ textarea::placeholder {
             font-size: var.$fontSize * 2;
         }
 
-        h4 {
+        h3 {
             width: 55%;
         }
 
@@ -399,7 +381,7 @@ textarea::placeholder {
 
 @media (max-width: 510px) {
     .contact-form {
-        h4 {
+        h3 {
             width: 60%;
             font-size: var.$fontSize * 1.2;
         }

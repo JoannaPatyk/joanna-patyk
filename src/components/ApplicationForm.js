@@ -88,20 +88,9 @@ function ApplicationForm() {
                     Napisz, chętnie <span>odpowiem na Twoje pytania!</span> Skontaktuj się w dowolnym momencie, a
                     postaram się pomóc.
                 </h2>
-                <h3>
-                    Poniżej znajduje się formularz zgłoszeniowy zawierający kilka pytań.{' '}
-                    <span>Udzielenie odpowiedzi na nie umożliwi przesłanie wstępnej wyceny.</span> Ostateczne koszty
-                    zostaną przedstawione po ustaleniu szczegółów.
-                </h3>
-                <h4>
-                    Jeśli wolisz komunikację mailową, możesz napisać na adres:
-                    <a href="mailto:patykjoanna93@gmail.com">
-                        <HiOutlineMailOpen className="email-icon" />
-                    </a>
-                </h4>
                 <div className="questions">
                     <label>
-                        1. Jakiego rodzaju strona Cię interesuje?
+                        Jakiego rodzaju strona Cię interesuje?
                         {checkboxOptions.map(({ name, checked, label }) => (
                             <label className="checkbox-container" htmlFor={name} key={name}>
                                 <input
@@ -164,6 +153,12 @@ function ApplicationForm() {
                 <Button nextClass="application-btn" type="submit" disabled={buttonDisabled}>
                     wyślij
                 </Button>
+                <h3>
+                    Jeśli wolisz komunikację mailową, możesz napisać na adres:
+                    <a href="mailto:patykjoanna93@gmail.com">
+                        <HiOutlineMailOpen className="email-icon" />
+                    </a>
+                </h3>
             </form>
             <DisplayImages elements={contactImages} />
             <DisplaySquares elements={contactSquares} />
