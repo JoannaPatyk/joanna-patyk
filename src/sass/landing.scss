@@ -44,11 +44,11 @@
 
     .landing-background-image {
         position: absolute;
-        top: -8%;
+        top: 5%;
         right: 5%;
         width: 35%;
         filter: drop-shadow(4px 4px var.$orange-200);
-        animation: upAndDown 6s infinite;
+        animation: upAndDown 5s ease-out infinite;
     }
 
     .landing-images {
@@ -99,13 +99,13 @@
 
 @keyframes upAndDown {
     0% {
-        top: -8%;
+        top: 5%;
     }
     50% {
-        top: -5%;
+        top: 0%;
     }
     100% {
-        top: -8%;
+        top: 5%;
     }
 }
 
