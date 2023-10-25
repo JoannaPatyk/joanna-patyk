@@ -7,7 +7,7 @@ import DisplaySquares from './DisplaySquares';
 import DisplayImages from './DisplayImages';
 import landingSquare from '../utils/landingSquares';
 import landingImages from '../utils/landingImages';
-import backgroundImage from '../images/bulb.png';
+import backgroundImage from '../images/ho.png';
 
 function Landing() {
     const navigate = useNavigate();
