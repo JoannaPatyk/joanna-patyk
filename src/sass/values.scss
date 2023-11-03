@@ -1,5 +1,6 @@
 @use './variables.scss' as var;
 @use 'sass:math';
+@import './mixins.scss';
 
 .background-values-container {
     background-color: var.$secondary-violet;
@@ -8,11 +9,8 @@
         position: relative;
         margin: var.$margin * 4 auto 0;
         width: 60%;
-        display: flex;
+        @include flex-column;
         gap: var.$gap * 6;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         color: var.$peach;
 
         h1 {
@@ -82,12 +80,9 @@
 
     .values-description {
         .value-content {
-            display: flex;
+            @include flex-column;
             gap: var.$gap * 2;
             min-height: 30vh;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
             margin-top: -3 * var.$padding;
 
             h2 {
@@ -308,7 +303,7 @@
         .values-description {
             .value-content {
                 .value-text {
-                    display: flex;
+                    @include flex;
                     gap: var.$gap * 2;
                 }
             }

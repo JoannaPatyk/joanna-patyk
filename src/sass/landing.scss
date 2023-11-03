@@ -1,4 +1,5 @@
 @use './variables.scss' as var;
+@import './mixins.scss';
 
 .landing-container {
     position: relative;
@@ -7,16 +8,16 @@
         width: 80%;
         min-height: 90vh;
         display: flex;
-        gap: var.$gap * 4;
         flex-direction: column;
         justify-content: center;
+        gap: var.$gap * 4;
         margin: 0 auto;
 
         .landing-title {
             position: relative;
             display: flex;
-            align-items: left;
             flex-direction: column;
+            align-items: left;
             width: 80%;
             font-weight: 400;
             font-size: var.$fontSize * 6;
