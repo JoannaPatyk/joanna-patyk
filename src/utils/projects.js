@@ -40,6 +40,12 @@ import ls7 from '../screens/ls-7.png';
 import ls8 from '../screens/ls-8.png';
 import ls9 from '../screens/ls-9.png';
 
+import su1 from '../screens/su-1.png';
+import su2 from '../screens/su-2.png';
+import su3 from '../screens/su-3.png';
+import su4 from '../screens/su-4.png';
+import su5 from '../screens/su-6.png';
+
 import { FaReact, FaCss3Alt, FaHtml5, FaNodeJs } from 'react-icons/fa';
 import { SiStyledcomponents, SiExpress, SiMongodb, SiEnvato, SiAdobe } from 'react-icons/si';
 import { FaWordpress, FaElementor } from 'react-icons/fa6';
@@ -259,6 +265,60 @@ const projects = [
     },
     {
         id: 3,
+        title: [
+            <a href="/projects/" className="link" key={0}>
+                Studio urody
+            </a>
+        ],
+        images: [
+            { id: 1, src: su1, className: 'project-image sbq-image1', alt: 'Strona główna' },
+            { id: 2, src: su2, className: 'project-image sbq-image1', alt: 'O nas' },
+            { id: 3, src: su3, className: 'project-image sbq-image1', alt: 'Zakres usług' },
+            { id: 4, src: su4, className: 'project-image sbq-image1', alt: 'Cennik' },
+            { id: 5, src: su5, className: 'project-image sbq-image1', alt: 'Kalendarz' },
+            {}
+        ],
+        description: [
+            <h3 key={0}>
+                Przykładowa strona dla studia urody specjalizującego się w pielęgnacji paznokci. Strona ta pełni rolę
+                wizytówki dla studia, umożliwiając potencjalnym Klientom łatwe zapoznanie się z oferowanymi usługami.
+                Zawiera kalendarz spotkań umożliwiający umówienie wizyty online. Ostatnia zakładka na stronie
+                internetowej zawiera dane kontaktowe studia urody oraz formularz kontaktowy, który umożliwia Klientom
+                wysłanie zapytania.
+            </h3>
+        ],
+        characteristics: [
+            <li key={0}>
+                <span>Estetycznym designem</span> - harmonijna kolorystyka oraz czytelny układ przyciągają uwagę
+                odwiedzających i budują pozytywne wrażenie.
+            </li>,
+            <li key={1}>
+                <span>Kalendarz spotkań</span> - możliwość rezerwacji terminu wizyty za pośrednictwem wbudowanego
+                kalendarza spotkań. Dzięki temu narzędziu użytkownicy mogą dostosować swoje usługi do indywidualnych
+                potrzeb i budżetu oraz sprawdzić dostępność terminów, co zwiększa atrakcyjność oferty studia urody..
+            </li>
+        ],
+        technologies: [
+            <div key={0} className="technologie">
+                <FaWordpress />
+                <p className="wordpress">WordPress</p>
+            </div>,
+            <div key={0} className="technologie">
+                <FaElementor />
+                <p className="elementor">Elementor</p>
+            </div>,
+            <div key={0} className="technologie">
+                <SiEnvato />
+                <p className="envato">Envato</p>
+            </div>,
+            <div key={0} className="technologie">
+                <SiAdobe />
+                <p className="adobe">Adobe Color</p>
+            </div>
+        ]
+    },
+    {
+        id: 4,
         title: [
             <a href="/projects/" className="link" key={0}>
                 Kancelaria prawna
