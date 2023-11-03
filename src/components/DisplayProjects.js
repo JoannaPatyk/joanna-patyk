@@ -19,7 +19,7 @@ function DisplayProjects() {
                             </div>
                             <h4 className="points-title">Zastosowane technologie i narzędzia:</h4>
                             <div className="technologies">{technologies}</div>
-                            {id != 3 ? (
+                            {id != 3 && id != 4 ? (
                                 <>
                                     <h4 className="points-title">Link:</h4>
                                     <div className="link-content">
