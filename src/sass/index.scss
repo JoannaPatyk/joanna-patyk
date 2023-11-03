@@ -1,5 +1,6 @@
 @use './variables.scss' as var;
 @use 'sass:math';
+@import './mixins.scss';
 
 * {
     margin: 0;
@@ -52,10 +53,7 @@ body {
 }
 
 #btn-up {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    @include flex-column;
     position: fixed;
     top: 85%;
     right: 3%;
@@ -95,8 +93,7 @@ body {
     gap: var.$gap * 0.5;
 
     .toggle-btn {
-        display: flex;
-        align-items: center;
+        @include flex;
         justify-content: center;
         border: none;
         filter: none;
@@ -136,8 +133,7 @@ body {
 // SQUARE
 
 .square {
-    position: absolute;
-    border-radius: var.$borderRadius;
+    @include square;
 }
 
 .big {
@@ -298,8 +294,7 @@ body {
 
 @media (max-width: 550px) {
     .slider-container {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         gap: var.$gap * 2;
 
         .toggle-btn {

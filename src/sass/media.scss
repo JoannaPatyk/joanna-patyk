@@ -1,9 +1,9 @@
 @use './variables.scss' as var;
+@import './mixins.scss';
 
 .contact-icon-container {
-    display: flex;
+    @include flex;
     gap: var.$gap;
-    align-items: center;
     justify-content: center;
 
     .contact-icon {

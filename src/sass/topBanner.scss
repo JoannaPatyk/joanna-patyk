@@ -1,19 +1,18 @@
 @use './variables.scss' as var;
 @use 'sass:math';
+@import './mixins.scss';
 
 .topBanner-container {
     min-height: 6vh;
-    display: flex;
+    @include flex;
     gap: var.$gap * 5;
-    align-items: center;
     justify-content: center;
     color: var.$peach;
     background-color: var.$secondary-violet;
 
     .slogan {
-        display: flex;
+        @include flex;
         gap: var.$gap * 2;
-        align-items: center;
         justify-content: center;
 
         p {

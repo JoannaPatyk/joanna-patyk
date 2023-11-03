@@ -1,11 +1,11 @@
 @use './variables.scss' as var;
 @use 'sass:math';
+@import './mixins.scss';
 
 .projects-container {
     width: 50%;
-    display: flex;
+    @include flex-column;
     gap: var.$gap * 8;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: var.$margin * 10 auto;
@@ -56,20 +56,14 @@
 
     .projects {
         width: 100%;
-        display: flex;
+        @include flex-column;
         gap: var.$gap * 8;
-        flex-direction: column;
         margin: 0 auto;
-        align-items: center;
-        justify-content: center;
 
         .project {
             width: 100%;
-            display: flex;
+            @include flex-column;
             gap: var.$gap * 6;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
 
             .project-title {
                 width: 50%;
@@ -101,9 +95,8 @@
 
             .project-description {
                 width: 100%;
-                display: flex;
+                @include flex-column;
                 gap: var.$gap * 4;
-                flex-direction: column;
                 text-align: justify;
 
                 .points-title {
@@ -124,9 +117,8 @@
                 }
 
                 ul {
-                    display: flex;
+                    @include flex-column;
                     gap: var.$gap * 2;
-                    flex-direction: column;
                     list-style-type: none;
 
                     li {
@@ -145,17 +137,13 @@
                 }
 
                 .technologies {
-                    display: flex;
+                    @include flex;
                     gap: var.$gap * 2;
-                    align-items: center;
                     justify-content: center;
 
                     .technologie {
-                        display: flex;
+                        @include flex-column;
                         gap: var.$gap;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
                         font-size: var.$fontSize * 5;
                         color: var.$black;
                         transition: var.$transition;
@@ -181,10 +169,9 @@
                 }
 
                 .link-content {
-                    display: flex;
+                    @include flex;
                     gap: var.$gap * 0.5;
                     justify-content: center;
-                    align-items: center;
                     transition: var.$transition;
 
                     &:hover {

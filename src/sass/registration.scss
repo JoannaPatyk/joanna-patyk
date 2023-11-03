@@ -1,5 +1,6 @@
 @use './variables.scss' as var;
 @use 'sass:math';
+@import './mixins.scss';
 
 .background-registration-container {
     position: relative;
@@ -28,10 +29,8 @@
         .steps-container {
             width: 70%;
             margin: 0 auto var.$margin * 8;
-            display: flex;
+            @include flex-column;
             gap: var.$gap * 6;
-            align-items: center;
-            flex-direction: column;
 
             .step {
                 position: relative;

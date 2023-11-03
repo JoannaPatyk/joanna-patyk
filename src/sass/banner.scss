@@ -1,9 +1,9 @@
 @use './variables.scss' as var;
+@import './mixins.scss';
 
 .banner-container {
     min-height: 14vh;
-    display: flex;
-    align-items: center;
+    @include flex;
     justify-content: center;
     background-color: var.$orange-300;
 
@@ -35,8 +35,7 @@
 
 @media (max-width: 1290px) {
     .banner-container {
-        display: flex;
-        align-items: center;
+        @include flex;
         justify-content: center;
 
         p {
